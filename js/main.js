@@ -3,6 +3,17 @@
    Spanish-primary bilingual B2B site
    ===================================================== */
 
+/* ===== JS-READY FLAG (enables CSS scroll animations) ===== */
+document.documentElement.classList.add('js-ready');
+
+/* ===== ANIMATION FALLBACK — make everything visible after 3 s ===== */
+setTimeout(function() {
+  document.querySelectorAll('.reveal, .rv, .fade-in').forEach(function(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+}, 3000);
+
 /* ===== LANGUAGE TOGGLE ===== */
 function setLang(l) {
   document.body.classList.toggle('en', l === 'en');
@@ -59,13 +70,8 @@ window.addEventListener('scroll', function() {
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-  // Content is visible by default; we enhance with animation only if motion is OK
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Animation is CSS-driven (.js-ready .reveal); just observe for the .visible class
   document.querySelectorAll('.reveal').forEach(function(el) {
-    if (!prefersReduced) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(18px)';
-    }
     obs.observe(el);
   });
 })();

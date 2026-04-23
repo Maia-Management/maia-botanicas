@@ -302,11 +302,19 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .wa:hover { transform: scale(1.06) translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
 
 /* ===== SCROLL REVEAL ===== */
-.reveal {
-  opacity: 1; transform: none;
+/* Content visible by default — no JS, no problem */
+.reveal { opacity: 1; transform: none; }
+
+/* Animation only when JS has initialised */
+.js-ready .reveal {
+  opacity: 0; transform: translateY(18px);
   transition: opacity 0.65s cubic-bezier(.4,0,.2,1), transform 0.65s cubic-bezier(.4,0,.2,1);
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.js-ready .reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js-ready .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }

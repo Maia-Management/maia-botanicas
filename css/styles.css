@@ -163,8 +163,11 @@ nav.scrolled {
 
 .mobile-toggle {
   display: none; background: none; border: none;
-  color: var(--ink-2); cursor: pointer; padding: 0.3rem;
+  color: var(--ink-2); cursor: pointer; padding: 0;
   border-radius: 4px; transition: background 0.2s;
+  /* Touch target: 44×44px minimum */
+  min-width: 44px; min-height: 44px;
+  align-items: center; justify-content: center;
 }
 .mobile-toggle:hover { background: var(--cream-2); }
 .mobile-toggle svg { display: block; }
@@ -172,7 +175,9 @@ nav.scrolled {
 /* Mobile nav */
 @media (max-width: 860px) {
   nav { padding: 0 1.25rem; }
-  .mobile-toggle { display: block; }
+  .mobile-toggle { display: flex; }
+  /* Ensure lang buttons have adequate touch targets on mobile */
+  .lang-btn { min-height: 44px; padding: 0 0.75rem; }
   .nav-center {
     position: fixed; top: 64px; left: 0; right: 0;
     background: var(--cream); border-bottom: 1px solid var(--cream-3);
@@ -292,7 +297,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 /* ===== WHATSAPP FAB ===== */
 .wa {
   position: fixed; bottom: 1.75rem; right: 1.75rem;
-  width: 52px; height: 52px; background: #25D366;
+  width: 56px; height: 56px; background: #25D366;
   border-radius: 14px; display: flex; align-items: center;
   justify-content: center; z-index: 999;
   box-shadow: 0 4px 20px rgba(37,211,102,0.35);
@@ -1044,6 +1049,23 @@ footer {
   section { padding: 4rem 1.25rem; }
   .cta-band { padding: 3rem 1.25rem; }
   nav { padding: 0 1.25rem; }
+}
+
+/* ===== iOS AUTO-ZOOM PREVENTION =====
+   Safari zooms in when focused input font-size < 16px.
+   Override the 0.9rem form inputs for all mobile viewports. */
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+}
+
+/* ===== FRUITS GRID — small screens =====
+   Reflow from 3 columns to 2 columns on very small viewports. */
+@media (max-width: 480px) {
+  .fruits-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ===== SECTION BACKGROUNDS ===== */

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Maia Botanicas — Very dark green bg, sage green leaf motif -->
+  <rect width="512" height="512" rx="102" ry="102" fill="#0A1A0A"/>
+  <!-- Sage green border -->
+  <rect x="6" y="6" width="500" height="500" rx="98" ry="98" fill="none" stroke="#87BC45" stroke-width="5" opacity="0.35"/>
+  <!-- Main botanical leaf — large, elegant -->
+  <path d="M256 130 C256 130 340 180 355 270 C370 360 300 400 256 395 C212 400 142 360 157 270 C172 180 256 130 256 130 Z" fill="#87BC45" opacity="0.2"/>
+  <path d="M256 130 C256 130 340 180 355 270 C370 360 300 400 256 395 C212 400 142 360 157 270 C172 180 256 130 256 130 Z" fill="none" stroke="#87BC45" stroke-width="9" stroke-linejoin="round"/>
+  <!-- Central leaf vein -->
+  <line x1="256" y1="145" x2="256" y2="390" stroke="#87BC45" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Secondary veins -->
+  <line x1="256" y1="210" x2="310" y2="240" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="256" y1="250" x2="320" y2="270" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="256" y1="290" x2="310" y2="310" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="256" y1="210" x2="202" y2="240" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="256" y1="250" x2="192" y2="270" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="256" y1="290" x2="202" y2="310" stroke="#87BC45" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>

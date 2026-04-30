@@ -29,6 +29,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Maia Botánicas — Términos de Servicio">
 <meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Términos de Servicio | Maia Botánicas">
+<meta name="twitter:description" content="Términos de Servicio de Maia Botánicas — condiciones de uso del sitio web y servicios B2B.">
+<meta name="twitter:image" content="https://maia-botanicas.com/og-image.jpg">
 
 <!-- Consent Mode v2 -->
 <script src="js/consent.js" defer></script>
@@ -39,7 +43,8 @@
 
 <style>
   .legal-page { max-width: 780px; margin: 0 auto; padding: 80px 24px 60px; }
-  .legal-page h1 { font-family: Inter, sans-serif; font-size: clamp(22px, 4vw, 32px); color: #1B2A4A; margin-bottom: 8px; }
+  .legal-page h1,
+  .legal-page [role="heading"][aria-level="1"] { font-family: Inter, sans-serif; font-size: clamp(22px, 4vw, 32px); color: #1B2A4A; margin-bottom: 8px; }
   .legal-page .legal-meta { font-size: 13px; color: #888; margin-bottom: 32px; border-bottom: 1px solid #eee; padding-bottom: 16px; }
   .legal-page h2 { font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; color: #1B2A4A; margin: 28px 0 8px; }
   .legal-page p, .legal-page li { font-size: 14px; line-height: 1.7; color: #444; }
@@ -59,7 +64,7 @@
 
 <!-- ===== NAV ===== -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <div class="nav-logo-mark">
       <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" stroke="#c8a45c" stroke-width="1.4" fill="none"/>
@@ -75,7 +80,7 @@
   </a>
   <div class="nav-center" id="navCenter">
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" data-lang="es">Inicio</a><a href="index.html" data-lang="en">Home</a></li>
+      <li><a href="/" data-lang="es">Inicio</a><a href="/" data-lang="en">Home</a></li>
       <li><a href="nosotros.html" data-lang="es">Nosotros</a><a href="nosotros.html" data-lang="en">About</a></li>
       <li><a href="productos.html" data-lang="es">Productos</a><a href="productos.html" data-lang="en">Products</a></li>
       <li><a href="proceso.html" data-lang="es">Proceso</a><a href="proceso.html" data-lang="en">Process</a></li>
@@ -168,7 +173,7 @@
 
     <!-- ── ENGLISH VERSION ── -->
     <div class="lang-section" data-lang="en">
-      <h1>Terms of Service</h1>
+      <div role="heading" aria-level="1">Terms of Service</div>
       <p class="legal-meta">
         Last updated: January 2025 · Applies to maia-botanicas.com
       </p>

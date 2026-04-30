@@ -527,12 +527,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   max-width: 1080px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
 }
-.about-hero h1 {
+.about-hero h1,
+.about-hero [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1.25rem;
 }
-.about-hero h1 em { color: var(--gold-2); font-style: italic; }
+.about-hero h1 em,
+.about-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
   display: inline-flex; font-family: var(--mono); font-size: 0.65rem;
@@ -601,12 +603,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   background: var(--forest-3); padding: 8rem 2.5rem 5rem;
 }
 .products-hero-inner { max-width: 1080px; margin: 0 auto; }
-.products-hero h1 {
+.products-hero h1,
+.products-hero [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.products-hero h1 em { color: var(--gold-2); font-style: italic; }
+.products-hero h1 em,
+.products-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .products-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .product-section { padding: 4.5rem 2.5rem; }
@@ -707,12 +711,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   background: var(--forest); padding: 8rem 2.5rem 5rem;
 }
 .process-hero-inner { max-width: 1080px; margin: 0 auto; }
-.process-hero h1 {
+.process-hero h1,
+.process-hero [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.process-hero h1 em { color: var(--gold-2); font-style: italic; }
+.process-hero h1 em,
+.process-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .process-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .process-steps {
@@ -791,12 +797,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   background: var(--forest-3); padding: 8rem 2.5rem 5rem;
 }
 .sustain-hero-inner { max-width: 1080px; margin: 0 auto; }
-.sustain-hero h1 {
+.sustain-hero h1,
+.sustain-hero [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.sustain-hero h1 em { color: var(--gold-2); font-style: italic; }
+.sustain-hero h1 em,
+.sustain-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .sustain-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .sustain-pillars {
@@ -874,12 +882,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   background: var(--forest); padding: 8rem 2.5rem 5rem;
 }
 .contact-hero-inner { max-width: 1080px; margin: 0 auto; }
-.contact-hero h1 {
+.contact-hero h1,
+.contact-hero [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.contact-hero h1 em { color: var(--gold-2); font-style: italic; }
+.contact-hero h1 em,
+.contact-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .contact-hero p { color: rgba(250,248,245,0.65); max-width: 500px; line-height: 1.75; }
 
 .contact-layout {
@@ -1035,7 +1045,8 @@ footer {
 
 /* ===== PRIVACY PAGE ===== */
 .privacy-page { padding: 8rem 2.5rem 5rem; max-width: 780px; margin: 0 auto; }
-.privacy-page h1 {
+.privacy-page h1,
+.privacy-page [role="heading"][aria-level="1"] {
   font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 700; color: var(--forest); margin-bottom: 0.5rem;
 }

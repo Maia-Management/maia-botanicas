@@ -3,25 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Consent Mode v2 — deny by default until user accepts -->
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('consent', 'default', {
-  analytics_storage: 'denied',
-  ad_storage: 'denied',
-  ad_user_data: 'denied',
-  ad_personalization: 'denied',
-  wait_for_update: 500
-});
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XMC58M7185"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XMC58M7185');
-</script>
+<script src="js/consent.js" defer></script>
 <title>Concentrados y Jarabes Tropicales B2B | Maia Botánicas</title>
 <meta name="description" content="Concentrados 65 Brix, jarabes artesanales, garnishes deshidratados y Majín. Ingredientes tropicales B2B del Caribe colombiano. Solicita muestras hoy.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -115,9 +97,6 @@ gtag('config', 'G-XMC58M7185');
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 </head>
@@ -125,7 +104,7 @@ gtag('config', 'G-XMC58M7185');
 
 <!-- ===== NAV ===== -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo" aria-label="Maia Botánicas — Inicio">
+  <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">
       <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" stroke="#c8a45c" stroke-width="1.4" fill="none"/>
@@ -161,6 +140,7 @@ gtag('config', 'G-XMC58M7185');
   </button>
 </nav>
 
+<main id="main-content">
 <!-- ===== HERO ===== -->
 <div class="products-hero">
   <div class="products-hero-inner">
@@ -432,31 +412,31 @@ gtag('config', 'G-XMC58M7185');
 
       <div class="reveal">
         <div style="background:var(--forest);border-radius:var(--radius-lg);padding:2rem;">
-          <p style="font-family:var(--mono);font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;" data-lang="es">Aplicaciones sugeridas</p>
-          <p style="font-family:var(--mono);font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;" data-lang="en">Suggested applications</p>
+          <p style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;" data-lang="es">Aplicaciones sugeridas</p>
+          <p style="font-family:var(--mono);font-size:0.65rem;color:var(--gold-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;" data-lang="en">Suggested applications</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.65rem;">
             <li style="font-size:0.875rem;color:rgba(250,248,245,0.75);display:flex;gap:0.75rem;align-items:flex-start;">
-              <span style="color:var(--gold);flex-shrink:0;">→</span>
+              <span style="color:var(--gold-2);flex-shrink:0;">→</span>
               <span data-lang="es">Borde de cócteles con sal de chile y limón</span>
               <span data-lang="en">Cocktail glass rims with chili-lime salt</span>
             </li>
             <li style="font-size:0.875rem;color:rgba(250,248,245,0.75);display:flex;gap:0.75rem;align-items:flex-start;">
-              <span style="color:var(--gold);flex-shrink:0;">→</span>
+              <span style="color:var(--gold-2);flex-shrink:0;">→</span>
               <span data-lang="es">Snack bars y experiencias de hospitalidad</span>
               <span data-lang="en">Snack bars and hospitality experiences</span>
             </li>
             <li style="font-size:0.875rem;color:rgba(250,248,245,0.75);display:flex;gap:0.75rem;align-items:flex-start;">
-              <span style="color:var(--gold);flex-shrink:0;">→</span>
+              <span style="color:var(--gold-2);flex-shrink:0;">→</span>
               <span data-lang="es">Frutas tropicales en restaurantes y hoteles</span>
               <span data-lang="en">Tropical fruits at restaurants and hotels</span>
             </li>
             <li style="font-size:0.875rem;color:rgba(250,248,245,0.75);display:flex;gap:0.75rem;align-items:flex-start;">
-              <span style="color:var(--gold);flex-shrink:0;">→</span>
+              <span style="color:var(--gold-2);flex-shrink:0;">→</span>
               <span data-lang="es">Retail premium y souvenirs gastronómicos</span>
               <span data-lang="en">Premium retail and gastronomic souvenirs</span>
             </li>
             <li style="font-size:0.875rem;color:rgba(250,248,245,0.75);display:flex;gap:0.75rem;align-items:flex-start;">
-              <span style="color:var(--gold);flex-shrink:0;">→</span>
+              <span style="color:var(--gold-2);flex-shrink:0;">→</span>
               <span data-lang="es">Etiquetado privado disponible</span>
               <span data-lang="en">Private label available</span>
             </li>
@@ -506,6 +486,8 @@ gtag('config', 'G-XMC58M7185');
 </div>
 
 <!-- ===== FOOTER ===== -->
+</main>
+
 <footer>
   <div class="footer-inner" style="max-width:1100px;margin:0 auto;padding:3rem 1.5rem 2rem;color:rgba(255,255,255,0.7);font-size:0.85rem;line-height:1.7;">
 
@@ -533,7 +515,7 @@ gtag('config', 'G-XMC58M7185');
     </div>
 
     <!-- Legal Identity Block -->
-    <div class="footer-legal-block" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;color:rgba(255,255,255,0.5);font-size:0.78rem;line-height:1.7;">
+    <div class="footer-legal-block" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:1.5rem;color:rgba(255,255,255,0.72);font-size:0.78rem;line-height:1.7;">
       <p data-lang="es" style="margin:0 0 0.5rem;">
         &copy; 2026 <strong style="color:rgba(255,255,255,0.7);font-weight:500;">MAIA MANAGEMENT GROUP S.A.S.</strong> · NIT 901.862.977-7 · Marca comercial: Maia Botánicas · CR 1 #19-61, Barrio Rodadero, Santa Marta, Magdalena 470007, Colombia · Matrícula Mercantil 218217 (Cámara de Comercio de Santa Marta)
       </p>
@@ -542,7 +524,7 @@ gtag('config', 'G-XMC58M7185');
       </p>
 
       <!-- Contact -->
-      <p style="margin:0.75rem 0 0;color:rgba(255,255,255,0.5);">
+      <p style="margin:0.75rem 0 0;color:rgba(255,255,255,0.72);">
         <a href="mailto:info@maia-botanicas.com" style="color:rgba(255,255,255,0.65);text-decoration:none;">info@maia-botanicas.com</a>
         &nbsp;·&nbsp;
         <a href="tel:+573213922272" style="color:rgba(255,255,255,0.65);text-decoration:none;">+57 321 392 2272</a>
@@ -553,20 +535,20 @@ gtag('config', 'G-XMC58M7185');
         <a href="contacto.html" data-lang="en" style="color:rgba(255,255,255,0.65);text-decoration:none;">Contact</a>
       </p>
 
-      <p style="margin:0.5rem 0 0;font-size:0.72rem;color:rgba(255,255,255,0.35);">
+      <p style="margin:0.5rem 0 0;font-size:0.72rem;color:rgba(255,255,255,0.72);">
         <span data-lang="es">Consultas urgentes: Andrew Gallie, CEO — WhatsApp +57 319 596 2773</span>
         <span data-lang="en">Urgent enquiries: Andrew Gallie, CEO — WhatsApp +57 319 596 2773</span>
       </p>
 
       <!-- Policy / Cookie Links -->
       <div class="footer-links" style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:1.25rem;font-size:0.75rem;">
-        <a href="privacy.html" data-lang="es" style="color:rgba(255,255,255,0.5);text-decoration:none;">Política de Privacidad</a>
-        <a href="privacy.html" data-lang="en" style="color:rgba(255,255,255,0.5);text-decoration:none;">Privacy Policy</a>
-        <a href="terminos.html" data-lang="es" style="color:rgba(255,255,255,0.5);text-decoration:none;">Términos de Servicio</a>
-        <a href="terminos.html" data-lang="en" style="color:rgba(255,255,255,0.5);text-decoration:none;">Terms of Service</a>
-        <a href="sitemap.xml" style="color:rgba(255,255,255,0.5);text-decoration:none;">Sitemap</a>
-        <a href="javascript:void(0)" onclick="window.MB_openConsentBanner && window.MB_openConsentBanner()" data-lang="es" style="color:rgba(255,255,255,0.5);text-decoration:none;cursor:pointer;">Configurar Cookies</a>
-        <a href="javascript:void(0)" onclick="window.MB_openConsentBanner && window.MB_openConsentBanner()" data-lang="en" style="color:rgba(255,255,255,0.5);text-decoration:none;cursor:pointer;">Cookie Settings</a>
+        <a href="privacy.html" data-lang="es" style="color:rgba(255,255,255,0.72);text-decoration:none;">Política de Privacidad</a>
+        <a href="privacy.html" data-lang="en" style="color:rgba(255,255,255,0.72);text-decoration:none;">Privacy Policy</a>
+        <a href="terminos.html" data-lang="es" style="color:rgba(255,255,255,0.72);text-decoration:none;">Términos de Servicio</a>
+        <a href="terminos.html" data-lang="en" style="color:rgba(255,255,255,0.72);text-decoration:none;">Terms of Service</a>
+        <a href="sitemap.xml" style="color:rgba(255,255,255,0.72);text-decoration:none;">Sitemap</a>
+        <a href="#mb-consent-banner" onclick="event.preventDefault(); window.MB_openConsentBanner && window.MB_openConsentBanner()" data-lang="es" style="color:rgba(255,255,255,0.72);text-decoration:none;cursor:pointer;">Configurar Cookies</a>
+        <a href="#mb-consent-banner" onclick="event.preventDefault(); window.MB_openConsentBanner && window.MB_openConsentBanner()" data-lang="en" style="color:rgba(255,255,255,0.72);text-decoration:none;cursor:pointer;">Cookie Settings</a>
       </div>
     </div>
 
@@ -596,7 +578,7 @@ gtag('config', 'G-XMC58M7185');
       <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#c8a45c;">Privacy policy</a>.</span>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-      <button onclick="MB_consentAccept()" style="background:#c8a45c;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
+      <button onclick="MB_consentAccept()" style="background:#8a641f;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
       <button onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
     </div>
   </div>
@@ -608,7 +590,7 @@ gtag('config', 'G-XMC58M7185');
   window.MB_consentAccept = function(){
     try{ localStorage.setItem('mb_consent','accepted'); }catch(e){}
     if(B) B.style.display='none';
-    if(typeof gtag==='function') gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied'});
+    if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics();
   };
   window.MB_consentReject = function(){
     try{ localStorage.setItem('mb_consent','rejected'); }catch(e){}
@@ -617,7 +599,7 @@ gtag('config', 'G-XMC58M7185');
   try{
     var c = localStorage.getItem('mb_consent');
     if(!c){ setTimeout(function(){ if(B) B.style.display='block'; }, 800); }
-    else if(c==='accepted'){ if(typeof gtag==='function') gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied'}); }
+    else if(c==='accepted'){ if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics(); }
   }catch(e){ if(B) B.style.display='block'; }
 })();
 </script>

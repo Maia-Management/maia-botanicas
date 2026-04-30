@@ -1,42 +1,55 @@
-/* Cookie Consent — Google Consent Mode v2
- * Runs BEFORE GA4 loads to set default denied state.
- * Applies any stored user preference from localStorage immediately.
- * Inline page banners (MB_consentAccept / MB_consentReject) call
- * gtag('consent','update',...) on user choice.
- *
- * localStorage key : 'mb_consent'  ('accepted' | 'rejected')
- * GA4 Measurement ID: G-XMC58M7185
+/* Cookie Consent - Google Consent Mode v2
+ * No analytics network request is made until consent is accepted.
  */
 (function () {
-  // Initialise dataLayer and global gtag function if not yet defined
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
-  if (typeof window.gtag !== 'function') { window.gtag = gtag; }
+  var GA_ID = "G-XMC58M7185";
+  var loaded = false;
 
-  // ── Default: deny everything until user makes a choice ──────────────
-  gtag('consent', 'default', {
-    analytics_storage:  'denied',
-    ad_storage:         'denied',
-    ad_user_data:       'denied',
-    ad_personalization: 'denied',
-    wait_for_update:    500
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  if (typeof window.gtag !== "function") {
+    window.gtag = gtag;
+  }
+
+  gtag("consent", "default", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    wait_for_update: 500
   });
 
-  // ── Apply any previously stored consent choice immediately ──────────
+  function grantAnalytics() {
+    gtag("consent", "update", {
+      analytics_storage: "granted",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+  }
+
+  window.MB_enableAnalytics = function () {
+    if (loaded) return;
+    loaded = true;
+    grantAnalytics();
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+    script.onload = function () {
+      gtag("js", new Date());
+      gtag("config", GA_ID, { anonymize_ip: true });
+    };
+    document.head.appendChild(script);
+  };
+
   try {
-    var stored = localStorage.getItem('mb_consent');
-    if (stored === 'accepted') {
-      // User previously accepted analytics; ads remain denied per policy
-      gtag('consent', 'update', {
-        analytics_storage: 'granted',
-        ad_storage:        'denied',
-        ad_user_data:      'denied',
-        ad_personalization:'denied'
-      });
+    if (localStorage.getItem("mb_consent") === "accepted") {
+      window.MB_enableAnalytics();
     }
-    // 'rejected' or absent → keep defaults (all denied); no banner action needed
-    // The inline page banner will show if no choice has been stored yet
   } catch (e) {
-    // localStorage unavailable (private browsing, strict settings) — keep defaults
+    // Keep denied defaults when storage is unavailable.
   }
 })();

@@ -13,7 +13,7 @@ img { max-width: 100%; height: auto; }
   --forest:   #1a3a2a;
   --forest-2: #22492f;
   --forest-3: #0f2219;
-  --gold:     #c8a45c;
+  --gold:     #8a641f;
   --gold-2:   #d4b574;
   --gold-wash: rgba(200, 164, 92, 0.10);
   --gold-glow: rgba(200, 164, 92, 0.20);
@@ -24,12 +24,12 @@ img { max-width: 100%; height: auto; }
   --ink:      #1c1c1c;
   --ink-2:    #3a3a3a;
   --ink-3:    #5a5a5a;
-  --muted:    #8a8a8a;
+  --muted:    #5f6763;
 
   /* Typography */
-  --serif: 'Playfair Display', 'Georgia', serif;
-  --sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --mono:  'IBM Plex Mono', 'Courier New', monospace;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --mono:  'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
@@ -237,7 +237,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 .btn-gold {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.85rem 1.75rem; background: var(--gold);
+  padding: 0.85rem 1.75rem; background: var(--gold-2);
   color: var(--forest); font-family: var(--sans);
   font-weight: 600; font-size: 0.875rem; text-decoration: none;
   border: none; cursor: pointer; border-radius: 8px;
@@ -477,6 +477,13 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 /* ===== WHY MAIA SECTION ===== */
 .why-section { background: var(--forest); }
+.why-section .section-label,
+.why-section .section-title em {
+  color: var(--gold-2);
+}
+.why-section .section-label::before {
+  background: var(--gold-2);
+}
 .why-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 1px; background: rgba(200,164,92,0.15);
@@ -491,7 +498,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .why-item:hover { background: rgba(200,164,92,0.06); }
 .why-item-num {
   font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--gold); letter-spacing: 0.08em; margin-bottom: 1rem;
+  color: var(--gold-2); letter-spacing: 0.08em; margin-bottom: 1rem;
 }
 .why-item h3 {
   font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
@@ -503,13 +510,13 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 /* ===== CTA BAND ===== */
 .cta-band {
-  background: var(--gold); padding: 4rem 2.5rem; text-align: center;
+  background: var(--gold-2); padding: 4rem 2.5rem; text-align: center;
 }
 .cta-band h2 {
   font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700; color: var(--forest); margin-bottom: 0.6rem;
 }
-.cta-band p { color: rgba(26,58,42,0.75); margin-bottom: 2rem; font-size: 1rem; }
+.cta-band p { color: var(--forest); margin-bottom: 2rem; font-size: 1rem; }
 .cta-band-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* ===== ABOUT PAGE ===== */
@@ -525,14 +532,14 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1.25rem;
 }
-.about-hero h1 em { color: var(--gold); font-style: italic; }
+.about-hero h1 em { color: var(--gold-2); font-style: italic; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
   display: inline-flex; font-family: var(--mono); font-size: 0.65rem;
-  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold-2); letter-spacing: 0.1em; text-transform: uppercase;
   margin-bottom: 1.25rem; padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(200,164,92,0.3);
-  border-radius: 4px; background: rgba(200,164,92,0.06);
+  border: 1px solid rgba(212,181,116,0.45);
+  border-radius: 4px; background: rgba(212,181,116,0.10);
 }
 
 .about-metrics {
@@ -599,7 +606,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.products-hero h1 em { color: var(--gold); font-style: italic; }
+.products-hero h1 em { color: var(--gold-2); font-style: italic; }
 .products-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .product-section { padding: 4.5rem 2.5rem; }
@@ -688,6 +695,8 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   color: var(--cream); margin-bottom: 0.5rem;
 }
 .custom-box p { color: rgba(250,248,245,0.65); font-size: 0.9rem; line-height: 1.7; }
+.custom-box .product-label { color: var(--gold-2); }
+.custom-box .product-label::before { background: var(--gold-2); }
 
 @media (max-width: 640px) {
   .custom-box { grid-template-columns: 1fr; }
@@ -703,7 +712,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.process-hero h1 em { color: var(--gold); font-style: italic; }
+.process-hero h1 em { color: var(--gold-2); font-style: italic; }
 .process-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .process-steps {
@@ -787,7 +796,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.sustain-hero h1 em { color: var(--gold); font-style: italic; }
+.sustain-hero h1 em { color: var(--gold-2); font-style: italic; }
 .sustain-hero p { color: rgba(250,248,245,0.65); max-width: 540px; line-height: 1.75; }
 
 .sustain-pillars {
@@ -870,7 +879,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   font-weight: 700; color: var(--cream); line-height: 1.15;
   letter-spacing: -0.025em; margin-bottom: 1rem;
 }
-.contact-hero h1 em { color: var(--gold); font-style: italic; }
+.contact-hero h1 em { color: var(--gold-2); font-style: italic; }
 .contact-hero p { color: rgba(250,248,245,0.65); max-width: 500px; line-height: 1.75; }
 
 .contact-layout {

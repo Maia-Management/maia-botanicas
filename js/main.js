@@ -22,19 +22,31 @@ function setLang(l) {
   if (btnES) btnES.classList.toggle('active', l === 'es');
   if (btnEN) btnEN.classList.toggle('active', l === 'en');
   document.documentElement.lang = l === 'en' ? 'en' : 'es';
+  syncLocalizedFormControls(l);
   try { localStorage.setItem('mb_lang', l); } catch(e) {}
   // Close mobile menu
   var nav = document.getElementById('navCenter');
   if (nav) nav.classList.remove('open');
 }
 
+function syncLocalizedFormControls(l) {
+  document.querySelectorAll('form [data-lang]').forEach(function(el) {
+    if (!/^(INPUT|TEXTAREA|SELECT|BUTTON|OPTION)$/.test(el.tagName)) return;
+    el.disabled = el.getAttribute('data-lang') !== l;
+  });
+}
+
 /* Restore saved language on load */
 (function() {
   try {
     var saved = localStorage.getItem('mb_lang');
-    if (saved === 'en') setLang('en');
+    setLang(saved === 'en' ? 'en' : 'es');
   } catch(e) {}
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+  syncLocalizedFormControls(document.body.classList.contains('en') ? 'en' : 'es');
+});
 
 /* ===== MOBILE MENU ===== */
 function toggleMenu() {
@@ -93,17 +105,18 @@ function showToast(msg) {
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    var btn = form.querySelector('.form-submit');
+    var isES = !document.body.classList.contains('en');
+    syncLocalizedFormControls(isES ? 'es' : 'en');
+    var btn = form.querySelector('.form-submit[data-lang="' + (isES ? 'es' : 'en') + '"]') || form.querySelector('.form-submit');
     if (btn) { btn.disabled = true; btn.textContent = '...'; }
 
     var data = new FormData(form);
-    fetch('https://maia-management.com/.netlify/functions/contact-form', {
+    fetch(form.getAttribute('action') || '/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(data).toString()
     })
     .then(function(res) {
-      var isES = !document.body.classList.contains('en');
       if (res.ok) {
         showToast(isES
           ? 'Mensaje enviado — te contactaremos pronto.'

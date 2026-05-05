@@ -28,18 +28,24 @@
       "@type": "CollectionPage",
       "@id": "https://maia-botanicas.com/productos.html#webpage",
       "url": "https://maia-botanicas.com/productos.html",
-      "name": "Catálogo de Productos B2B | Maia Botánicas Colombia",
+      "name": "Catálogo de Productos B2B | Maia Botánicas",
       "description": "Concentrados clarificados 65° Brix, jarabes artesanales de coctelería, garnishes deshidratados y Majín. Ingredientes colombianos premium para bares, restaurantes y exportación.",
       "inLanguage": ["es-CO", "en-US"],
       "isPartOf": {"@id": "https://maia-botanicas.com/#website"},
-      "about": {"@id": "https://maia-botanicas.com/#organization"},
-      "primaryImageOfPage": "https://maia-botanicas.com/og-image.jpg",
-      "mainEntity": {"@id": "https://maia-botanicas.com/productos.html#productlist"}
+      "about": {"@id": "https://maia-botanicas.com/#organization"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maia-botanicas.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://maia-botanicas.com/productos.html"}
+      ]
     },
     {
       "@type": "ItemList",
-      "@id": "https://maia-botanicas.com/productos.html#productlist",
-      "name": "Líneas de producto Maia Botánicas",
+      "@id": "https://maia-botanicas.com/productos.html#catalog",
+      "name": "Catálogo Maia Botánicas",
+      "description": "Líneas de producto B2B para coctelería, HORECA y exportación.",
       "numberOfItems": 4,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
@@ -49,12 +55,12 @@
           "item": {
             "@type": "Product",
             "name": "Concentrados Clarificados 65° Brix",
-            "description": "Concentrados de fruta clarificados a 65° Brix con ingredientes colombianos de origen verificable, documentados con COA por lote. Para bares, mixología profesional y exportación.",
-            "category": "Concentrados de fruta / Fruit concentrates",
-            "brand": {"@id": "https://maia-botanicas.com/#organization"},
+            "description": "Concentrados clarificados de hibiscus, lulo andino, maracuyá, guanábana y corozo de pava. Estandarizados a 65° Brix para coctelería y exportación.",
+            "category": "Concentrados de fruta clarificados",
+            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
             "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "url": "https://maia-botanicas.com/productos.html#concentrados",
-            "countryOfOrigin": "CO"
+            "countryOfOrigin": "CO",
+            "url": "https://maia-botanicas.com/productos.html#concentrados"
           }
         },
         {
@@ -63,12 +69,12 @@
           "item": {
             "@type": "Product",
             "name": "Jarabes Artesanales de Coctelería",
-            "description": "Jarabes artesanales para coctelería elaborados con botánicos colombianos: hibiscus, lulo, corozo, guanábana, maracuyá y más.",
-            "category": "Jarabes / Cocktail syrups",
-            "brand": {"@id": "https://maia-botanicas.com/#organization"},
+            "description": "Jarabes Hibiscus & Rosa Andina, Tamarindo y Ají Tropical formulados para bares de autor.",
+            "category": "Jarabes para coctelería",
+            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
             "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "url": "https://maia-botanicas.com/productos.html#syrups",
-            "countryOfOrigin": "CO"
+            "countryOfOrigin": "CO",
+            "url": "https://maia-botanicas.com/productos.html#jarabes"
           }
         },
         {
@@ -77,12 +83,12 @@
           "item": {
             "@type": "Product",
             "name": "Garnishes Deshidratados",
-            "description": "Garnishes deshidratados de frutas y botánicos colombianos para bares de autor, cocinas profesionales y mercados de exportación.",
-            "category": "Garnishes deshidratados / Dehydrated garnishes",
-            "brand": {"@id": "https://maia-botanicas.com/#organization"},
+            "description": "Flores de hibiscus, chips de lulo y mix tropical caribeño deshidratados para guarnición de coctelería y repostería.",
+            "category": "Botánicos deshidratados",
+            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
             "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "url": "https://maia-botanicas.com/productos.html#garnishes",
-            "countryOfOrigin": "CO"
+            "countryOfOrigin": "CO",
+            "url": "https://maia-botanicas.com/productos.html#garnishes"
           }
         },
         {
@@ -91,21 +97,14 @@
           "item": {
             "@type": "Product",
             "name": "Majín — El Tajín Colombiano",
-            "description": "Sazonador de chile y sal con cítricos y botánicos colombianos. Versión local del clásico Tajín, formulada en Santa Marta.",
-            "category": "Sazonadores / Seasoning blends",
-            "brand": {"@id": "https://maia-botanicas.com/#organization"},
+            "description": "Sazonador de chiles, sal y cítricos colombianos. Versión local del clásico Tajín, formulado para escarchados y guarniciones.",
+            "category": "Sazonadores y especias",
+            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
             "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "url": "https://maia-botanicas.com/productos.html#majin",
-            "countryOfOrigin": "CO"
+            "countryOfOrigin": "CO",
+            "url": "https://maia-botanicas.com/productos.html#majin"
           }
         }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maia-botanicas.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://maia-botanicas.com/productos.html"}
       ]
     }
   ]

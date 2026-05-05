@@ -20,98 +20,73 @@
 <meta name="twitter:title" content="Catálogo B2B | Maia Botánicas Colombia">
 <meta name="twitter:description" content="Concentrados clarificados, jarabes artesanales, garnishes y Majín. Botánicos colombianos premium.">
 <meta name="twitter:image" content="https://maia-botanicas.com/og-image.jpg">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "CollectionPage",
-      "@id": "https://maia-botanicas.com/productos.html#webpage",
-      "url": "https://maia-botanicas.com/productos.html",
-      "name": "Catálogo de Productos B2B | Maia Botánicas",
-      "description": "Concentrados clarificados 65° Brix, jarabes artesanales de coctelería, garnishes deshidratados y Majín. Ingredientes colombianos premium para bares, restaurantes y exportación.",
-      "inLanguage": ["es-CO", "en-US"],
-      "isPartOf": {"@id": "https://maia-botanicas.com/#website"},
-      "about": {"@id": "https://maia-botanicas.com/#organization"}
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maia-botanicas.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Productos", "item": "https://maia-botanicas.com/productos.html"}
-      ]
+      "@type": ["Organization", "LocalBusiness", "FoodEstablishment"],
+      "@id": "https://maia-botanicas.com/#organization",
+      "name": "Maia Botánicas",
+      "legalName": "Be Vida Botánicas SAS",
+      "taxID": "901.862.977-7",
+      "url": "https://maia-botanicas.com",
+      "telephone": "+19034598763",
+      "email": "info@maia-botanicas.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 24 #3-99, Edificio Banco de Bogotá, Suite 1102, Level 11",
+        "addressLocality": "Santa Marta",
+        "addressRegion": "Magdalena",
+        "postalCode": "470004",
+        "addressCountry": "CO"
+      },
+      "description": "Fabricante colombiano de jarabes clarificados artesanales, fermentos de precisión y botánicos de exportación. Productos para bares, restaurantes y exportación internacional.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "The Maia Group",
+        "url": "https://the-maia-group.com"
+      }
     },
     {
       "@type": "ItemList",
       "@id": "https://maia-botanicas.com/productos.html#catalog",
-      "name": "Catálogo Maia Botánicas",
-      "description": "Líneas de producto B2B para coctelería, HORECA y exportación.",
+      "name": "Catálogo de Productos B2B — Maia Botánicas",
+      "description": "Concentrados clarificados 65° Brix, jarabes artesanales, garnishes deshidratados y Majín. Ingredientes colombianos premium para bares, restaurantes y exportación.",
+      "url": "https://maia-botanicas.com/productos.html",
       "numberOfItems": 4,
-      "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "item": {
-            "@type": "Product",
-            "name": "Concentrados Clarificados 65° Brix",
-            "description": "Concentrados clarificados de hibiscus, lulo andino, maracuyá, guanábana y corozo de pava. Estandarizados a 65° Brix para coctelería y exportación.",
-            "category": "Concentrados de fruta clarificados",
-            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
-            "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "countryOfOrigin": "CO",
-            "url": "https://maia-botanicas.com/productos.html#concentrados"
-          }
+          "name": "Concentrados Clarificados 65° Brix",
+          "description": "Concentrados de frutas colombianas clarificados a 65° Brix. Hibiscus, lulo, corozo, guanábana, maracuyá."
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "item": {
-            "@type": "Product",
-            "name": "Jarabes Artesanales de Coctelería",
-            "description": "Jarabes Hibiscus & Rosa Andina, Tamarindo y Ají Tropical formulados para bares de autor.",
-            "category": "Jarabes para coctelería",
-            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
-            "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "countryOfOrigin": "CO",
-            "url": "https://maia-botanicas.com/productos.html#jarabes"
-          }
+          "name": "Jarabes Artesanales de Coctelería",
+          "description": "Jarabes artesanales para coctelería premium elaborados con botánicos colombianos."
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "item": {
-            "@type": "Product",
-            "name": "Garnishes Deshidratados",
-            "description": "Flores de hibiscus, chips de lulo y mix tropical caribeño deshidratados para guarnición de coctelería y repostería.",
-            "category": "Botánicos deshidratados",
-            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
-            "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "countryOfOrigin": "CO",
-            "url": "https://maia-botanicas.com/productos.html#garnishes"
-          }
+          "name": "Garnishes Deshidratados",
+          "description": "Garnishes deshidratados para coctelería y gastronomía de alta gama."
         },
         {
           "@type": "ListItem",
           "position": 4,
-          "item": {
-            "@type": "Product",
-            "name": "Majín — El Tajín Colombiano",
-            "description": "Sazonador de chiles, sal y cítricos colombianos. Versión local del clásico Tajín, formulado para escarchados y guarniciones.",
-            "category": "Sazonadores y especias",
-            "brand": {"@type": "Brand", "name": "Maia Botánicas"},
-            "manufacturer": {"@id": "https://maia-botanicas.com/#organization"},
-            "countryOfOrigin": "CO",
-            "url": "https://maia-botanicas.com/productos.html#majin"
-          }
+          "name": "Majín",
+          "description": "Bebida fermentada de precisión. Producto insignia de Maia Botánicas."
         }
       ]
     }
   ]
 }
 </script>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <style>
 /* ===== PRODUCT SPEC CARD ===== */
 .spec-card {

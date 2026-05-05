@@ -31,6 +31,15 @@
   </url>
 
   <url>
+    <loc>https://maia-botanicas.com/mayoreo.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maia-botanicas.com/mayoreo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maia-botanicas.com/mayoreo.html"/>
+  </url>
+
+  <url>
     <loc>https://maia-botanicas.com/proceso.html</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>

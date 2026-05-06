@@ -65,4 +65,22 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://maia-botanicas.com/contacto.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://maia-botanicas.com/contacto.html"/>
   </url>
+
+  <url>
+    <loc>https://maia-botanicas.com/privacy.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maia-botanicas.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maia-botanicas.com/privacy.html"/>
+  </url>
+
+  <url>
+    <loc>https://maia-botanicas.com/terminos.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://maia-botanicas.com/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://maia-botanicas.com/terminos.html"/>
+  </url>
 </urlset>

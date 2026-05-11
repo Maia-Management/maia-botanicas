@@ -27,3 +27,6 @@ build/
 
 # Logs
 *.log
+
+# Claude Code worktrees and local state (must never be committed)
+.claude/

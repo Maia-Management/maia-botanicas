@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -85,11 +85,11 @@
     </ul>
     <div class="nav-sep"></div>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+      <button type="button" class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
+      <button type="button" class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
   </div>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
+  <button type="button" class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
     </svg>
@@ -123,8 +123,8 @@
           <div class="contact-detail">
             <div class="contact-detail-icon">📧</div>
             <div class="contact-detail-text">
-              <h4 data-lang="es">Correo electrónico</h4>
-              <h4 data-lang="en">Email</h4>
+              <h3 data-lang="es">Correo electrónico</h3>
+              <h3 data-lang="en">Email</h3>
               <a href="mailto:info@maia-botanicas.com">info@maia-botanicas.com</a>
             </div>
           </div>
@@ -132,8 +132,8 @@
           <div class="contact-detail">
             <div class="contact-detail-icon">📍</div>
             <div class="contact-detail-text">
-              <h4 data-lang="es">Ubicación</h4>
-              <h4 data-lang="en">Location</h4>
+              <h3 data-lang="es">Ubicación</h3>
+              <h3 data-lang="en">Location</h3>
               <p data-lang="es">Santa Marta, Magdalena<br>Colombia</p>
               <p data-lang="en">Santa Marta, Magdalena<br>Colombia</p>
             </div>
@@ -142,8 +142,8 @@
           <div class="contact-detail">
             <div class="contact-detail-icon">⏱️</div>
             <div class="contact-detail-text">
-              <h4 data-lang="es">Tiempo de respuesta</h4>
-              <h4 data-lang="en">Response time</h4>
+              <h3 data-lang="es">Tiempo de respuesta</h3>
+              <h3 data-lang="en">Response time</h3>
               <p data-lang="es">Menos de 24 horas hábiles</p>
               <p data-lang="en">Less than 24 business hours</p>
             </div>
@@ -152,8 +152,8 @@
           <div class="contact-detail">
             <div class="contact-detail-icon">🌐</div>
             <div class="contact-detail-text">
-              <h4 data-lang="es">Idiomas</h4>
-              <h4 data-lang="en">Languages</h4>
+              <h3 data-lang="es">Idiomas</h3>
+              <h3 data-lang="en">Languages</h3>
               <p data-lang="es">Español · English</p>
               <p data-lang="en">Español · English</p>
             </div>
@@ -163,14 +163,14 @@
         <a href="https://wa.me/19034598763?text=Hola!%20Me%20interesa%20Maia%20Bot%C3%A1nicas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener" class="wa-cta" data-lang="es">
           <span class="wa-cta-icon">💬</span>
           <div class="wa-cta-text">
-            <h4>WhatsApp Directo</h4>
+            <h3>WhatsApp Directo</h3>
             <p>Respuesta inmediata en horario laboral</p>
           </div>
         </a>
         <a href="https://wa.me/19034598763?text=Hi!%20I%27m%20interested%20in%20Maia%20Bot%C3%A1nicas%2C%20I%27d%20like%20more%20information." target="_blank" rel="noopener" class="wa-cta" data-lang="en">
           <span class="wa-cta-icon">💬</span>
           <div class="wa-cta-text">
-            <h4>WhatsApp Direct</h4>
+            <h3>WhatsApp Direct</h3>
             <p>Immediate response during business hours</p>
           </div>
         </a>
@@ -216,7 +216,7 @@
           <input type="hidden" name="form-name" value="maia-botanicas-contact">
           <input type="hidden" name="source" value="maia-botanicas">
           <p hidden>
-            <label>No completar este campo <input name="bot-field" autocomplete="off" tabindex="-1"></label>
+            <label>No completar este campo <input type="text" name="bot-field" autocomplete="off" tabindex="-1"></label>
           </p>
 
           <div class="form-row">
@@ -400,8 +400,8 @@
       <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#c8a45c;">Privacy policy</a>.</span>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-      <button onclick="MB_consentAccept()" style="background:#8a641f;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
-      <button onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
+      <button type="button" onclick="MB_consentAccept()" style="background:#8a641f;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
+      <button type="button" onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
     </div>
   </div>
 </div>

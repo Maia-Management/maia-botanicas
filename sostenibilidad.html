@@ -84,11 +84,11 @@
     </ul>
     <div class="nav-sep"></div>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+      <button type="button" class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
+      <button type="button" class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
   </div>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
+  <button type="button" class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
     </svg>
@@ -443,12 +443,12 @@
 <div id="mb-consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a3a2a;color:#fff;padding:16px 24px;z-index:10001;box-shadow:0 -2px 12px rgba(0,0,0,0.3);font-family:Inter,sans-serif;font-size:13px;line-height:1.5;">
   <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;">
     <div style="flex:1;min-width:200px;">
-      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#B87333;">Política de privacidad</a>.</span>
-      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#B87333;">Privacy policy</a>.</span>
+      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#F2C879;">Política de privacidad</a>.</span>
+      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#F2C879;">Privacy policy</a>.</span>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-      <button onclick="MB_consentAccept()" style="background:#B87333;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
-      <button onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
+      <button type="button" onclick="MB_consentAccept()" style="background:#6F4019;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
+      <button type="button" onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
     </div>
   </div>
 </div>

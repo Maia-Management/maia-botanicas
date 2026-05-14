@@ -82,7 +82,7 @@
 
 <!-- ===== NAV ===== -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo" aria-label="Maia Botánicas — Inicio">
+  <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">
       <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" stroke="#B87333" stroke-width="1.4" fill="none"/>
@@ -108,16 +108,18 @@
     </ul>
     <div class="nav-sep"></div>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+      <button type="button" class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
+      <button type="button" class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
   </div>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
+  <button type="button" class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
     </svg>
   </button>
 </nav>
+
+<main id="main-content">
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -144,7 +146,7 @@
       <div class="hero-stats">
 
 
-<figure style="margin:2rem 0 0;border-radius:12px;overflow:hidden;max-height:380px;"><img src="assets/images/hibiscus-harvest.png" alt="Hibiscus harvest - Maia Botanicas" style="width:100%;object-fit:cover;display:block;" loading="eager"></figure>
+<figure style="margin:2rem 0 0;border-radius:12px;overflow:hidden;max-height:380px;"><img src="assets/images/hibiscus-harvest.webp" alt="Hibiscus harvest - Maia Botanicas" style="width:100%;object-fit:cover;display:block;" loading="eager" width="1024" height="1024"></figure>
         <div class="hero-stat">
           <span class="hero-stat-num">65°</span>
           <span class="hero-stat-label" data-lang="es">Brix concentrado</span>
@@ -164,12 +166,12 @@
     </div>
 
     <div class="hero-visual">
-      <img src="images/botanicas-syrup-hero.png" alt="Artisan cocktail syrups in amber bottles with Colombian tropical fruits" class="hero-visual-img" style="width:100%;border-radius:12px;margin-bottom:1.5rem;object-fit:cover;max-height:340px;" loading="eager" />
+      <img src="images/botanicas-syrup-hero.webp" alt="Artisan cocktail syrups in amber bottles with Colombian tropical fruits" class="hero-visual-img" style="width:100%;border-radius:12px;margin-bottom:1.5rem;object-fit:cover;max-height:340px;" loading="eager" width="1200" height="686" />
       <div class="hero-visual-card">
         <div class="hero-visual-icon">🌺</div>
         <div class="hero-visual-text">
-          <h4 data-lang="es">Concentrados Clarificados 65° Brix</h4>
-          <h4 data-lang="en">Clarified Concentrates 65° Brix</h4>
+          <div class="hero-visual-title" data-lang="es">Concentrados Clarificados 65° Brix</div>
+          <div class="hero-visual-title" data-lang="en">Clarified Concentrates 65° Brix</div>
           <p data-lang="es">Hibiscus, lulo, guanábana, corozo, maracuyá y más</p>
           <p data-lang="en">Hibiscus, lulo, soursop, corozo, passion fruit and more</p>
         </div>
@@ -177,8 +179,8 @@
       <div class="hero-visual-card">
         <div class="hero-visual-icon">🫙</div>
         <div class="hero-visual-text">
-          <h4 data-lang="es">Jarabes Artesanales de Coctelería</h4>
-          <h4 data-lang="en">Artisanal Cocktail Syrups</h4>
+          <div class="hero-visual-title" data-lang="es">Jarabes Artesanales de Coctelería</div>
+          <div class="hero-visual-title" data-lang="en">Artisanal Cocktail Syrups</div>
           <p data-lang="es">Formulados para bares, hoteles y programas premium</p>
           <p data-lang="en">Formulated for bars, hotels and premium programmes</p>
         </div>
@@ -186,8 +188,8 @@
       <div class="hero-visual-card">
         <div class="hero-visual-icon">🌿</div>
         <div class="hero-visual-text">
-          <h4 data-lang="es">Garnishes Deshidratados</h4>
-          <h4 data-lang="en">Dehydrated Garnishes</h4>
+          <div class="hero-visual-title" data-lang="es">Garnishes Deshidratados</div>
+          <div class="hero-visual-title" data-lang="en">Dehydrated Garnishes</div>
           <p data-lang="es">Decoraciones de barra de origen tropical colombiano</p>
           <p data-lang="en">Tropical-origin bar decorations from Colombia</p>
         </div>
@@ -195,8 +197,8 @@
       <div class="hero-visual-card">
         <div class="hero-visual-icon">🌶️</div>
         <div class="hero-visual-text">
-          <h4 data-lang="es">Majín — El Tajín Colombiano</h4>
-          <h4 data-lang="en">Majín — The Colombian Tajín</h4>
+          <div class="hero-visual-title" data-lang="es">Majín — El Tajín Colombiano</div>
+          <div class="hero-visual-title" data-lang="en">Majín — The Colombian Tajín</div>
           <p data-lang="es">Sazonador tropical de chile y limón, propiedad nuestra</p>
           <p data-lang="en">Tropical chili-lime seasoning, proprietary recipe</p>
         </div>
@@ -210,9 +212,9 @@
 <section style="background:#f8f4ef;padding:4rem 2.5rem;">
   <div class="section-inner" style="max-width:1200px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
-      <img src="images/botanicas-black-garlic.png" alt="Black garlic bulbs — premium bar ingredient by Maia Botanicas" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" />
-      <img src="images/botanicas-flatlay.png" alt="Premium bar ingredients flat-lay: syrups, botanicals and tropical fruits" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" />
-      <img src="images/botanicas-bar-lifestyle.png" alt="Bartender crafting cocktails with Maia Botanicas house-made syrups at golden hour" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" />
+      <img src="images/botanicas-black-garlic.webp" alt="Black garlic bulbs — premium bar ingredient by Maia Botanicas" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" width="1000" height="571" />
+      <img src="images/botanicas-flatlay.webp" alt="Premium bar ingredients flat-lay: syrups, botanicals and tropical fruits" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" width="1000" height="571" />
+      <img src="images/botanicas-bar-lifestyle.webp" alt="Bartender crafting cocktails with Maia Botanicas house-made syrups at golden hour" style="width:100%;border-radius:10px;object-fit:cover;height:260px;" loading="lazy" width="1000" height="571" />
     </div>
   </div>
 </section>
@@ -416,6 +418,8 @@
 </div>
 
 <!-- ===== FOOTER ===== -->
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -429,13 +433,13 @@
           </div>
           <span class="footer-brand-name">Maia Botánicas</span>
         </div>
-        <p data-lang="es">Colombia's Botanical Intelligence. Parte de <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:none;">The Maia Group</a> — Santa Marta, Colombia.</p>
-        <p data-lang="en">Colombia's Botanical Intelligence. Part of <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:none;">The Maia Group</a> — Santa Marta, Colombia.</p>
+        <p data-lang="es">Colombia's Botanical Intelligence. Parte de <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;">The Maia Group</a> — Santa Marta, Colombia.</p>
+        <p data-lang="en">Colombia's Botanical Intelligence. Part of <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;">The Maia Group</a> — Santa Marta, Colombia.</p>
       </div>
 
       <div class="footer-col">
-        <h4 data-lang="es">Productos</h4>
-        <h4 data-lang="en">Products</h4>
+        <div class="footer-title" data-lang="es">Productos</div>
+        <div class="footer-title" data-lang="en">Products</div>
         <ul>
           <li><a href="productos.html#concentrados" data-lang="es">Concentrados Clarificados</a><a href="productos.html#concentrados" data-lang="en">Clarified Concentrates</a></li>
           <li><a href="productos.html#syrups" data-lang="es">Jarabes Artesanales</a><a href="productos.html#syrups" data-lang="en">Artisanal Syrups</a></li>
@@ -445,8 +449,8 @@
       </div>
 
       <div class="footer-col">
-        <h4 data-lang="es">Empresa</h4>
-        <h4 data-lang="en">Company</h4>
+        <div class="footer-title" data-lang="es">Empresa</div>
+        <div class="footer-title" data-lang="en">Company</div>
         <ul>
           <li><a href="nosotros.html" data-lang="es">Nosotros</a><a href="nosotros.html" data-lang="en">About</a></li>
           <li><a href="sostenibilidad.html" data-lang="es">Sostenibilidad</a><a href="sostenibilidad.html" data-lang="en">Sustainability</a></li>
@@ -456,8 +460,8 @@
       </div>
 
       <div class="footer-col">
-        <h4 data-lang="es">The Maia Group</h4>
-        <h4 data-lang="en">The Maia Group</h4>
+        <div class="footer-title" data-lang="es">The Maia Group</div>
+        <div class="footer-title" data-lang="en">The Maia Group</div>
         <ul>
           <li><a href="https://the-maia-group.com" target="_blank" rel="noopener">The Maia Group</a></li>
           <li><a href="https://maia-legal.com" target="_blank" rel="noopener" data-lang="es">Legal</a><a href="https://maia-legal.com" target="_blank" rel="noopener" data-lang="en">Legal</a></li>
@@ -467,8 +471,8 @@
       </div>
 
       <div class="footer-col">
-        <h4 data-lang="es">Contacto</h4>
-        <h4 data-lang="en">Contact</h4>
+        <div class="footer-title" data-lang="es">Contacto</div>
+        <div class="footer-title" data-lang="en">Contact</div>
         <ul>
           <li><a href="mailto:info@maia-botanicas.com">info@maia-botanicas.com</a></li>
           <li><a href="tel:+19034598763">+1 903 459 8763</a></li>
@@ -511,12 +515,12 @@
 <div id="mb-consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a3a2a;color:#fff;padding:16px 24px;z-index:10001;box-shadow:0 -2px 12px rgba(0,0,0,0.3);font-family:Inter,sans-serif;font-size:13px;line-height:1.5;">
   <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;">
     <div style="flex:1;min-width:200px;">
-      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#B87333;">Política de privacidad</a>.</span>
-      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#B87333;">Privacy policy</a>.</span>
+      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#F2C879;">Política de privacidad</a>.</span>
+      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#F2C879;">Privacy policy</a>.</span>
     </div>
     <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-      <button onclick="MB_consentAccept()" style="background:#B87333;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
-      <button onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
+      <button type="button" onclick="MB_consentAccept()" style="background:#6F4019;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
+      <button type="button" onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
     </div>
   </div>
 </div>

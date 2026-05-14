@@ -22,6 +22,60 @@
   force = true
 
 [[redirects]]
+  from = "/assets/images/hibiscus-harvest.png"
+  to = "/assets/images/hibiscus-harvest.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/assets/images/lulo-fruit.png"
+  to = "/assets/images/lulo-fruit.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/assets/images/corozo-berries.png"
+  to = "/assets/images/corozo-berries.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/assets/images/concentrates-lab.png"
+  to = "/assets/images/concentrates-lab.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/botanicas-syrup-hero.png"
+  to = "/images/botanicas-syrup-hero.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/botanicas-black-garlic.png"
+  to = "/images/botanicas-black-garlic.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/botanicas-flatlay.png"
+  to = "/images/botanicas-flatlay.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/botanicas-bar-lifestyle.png"
+  to = "/images/botanicas-bar-lifestyle.webp"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/images/2026-04-25_maia-botanicas_imagen_botanical-ingredient-flatlay.png"
+  to = "/images/2026-04-25_maia-botanicas_imagen_botanical-ingredient-flatlay.webp"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
@@ -102,7 +156,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://maia-management.com; frame-src 'none'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com https://www.google.com.co; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.google.com https://www.google.com.co https://maia-management.com; frame-src 'none'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests"
 
 [[headers]]
   for = "/*.css"

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -91,7 +91,7 @@
   display:flex; align-items:center; justify-content:center;
   font-size:1.25rem; flex-shrink:0;
 }
-.cert-item-body h4 { font-family:var(--mono); font-size:0.72rem; font-weight:700; color:var(--forest); letter-spacing:0.03em; margin-bottom:0.3rem; }
+.cert-item-body h3 { font-family:var(--mono); font-size:0.72rem; font-weight:700; color:var(--forest); letter-spacing:0.03em; margin-bottom:0.3rem; }
 .cert-item-body p { font-size:0.82rem; color:var(--ink-3); line-height:1.6; }
 .cert-status-active { color:#1a6b33; font-family:var(--mono); font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; }
 .cert-status-pending { color:var(--muted); font-family:var(--mono); font-size:0.6rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
@@ -101,7 +101,7 @@
 
 <!-- ===== NAV ===== -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo" aria-label="Maia Botánicas — Inicio">
+  <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">
       <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" stroke="#B87333" stroke-width="1.4" fill="none"/>
@@ -127,16 +127,18 @@
     </ul>
     <div class="nav-sep"></div>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
+      <button type="button" class="lang-btn active" id="btnES" onclick="setLang('es')">ES</button>
+      <button type="button" class="lang-btn" id="btnEN" onclick="setLang('en')">EN</button>
     </div>
   </div>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
+  <button type="button" class="mobile-toggle" onclick="toggleMenu()" aria-label="Menú">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
       <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
     </svg>
   </button>
 </nav>
+
+<main id="main-content">
 
 <!-- ===== HERO ===== -->
 <div class="about-hero">
@@ -369,7 +371,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">🇨🇴</div>
         <div class="cert-item-body">
-          <h4>INVIMA — Instituto Nacional de Vigilancia de Medicamentos y Alimentos</h4>
+          <h3>INVIMA — Instituto Nacional de Vigilancia de Medicamentos y Alimentos</h3>
           <p data-lang="es">Registro sanitario vigente. El INVIMA es el equivalente colombiano a la FDA — garantiza que nuestros productos cumplen los estándares de inocuidad alimentaria para comercialización en Colombia y exportación.</p>
           <p data-lang="en">Active sanitary registration. INVIMA is Colombia's FDA equivalent — certifies that our products meet food safety standards for commercialisation in Colombia and export.</p>
           <div class="cert-status-active" data-lang="es">✓ ACTIVO</div>
@@ -379,7 +381,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">🏭</div>
         <div class="cert-item-body">
-          <h4>BPM / GMP — Buenas Prácticas de Manufactura</h4>
+          <h3>BPM / GMP — Buenas Prácticas de Manufactura</h3>
           <p data-lang="es">Nuestro proceso productivo cumple con Buenas Prácticas de Manufactura según normativa colombiana (Decreto 3075). Control de calidad documentado en cada lote, trazabilidad completa desde materia prima hasta producto terminado.</p>
           <p data-lang="en">Our production process complies with Good Manufacturing Practices under Colombian regulation (Decree 3075). Documented quality control on every batch, full traceability from raw material to finished product.</p>
           <div class="cert-status-active" data-lang="es">✓ ACTIVO</div>
@@ -389,7 +391,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">⚠️</div>
         <div class="cert-item-body">
-          <h4>HACCP — Hazard Analysis Critical Control Points</h4>
+          <h3>HACCP — Hazard Analysis Critical Control Points</h3>
           <p data-lang="es">Sistema HACCP implementado en toda la cadena de producción. Análisis de puntos críticos de control para prevención de riesgos biológicos, químicos y físicos en cada etapa del proceso.</p>
           <p data-lang="en">HACCP system implemented across the entire production chain. Critical control point analysis for prevention of biological, chemical and physical hazards at every stage of the process.</p>
           <div class="cert-status-active" data-lang="es">✓ IMPLEMENTADO</div>
@@ -399,7 +401,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">🌿</div>
         <div class="cert-item-body">
-          <h4>ISO 22000 — Food Safety Management</h4>
+          <h3>ISO 22000 — Food Safety Management</h3>
           <p data-lang="es">En proceso de certificación ISO 22000:2018. Estándar internacional de gestión de seguridad alimentaria exigido por la mayoría de distribuidores HORECA europeos y estadounidenses para proveedores de ingredientes.</p>
           <p data-lang="en">ISO 22000:2018 certification in progress. International food safety management standard required by most European and US HORECA distributors for ingredient suppliers.</p>
           <div class="cert-status-pending" data-lang="es">⏳ EN PROCESO — 2026</div>
@@ -409,7 +411,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">☘️</div>
         <div class="cert-item-body">
-          <h4>USDA Organic / EU Organic</h4>
+          <h3>USDA Organic / EU Organic</h3>
           <p data-lang="es">Certificación orgánica en proceso para línea de concentrados clarificados. Auditoría por organismo acreditado (Ecocert / Control Union) contra NOP de USDA y Reglamento CE 2018/848. Prevista finalización Q4 2026.</p>
           <p data-lang="en">Organic certification in process for clarified concentrates line. Audit by accredited body (Ecocert / Control Union) against USDA NOP and EU Regulation 2018/848. Expected completion Q4 2026.</p>
           <div class="cert-status-pending" data-lang="es">⏳ EN PROCESO — Q4 2026</div>
@@ -419,7 +421,7 @@
       <div class="cert-item">
         <div class="cert-item-icon">✡️</div>
         <div class="cert-item-body">
-          <h4>Kosher</h4>
+          <h3>Kosher</h3>
           <p data-lang="es">Certificación Kosher disponible para línea de concentrados clarificados y jarabes artesanales. Relevante para distribuidores en USA (mercado judío de $12B) y UAE (mercados de interfaz con Israel post-Abraham Accords).</p>
           <p data-lang="en">Kosher certification available for clarified concentrates and artisanal syrups lines. Relevant for US distributors ($12B Jewish market) and UAE (Israel interface markets post-Abraham Accords).</p>
           <div class="cert-status-active" data-lang="es">✓ DISPONIBLE</div>
@@ -449,6 +451,8 @@
 </div>
 
 <!-- ===== FOOTER ===== -->
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -462,11 +466,11 @@
           </div>
           <span class="footer-brand-name">Maia Botánicas</span>
         </div>
-        <p data-lang="es">Parte de <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:none;">The Maia Group</a> — Santa Marta, Colombia.</p>
-        <p data-lang="en">Part of <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:none;">The Maia Group</a> — Santa Marta, Colombia.</p>
+        <p data-lang="es">Parte de <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;">The Maia Group</a> — Santa Marta, Colombia.</p>
+        <p data-lang="en">Part of <a href="https://the-maia-group.com" target="_blank" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;">The Maia Group</a> — Santa Marta, Colombia.</p>
       </div>
       <div class="footer-col">
-        <h4 data-lang="es">Productos</h4><h4 data-lang="en">Products</h4>
+        <div class="footer-title" data-lang="es">Productos</div><div class="footer-title" data-lang="en">Products</div>
         <ul>
           <li><a href="productos.html#concentrados" data-lang="es">Concentrados</a><a href="productos.html#concentrados" data-lang="en">Concentrates</a></li>
           <li><a href="productos.html#syrups" data-lang="es">Jarabes</a><a href="productos.html#syrups" data-lang="en">Syrups</a></li>
@@ -475,7 +479,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-lang="es">Empresa</h4><h4 data-lang="en">Company</h4>
+        <div class="footer-title" data-lang="es">Empresa</div><div class="footer-title" data-lang="en">Company</div>
         <ul>
           <li><a href="nosotros.html" data-lang="es">Nosotros</a><a href="nosotros.html" data-lang="en">About</a></li>
           <li><a href="sostenibilidad.html" data-lang="es">Sostenibilidad</a><a href="sostenibilidad.html" data-lang="en">Sustainability</a></li>
@@ -484,7 +488,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-lang="es">The Maia Group</h4><h4 data-lang="en">The Maia Group</h4>
+        <div class="footer-title" data-lang="es">The Maia Group</div><div class="footer-title" data-lang="en">The Maia Group</div>
         <ul>
           <li><a href="https://the-maia-group.com" target="_blank" rel="noopener">The Maia Group</a></li>
           <li><a href="https://lleva-lleva.com" target="_blank" rel="noopener">LlevaLleva</a></li>
@@ -493,7 +497,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-lang="es">Contacto</h4><h4 data-lang="en">Contact</h4>
+        <div class="footer-title" data-lang="es">Contacto</div><div class="footer-title" data-lang="en">Contact</div>
         <ul>
           <li><a href="mailto:info@maia-botanicas.com">info@maia-botanicas.com</a></li>
           <li><a href="tel:+19034598763">+1 903 459 8763</a></li>

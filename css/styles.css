@@ -210,7 +210,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .section-inner { max-width: 1080px; margin: 0 auto; }
 
 .section-label {
-  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--mono);
   font-size: 0.875rem !important;
   font-weight: 600 !important;
@@ -372,7 +372,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
 }
 .hero-tag {
-  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--mono);
   font-size: 0.875rem !important;
   font-weight: 600 !important;
@@ -558,7 +558,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .about-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
-  display: inline-flex !important; font-family: var(--mono);
+  display: inline-flex; font-family: var(--mono);
   font-size: 0.875rem !important;
   font-weight: 600 !important;
   color: #F5E6D3 !important;
@@ -643,7 +643,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .product-inner { max-width: 1080px; margin: 0 auto; }
 .product-header { margin-bottom: 2.5rem; }
 .product-label {
-  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--mono);
   font-size: 0.875rem !important;
   font-weight: 600 !important;

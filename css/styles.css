@@ -118,6 +118,12 @@ nav.scrolled {
   display: flex; align-items: center; gap: 0.75rem;
   text-decoration: none; flex-shrink: 0;
 }
+
+/* Desktop: keep nav-links, separator and lang-toggle on one row */
+.nav-center {
+  display: flex; align-items: center; gap: 0;
+  flex-wrap: nowrap;
+}
 .nav-logo-mark {
   width: 36px; height: 36px; background: var(--forest);
   border-radius: 8px; display: flex; align-items: center; justify-content: center;
@@ -201,9 +207,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 .section-label {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 0.85rem;
+  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 0.95rem;
 }
 .section-label::before {
   content: ''; width: 18px; height: 1px; background: var(--gold);
@@ -359,12 +365,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 }
 .hero-tag {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
+  color: var(--cream); letter-spacing: 0.09em; text-transform: uppercase;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(200,164,92,0.3);
-  padding: 0.35rem 0.75rem; border-radius: 4px;
-  background: rgba(200,164,92,0.06);
+  border: 1px solid rgba(242,200,121,0.45);
+  padding: 0.42rem 0.85rem; border-radius: 4px;
+  background: rgba(242,200,121,0.10);
 }
 .hero-tag-dot {
   width: 6px; height: 6px; background: var(--gold);
@@ -406,9 +412,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   color: var(--gold); line-height: 1; display: block;
 }
 .hero-stat-label {
-  font-family: var(--mono); font-size: 0.6rem; font-weight: 500;
-  color: rgba(250,248,245,0.5); letter-spacing: 0.08em;
-  text-transform: uppercase; margin-top: 0.35rem; display: block;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+  color: rgba(245,239,224,0.88); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-top: 0.4rem; display: block;
 }
 
 /* Hero right side: product showcase */
@@ -480,7 +486,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 /* ===== WHY MAIA SECTION ===== */
 .why-section { background: var(--forest); }
-.why-section .section-label,
+.why-section .section-label { color: var(--cream) !important; }
 .why-section .section-title em { color: var(--gold-2) !important; }
 .why-section .section-label::before {
   background: var(--gold-2);
@@ -498,8 +504,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 }
 .why-item:hover { background: rgba(200,164,92,0.06); }
 .why-item-num {
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--gold-2); letter-spacing: 0.08em; margin-bottom: 1rem;
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 700;
+  color: var(--cream); letter-spacing: 0.08em; margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 .why-item h3 {
   font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
@@ -539,11 +546,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .about-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
-  display: inline-flex; font-family: var(--mono); font-size: 0.65rem;
-  color: var(--gold-2); letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 1.25rem; padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(212,181,116,0.45);
-  border-radius: 4px; background: rgba(212,181,116,0.10);
+  display: inline-flex; font-family: var(--mono);
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--cream); letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 1.25rem; padding: 0.42rem 0.85rem;
+  border: 1px solid rgba(242,200,121,0.55);
+  border-radius: 4px; background: rgba(242,200,121,0.12);
 }
 
 .about-metrics {
@@ -559,9 +567,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   color: var(--gold-2); display: block; line-height: 1;
 }
 .about-metric-label {
-  font-family: var(--mono); font-size: 0.62rem; color: rgba(250,248,245,0.84);
-  letter-spacing: 0.08em; text-transform: uppercase;
-  margin-top: 0.35rem; display: block;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+  color: rgba(245,239,224,0.92); letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: 0.4rem; display: block;
 }
 
 @media (max-width: 860px) {
@@ -621,9 +629,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .product-header { margin-bottom: 2.5rem; }
 .product-label {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 0.65rem;
+  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 .product-label::before { content: ''; width: 16px; height: 1px; background: var(--gold); }
 .product-header h2 {
@@ -701,7 +709,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   color: var(--cream); margin-bottom: 0.5rem;
 }
 .custom-box p { color: rgba(250,248,245,0.86) !important; font-size: 0.9rem; line-height: 1.7; }
-.custom-box .product-label { color: var(--gold-2); }
+.custom-box .product-label { color: var(--cream); }
 .custom-box .product-label::before { background: var(--gold-2); }
 
 @media (max-width: 640px) {
@@ -842,9 +850,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   color: var(--forest); display: block; line-height: 1;
 }
 .impact-desc {
-  font-family: var(--mono); font-size: 0.62rem; color: var(--muted);
-  letter-spacing: 0.06em; text-transform: uppercase;
-  margin-top: 0.4rem; display: block; line-height: 1.4;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+  color: var(--forest); letter-spacing: 0.07em; text-transform: uppercase;
+  margin-top: 0.5rem; display: block; line-height: 1.4;
 }
 
 @media (max-width: 760px) {
@@ -914,9 +922,9 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 }
 .contact-detail-text h4,
 .contact-detail-text h3 {
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase;
-  margin-bottom: 0.2rem;
+  font-family: var(--mono); font-size: 0.75rem; font-weight: 700;
+  color: var(--forest); letter-spacing: 0.07em; text-transform: uppercase;
+  margin-bottom: 0.25rem;
 }
 .contact-detail-text a, .contact-detail-text p {
   font-size: 0.9rem; color: var(--forest); font-weight: 600;
@@ -950,8 +958,8 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
 .form-group label {
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 500;
-  color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 0.75rem; font-weight: 700;
+  color: var(--forest); letter-spacing: 0.07em; text-transform: uppercase;
 }
 .form-group input, .form-group select, .form-group textarea {
   padding: 0.75rem 1rem; border: 1.5px solid var(--cream-3);
@@ -1013,8 +1021,8 @@ footer {
 }
 .footer-col h4,
 .footer-title {
-  font-family: var(--mono); font-size: 0.65rem; font-weight: 600;
-  color: var(--gold-2); letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 700;
+  color: var(--cream); letter-spacing: 0.09em; text-transform: uppercase;
   margin-bottom: 1rem;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }

@@ -50,19 +50,42 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
 <style>
-.moq-table { width:100%; border-collapse:collapse; margin-top:1.5rem; }
+/* B2B MOQ table — premium wrapper with rounded corners, shadow, zebra striping */
+.moq-wrap {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(45,80,22,0.08), 0 1px 4px rgba(45,80,22,0.05);
+  border: 1px solid rgba(45,80,22,0.08);
+}
+.moq-table {
+  width: 100%; border-collapse: collapse; margin: 0;
+  font-family: var(--sans);
+}
 .moq-table th {
-  background:var(--forest); color:var(--cream);
-  padding:0.85rem 1.25rem; font-family:var(--mono); font-size:0.65rem;
-  font-weight:600; letter-spacing:0.06em; text-transform:uppercase; text-align:left;
+  background: var(--forest); color: var(--cream);
+  padding: 1.15rem 1.35rem;
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; text-align: left;
+  border: none;
 }
 .moq-table td {
-  padding:0.85rem 1.25rem; border-bottom:1px solid var(--cream-3);
-  font-size:0.85rem; color:var(--ink-3); vertical-align:middle;
+  padding: 1.1rem 1.35rem;
+  border-bottom: 1px solid rgba(45,80,22,0.08);
+  font-size: 0.92rem; color: var(--ink-2); vertical-align: middle;
+  border-left: none; border-right: none;
+  line-height: 1.55;
 }
-.moq-table tr:last-child td { border-bottom:none; }
-.moq-table tr:nth-child(even) td { background:var(--cream-2); }
-.moq-val { font-family:var(--mono); font-weight:600; color:var(--forest); font-size:0.82rem; }
+.moq-table tbody tr { background: white; }
+.moq-table tbody tr:nth-child(even) { background: #FBF9F5; }
+.moq-table tbody tr:last-child td { border-bottom: none; }
+.moq-table tbody tr:hover { background: rgba(245,230,211,0.35); }
+.moq-val {
+  font-family: var(--mono); font-weight: 700;
+  color: var(--forest); font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
 
 .market-card {
   background:white; border:1px solid var(--cream-3);
@@ -240,7 +263,7 @@
       <p class="section-sub" data-lang="en">Final prices and terms subject to volume, destination and customisation. Contact for formal quotation.</p>
     </div>
 
-    <div class="table-wrap reveal" style="margin-top:2rem;">
+    <div class="moq-wrap reveal">
       <table class="moq-table">
         <thead>
           <tr>

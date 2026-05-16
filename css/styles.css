@@ -119,10 +119,14 @@ nav.scrolled {
   text-decoration: none; flex-shrink: 0;
 }
 
-/* Desktop: keep nav-links, separator and lang-toggle on one row */
+/* Desktop: keep nav-links, separator and lang-toggle on one row.
+   IMPORTANT: do not !important the display rule here — the mobile media
+   query at the bottom of nav section needs to override to display:none. */
 .nav-center {
-  display: flex; align-items: center; gap: 0;
+  display: flex;
+  align-items: center;
   flex-wrap: nowrap;
+  gap: 0;
 }
 .nav-logo-mark {
   width: 36px; height: 36px; background: var(--forest);
@@ -206,10 +210,10 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .section-inner { max-width: 1080px; margin: 0 auto; }
 
 .section-label {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
-  color: var(--gold); letter-spacing: 0.09em; text-transform: uppercase;
-  margin-bottom: 0.95rem;
+  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
+  color: var(--gold) !important; letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 .section-label::before {
   content: ''; width: 18px; height: 1px; background: var(--gold);
@@ -364,13 +368,13 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
 }
 .hero-tag {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
-  color: var(--cream); letter-spacing: 0.09em; text-transform: uppercase;
+  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
+  color: #F5E6D3 !important; letter-spacing: 0.09em; text-transform: uppercase;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(242,200,121,0.45);
-  padding: 0.42rem 0.85rem; border-radius: 4px;
-  background: rgba(242,200,121,0.10);
+  border: 1px solid rgba(245,230,211,0.55);
+  padding: 0.5rem 0.95rem; border-radius: 4px;
+  background: rgba(245,230,211,0.10);
 }
 .hero-tag-dot {
   width: 6px; height: 6px; background: var(--gold);
@@ -486,7 +490,7 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 /* ===== WHY MAIA SECTION ===== */
 .why-section { background: var(--forest); }
-.why-section .section-label { color: var(--cream) !important; }
+.why-section .section-label { color: #F5E6D3 !important; }
 .why-section .section-title em { color: var(--gold-2) !important; }
 .why-section .section-label::before {
   background: var(--gold-2);
@@ -546,12 +550,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .about-hero [role="heading"][aria-level="1"] em { color: var(--gold-2); font-style: italic; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
-  display: inline-flex; font-family: var(--mono);
-  font-size: 0.8rem; font-weight: 700;
-  color: var(--cream); letter-spacing: 0.09em; text-transform: uppercase;
-  margin-bottom: 1.25rem; padding: 0.42rem 0.85rem;
-  border: 1px solid rgba(242,200,121,0.55);
-  border-radius: 4px; background: rgba(242,200,121,0.12);
+  display: inline-flex !important; font-family: var(--mono);
+  font-size: 0.85rem !important; font-weight: 700 !important;
+  color: #F5E6D3 !important; letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 1.25rem; padding: 0.5rem 0.95rem;
+  border: 1px solid rgba(245,230,211,0.55);
+  border-radius: 4px; background: rgba(245,230,211,0.10);
 }
 
 .about-metrics {
@@ -628,10 +632,10 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .product-inner { max-width: 1080px; margin: 0 auto; }
 .product-header { margin-bottom: 2.5rem; }
 .product-label {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
-  color: var(--gold); letter-spacing: 0.09em; text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  display: inline-flex !important; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
+  color: var(--gold) !important; letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 0.85rem;
 }
 .product-label::before { content: ''; width: 16px; height: 1px; background: var(--gold); }
 .product-header h2 {

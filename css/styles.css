@@ -211,8 +211,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 
 .section-label {
   display: inline-flex !important; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
-  color: var(--gold) !important; letter-spacing: 0.09em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: var(--gold) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 .section-label::before {
@@ -369,8 +373,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 }
 .hero-tag {
   display: inline-flex !important; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
-  color: #F5E6D3 !important; letter-spacing: 0.09em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #F5E6D3 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(245,230,211,0.55);
   padding: 0.5rem 0.95rem; border-radius: 4px;
@@ -551,8 +559,11 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .about-hero p { color: rgba(250,248,245,0.7); font-size: 1rem; line-height: 1.75; }
 .about-tag {
   display: inline-flex !important; font-family: var(--mono);
-  font-size: 0.85rem !important; font-weight: 700 !important;
-  color: #F5E6D3 !important; letter-spacing: 0.09em; text-transform: uppercase;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #F5E6D3 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
   margin-bottom: 1.25rem; padding: 0.5rem 0.95rem;
   border: 1px solid rgba(245,230,211,0.55);
   border-radius: 4px; background: rgba(245,230,211,0.10);
@@ -633,8 +644,12 @@ section { padding: 5.5rem 2.5rem; position: relative; overflow-x: hidden; }
 .product-header { margin-bottom: 2.5rem; }
 .product-label {
   display: inline-flex !important; align-items: center; gap: 0.5rem;
-  font-family: var(--mono); font-size: 0.85rem !important; font-weight: 700 !important;
-  color: var(--gold) !important; letter-spacing: 0.09em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: var(--gold) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
   margin-bottom: 0.85rem;
 }
 .product-label::before { content: ''; width: 16px; height: 1px; background: var(--gold); }

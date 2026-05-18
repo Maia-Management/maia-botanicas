@@ -11,6 +11,9 @@ img { max-width: 100%; height: auto; }
 
 /* ===== VARIABLES ===== */
 :root {
+  --maia-teal: #1B7A8C;
+  --maia-anchor: #1B7A8C;
+
   /* Brand palette — Apothecary / Colombian Botanical */
   --forest:   #2D5016;
   --forest-2: #3a6a1d;

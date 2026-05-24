@@ -76,7 +76,9 @@
 }
 </script>
 <link rel="stylesheet" href="css/styles.css?v=20260516c">
-<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1A0A">
 </head>
 <body>
 
@@ -129,7 +131,7 @@
       <div class="hero-tag" data-lang="en" style="color:#F5E6D3 !important;font-size:0.875rem !important;font-weight:600 !important;letter-spacing:0.05em !important;"><span class="hero-tag-dot"></span>Santa Marta, Colombia · B2B · Est. 2026</div>
 
       <h1 class="hero-h1" data-lang="es">Colombia importa jarabes<br>de España.<br><em>Nosotros los fabricamos aquí.</em></h1>
-      <div class="hero-h1" data-lang="en" role="heading" aria-level="1">Colombia imports bar syrups<br>from Spain.<br><em>We make them here.</em></div>
+      <h1 class="hero-h1" data-lang="en">Colombia imports bar syrups<br>from Spain.<br><em>We make them here.</em></h1>
 
       <p class="hero-sub" data-lang="es">Maia Botánicas fabrica jarabes clarificados artesanales, fermentos de precisión y extractos botánicos usando ingredientes colombianos — el hibiscus, el lulo, el corozo, la pasiflora — y los envía al mundo. Incluso de vuelta a España.</p>
       <p class="hero-sub" data-lang="en">Maia Botánicas manufactures artisanal clarified syrups, precision ferments and botanical extracts using Colombian ingredients — hibiscus, lulo, corozo, passionfruit — and ships them to the world. Even back to Spain.</p>
@@ -385,17 +387,32 @@
 <!-- ===== CERTIFICATIONS STRIP ===== -->
 <section style="padding:2.5rem 2.5rem;background:#fff;border-top:1px solid var(--cream-3);border-bottom:1px solid var(--cream-3);">
   <div class="section-inner">
-    <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;" class="reveal">
-      <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);" data-lang="es">Certificaciones &amp; Calidad</div>
-      <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);" data-lang="en">Certifications &amp; Quality</div>
-      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
-        <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">INVIMA Registered</span>
-        <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">BPM / GMP</span>
-        <span style="background:var(--cream-2);border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);">ISO 22000 (en proceso)</span>
-        <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">HACCP</span>
-        <span style="background:var(--cream-2);border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);">USDA Organic (working toward)</span>
-        <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">Kosher Available</span>
-        <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">COA per Batch</span>
+    <div class="reveal" style="display:flex;flex-direction:column;gap:1.25rem;">
+      <!-- ACHIEVED ROW -->
+      <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--forest);font-weight:700;min-width:11rem;" data-lang="es">✓ Certificaciones activas</div>
+        <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--forest);font-weight:700;min-width:11rem;" data-lang="en">✓ Active certifications</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;">
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="es">INVIMA — Registro Sanitario</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="en">INVIMA Sanitary Registration</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">BPM / GMP</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);">HACCP</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="es">Kosher (disponible)</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="en">Kosher (available)</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="es">COA por lote</span>
+          <span style="background:var(--cream-2);border:1px solid var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:600;color:var(--forest);font-family:var(--mono);" data-lang="en">COA per batch</span>
+        </div>
+      </div>
+      <!-- ROADMAP ROW -->
+      <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:center;border-top:1px dashed var(--cream-3);padding-top:1.25rem;">
+        <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);font-weight:700;min-width:11rem;" data-lang="es">⏳ En proceso (roadmap)</div>
+        <div style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);font-weight:700;min-width:11rem;" data-lang="en">⏳ In progress (roadmap)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;align-items:center;">
+          <span style="background:transparent;border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);" data-lang="es">ISO 22000 — 2026</span>
+          <span style="background:transparent;border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);" data-lang="en">ISO 22000 — 2026</span>
+          <span style="background:transparent;border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);" data-lang="es">USDA / EU Organic — Q4 2026</span>
+          <span style="background:transparent;border:1px dashed var(--cream-3);padding:0.35rem 0.85rem;border-radius:20px;font-size:0.72rem;font-weight:500;color:var(--muted);font-family:var(--mono);" data-lang="en">USDA / EU Organic — Q4 2026</span>
+        </div>
       </div>
     </div>
   </div>
@@ -484,8 +501,8 @@
     </div>
 
     <div class="footer-bottom">
-      <div class="footer-copy" data-lang="es">&copy; 2026 Maia Management S.A.S. — operando como Maia Botánicas. Parte de Maia Management S.A.S. NIT 901.862.977-7. Santa Marta, Colombia.</div>
-      <div class="footer-copy" data-lang="en">&copy; 2026 Maia Management S.A.S. — operating as Maia Botánicas. Part of Maia Management S.A.S. NIT 901.862.977-7. Santa Marta, Colombia.</div>
+      <div class="footer-copy" data-lang="es">&copy; 2026 Maia Management S.A.S. — marca comercial: Maia Botánicas · NIT 901.862.977-7 · Santa Marta, Colombia.</div>
+      <div class="footer-copy" data-lang="en">&copy; 2026 Maia Management S.A.S. — commercial brand: Maia Botánicas · NIT 901.862.977-7 · Santa Marta, Colombia.</div>
       <div class="footer-links">
         <a href="privacy.html" data-lang="es">Privacidad</a>
         <a href="privacy.html" data-lang="en">Privacy</a>

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#1a3a2a"/>
-  <!-- Stylized leaf/botanical mark -->
-  <path d="M16 6 C16 6 8 10 8 18 C8 22 11.5 25 16 25 C20.5 25 24 22 24 18 C24 10 16 6 16 6Z" fill="none" stroke="#c8a45c" stroke-width="1.8"/>
-  <path d="M16 8 L16 24" stroke="#c8a45c" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M16 14 C14 12 11 13 10 15" stroke="#c8a45c" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M16 18 C18 16 21 17 22 19" stroke="#c8a45c" stroke-width="1" stroke-linecap="round" fill="none"/>
-</svg>

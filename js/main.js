@@ -14,17 +14,19 @@ setTimeout(function() {
   });
 }, 3000);
 
-/* ===== LANGUAGE TOGGLE ===== */
+/* ===== LANGUAGE (route-driven) =====
+   The site is split into separately-indexable routes: ES at /, EN at /en/.
+   The HTML <html lang="..."> attribute is authoritative — no JS swapping.
+   We keep setLang as a helper so the contact form handler and any legacy
+   callers still work, but it no longer flips the body class or writes to
+   localStorage (which used to override the route on subsequent page loads). */
+function currentLang() {
+  return (document.documentElement.getAttribute('lang') || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
+}
+
 function setLang(l) {
-  document.body.classList.toggle('en', l === 'en');
-  var btnES = document.getElementById('btnES');
-  var btnEN = document.getElementById('btnEN');
-  if (btnES) btnES.classList.toggle('active', l === 'es');
-  if (btnEN) btnEN.classList.toggle('active', l === 'en');
-  document.documentElement.lang = l === 'en' ? 'en' : 'es';
-  syncLocalizedFormControls(l);
-  try { localStorage.setItem('mb_lang', l); } catch(e) {}
-  // Close mobile menu
+  // Kept for the contact-form code path that still calls this; no DOM swap.
+  syncLocalizedFormControls(l === 'en' ? 'en' : 'es');
   var nav = document.getElementById('navCenter');
   if (nav) nav.classList.remove('open');
 }
@@ -36,16 +38,14 @@ function syncLocalizedFormControls(l) {
   });
 }
 
-/* Restore saved language on load */
+/* Mark the body so any legacy CSS that keys off body.en still applies on /en/ pages. */
 (function() {
-  try {
-    var saved = localStorage.getItem('mb_lang');
-    setLang(saved === 'en' ? 'en' : 'es');
-  } catch(e) {}
+  if (currentLang() === 'en') document.body && document.body.classList.add('en');
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-  syncLocalizedFormControls(document.body.classList.contains('en') ? 'en' : 'es');
+  if (currentLang() === 'en') document.body.classList.add('en');
+  syncLocalizedFormControls(currentLang());
 });
 
 /* ===== MOBILE MENU ===== */
@@ -105,7 +105,7 @@ function showToast(msg) {
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    var isES = !document.body.classList.contains('en');
+    var isES = currentLang() === 'es';
     syncLocalizedFormControls(isES ? 'es' : 'en');
     var btn = form.querySelector('.form-submit[data-lang="' + (isES ? 'es' : 'en') + '"]') || form.querySelector('.form-submit');
     if (btn) { btn.disabled = true; btn.textContent = '...'; }
@@ -132,7 +132,7 @@ function showToast(msg) {
       }
     })
     .catch(function() {
-      var isES = !document.body.classList.contains('en');
+      var isES = currentLang() === 'es';
       showToast(isES
         ? 'Algo salió mal. Por favor escríbenos por WhatsApp.'
         : 'Something went wrong. Please contact us via WhatsApp.');
@@ -140,7 +140,7 @@ function showToast(msg) {
     .finally(function() {
       if (btn) {
         btn.disabled = false;
-        var isES = !document.body.classList.contains('en');
+        var isES = currentLang() === 'es';
         btn.textContent = isES ? 'Enviar Solicitud' : 'Send Enquiry';
       }
     });

@@ -21,6 +21,78 @@
   status = 301
   force = true
 
+# Legacy ?lang=en URLs → real /en/ routes (Spanish-default site, English split-out 2026-05-24).
+# Must come before the page-level redirects below so the query match wins.
+[[redirects]]
+  from = "/"
+  query = { lang = "en" }
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  query = { lang = "en" }
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nosotros.html"
+  query = { lang = "en" }
+  to = "/en/nosotros.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/productos.html"
+  query = { lang = "en" }
+  to = "/en/productos.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mayoreo.html"
+  query = { lang = "en" }
+  to = "/en/mayoreo.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/proceso.html"
+  query = { lang = "en" }
+  to = "/en/proceso.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sostenibilidad.html"
+  query = { lang = "en" }
+  to = "/en/sostenibilidad.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contacto.html"
+  query = { lang = "en" }
+  to = "/en/contacto.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  query = { lang = "en" }
+  to = "/en/privacy.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terminos.html"
+  query = { lang = "en" }
+  to = "/en/terminos.html"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/assets/images/hibiscus-harvest.png"
   to = "/assets/images/hibiscus-harvest.webp"

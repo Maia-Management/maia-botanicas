@@ -530,5 +530,39 @@
 <svg fill="white" height="26" viewbox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.112 1.526 5.836L.057 23.617a.75.75 0 00.919.921l5.857-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.74-.516-5.292-1.415l-.369-.214-3.862.977.998-3.78-.236-.381A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
 </a>
 <script defer="" src="js/main.js?v=20260524-routes"></script>
+
+<!-- ===== COOKIE CONSENT BANNER (Ley 1581/2012) — T1-07 install 2026-06-01 ===== -->
+<div id="mb-consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a3a2a;color:#fff;padding:16px 24px;z-index:10001;box-shadow:0 -2px 12px rgba(0,0,0,0.3);font-family:Inter,sans-serif;font-size:13px;line-height:1.5;">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;">
+    <div style="flex:1;min-width:200px;">
+      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#F2C879;">Política de privacidad</a>.</span>
+      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#F2C879;">Privacy policy</a>.</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
+      <button type="button" onclick="MB_consentAccept()" style="background:#6F4019;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
+      <button type="button" onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var B = document.getElementById('mb-consent-banner');
+  window.MB_openConsentBanner = function(){ if(B) B.style.display='block'; };
+  window.MB_consentAccept = function(){
+    try{ localStorage.setItem('mb_consent','accepted'); }catch(e){}
+    if(B) B.style.display='none';
+    if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics();
+  };
+  window.MB_consentReject = function(){
+    try{ localStorage.setItem('mb_consent','rejected'); }catch(e){}
+    if(B) B.style.display='none';
+  };
+  try{
+    var c = localStorage.getItem('mb_consent');
+    if(!c){ setTimeout(function(){ if(B) B.style.display='block'; }, 800); }
+    else if(c==='accepted'){ if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics(); }
+  }catch(e){ if(B) B.style.display='block'; }
+})();
+</script>
 </body>
 </html>

@@ -1,568 +1,277 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script defer="" src="js/consent.js?v=20260524-routes"></script>
-<title>Mayoreo &amp; Exportación B2B | Maia Botánicas Colombia</title>
-<meta content="Wholesale terms for bars, restaurants, and distributors: export markets, MOQ, lead times, certifications, and HORECA samples." name="description"/>
-<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
-<link href="https://maia-botanicas.com/mayoreo.html" rel="canonical"/><link href="https://maia-botanicas.com/mayoreo.html" hreflang="es" rel="alternate"/><link href="https://maia-botanicas.com/en/mayoreo.html" hreflang="en" rel="alternate"/><link href="https://maia-botanicas.com/mayoreo.html" hreflang="x-default" rel="alternate"/>
-
-
-
-<meta content="website" property="og:type"/>
-<meta content="Mayoreo &amp; Exportación B2B | Maia Botánicas Colombia" property="og:title"/>
-<meta content="Condiciones B2B, MOQ, exportación a EU/USA/UAE y programa HORECA Colombia. Ingredientes colombianos premium para bares, restaurantes y distribuidores internacionales." property="og:description"/>
-<meta content="https://maia-botanicas.com/mayoreo.html" property="og:url"/>
-<meta content="https://maia-botanicas.com/og-image.jpg" property="og:image"/>
-<meta content="Maia Botánicas — B2B botanical ingredients, syrups and concentrates" property="og:image:alt"/>
-<meta content="Maia Botánicas" property="og:site_name"/>
-<meta content="es_CO" property="og:locale"/><meta content="en_US" property="og:locale:alternate"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@MaiaGroupCO" name="twitter:site"/>
-<meta content="@MaiaGroupCO" name="twitter:creator"/>
-<meta content="Mayoreo &amp; Exportación B2B | Maia Botánicas Colombia" name="twitter:title"/>
-<meta content="Condiciones B2B, MOQ, exportación y HORECA. Ingredientes colombianos premium." name="twitter:description"/>
-<meta content="https://maia-botanicas.com/og-image.jpg" name="twitter:image"/>
-<link href="https://maia-botanicas.com" rel="author"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://maia-botanicas.com/mayoreo.html#webpage",
-      "url": "https://maia-botanicas.com/mayoreo.html",
-      "name": "Mayoreo &amp; Exportación B2B | Maia Botánicas",
-      "description": "Condiciones de mayoreo y exportación para bares, restaurantes, distribuidores y mercados internacionales.",
-      "inLanguage": ["es-CO", "en-US"],
-      "isPartOf": {"@id": "https://maia-botanicas.com/#website"}
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://maia-botanicas.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Mayoreo", "item": "https://maia-botanicas.com/mayoreo.html"}
-      ]
-    }
-  ]
-}
-</script>
-<link href="css/styles.css?v=20260516c" rel="stylesheet"/>
-<link href="/favicon.svg" rel="apple-touch-icon"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#0A1A0A" name="theme-color"/>
-<style>
-/* B2B MOQ table — premium wrapper with rounded corners, shadow, zebra striping */
-.moq-wrap {
-  margin-top: 2rem !important;
-  background: white !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 20px rgba(45,80,22,0.10), 0 1px 4px rgba(45,80,22,0.05) !important;
-  border: 1px solid rgba(45,80,22,0.08) !important;
-}
-.moq-table {
-  width: 100% !important; border-collapse: collapse !important; margin: 0 !important;
-  font-family: var(--sans) !important;
-}
-.moq-table th {
-  background: var(--forest) !important; color: var(--cream) !important;
-  padding: 1.15rem 1.35rem !important;
-  font-family: var(--mono) !important; font-size: 0.8rem !important; font-weight: 700 !important;
-  letter-spacing: 0.08em !important; text-transform: uppercase !important; text-align: left !important;
-  border: none !important;
-}
-.moq-table td {
-  padding: 1.1rem 1.35rem !important;
-  border-bottom: 1px solid rgba(45,80,22,0.08) !important;
-  font-size: 0.92rem !important; color: var(--ink-2) !important; vertical-align: middle !important;
-  border-left: none !important; border-right: none !important;
-  line-height: 1.55 !important;
-}
-.moq-table tbody tr { background: white !important; }
-.moq-table tbody tr:nth-child(even) { background: #FBF9F5 !important; }
-.moq-table tbody tr:last-child td { border-bottom: none !important; }
-.moq-table tbody tr:hover { background: rgba(245,230,211,0.35) !important; }
-.moq-val {
-  font-family: var(--mono) !important; font-weight: 700 !important;
-  color: var(--forest) !important; font-size: 0.88rem !important;
-  letter-spacing: 0.01em !important;
-}
-
-.market-card {
-  background:white; border:1px solid var(--cream-3);
-  border-radius:var(--radius-lg); padding:2rem;
-  transition:all 0.3s;
-}
-.market-card:hover { border-color:var(--gold); box-shadow:var(--shadow-sm); }
-.market-flag { font-size:2rem; margin-bottom:1rem; display:block; }
-.market-card h3 { font-family:var(--serif); font-size:1.1rem; font-weight:700; color:var(--forest); margin-bottom:0.5rem; }
-.market-card p { font-size:0.85rem; color:var(--ink-3); line-height:1.65; }
-.market-badge {
-  display:inline-flex; align-items:center; gap:0.4rem;
-  margin-top:0.75rem; padding:0.3rem 0.65rem;
-  background:rgba(45,80,22,0.08); border:1px solid rgba(45,80,22,0.2);
-  border-radius:5px; font-family:var(--mono); font-size:0.62rem;
-  font-weight:600; color:var(--forest); letter-spacing:0.04em;
-}
-.cert-item {
-  display:flex; gap:1.25rem; align-items:flex-start;
-  padding:1.5rem; background:white; border:1px solid var(--cream-3);
-  border-radius:var(--radius); margin-bottom:0.75rem;
-}
-.cert-item-icon {
-  width:44px; height:44px; background:var(--gold-wash);
-  border:1px solid rgba(184,115,51,0.2); border-radius:9px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1.25rem; flex-shrink:0;
-}
-.cert-item-body h3 { font-family:var(--mono); font-size:0.72rem; font-weight:700; color:var(--forest); letter-spacing:0.03em; margin-bottom:0.3rem; }
-.cert-item-body p { font-size:0.82rem; color:var(--ink-3); line-height:1.6; }
-.cert-status-active { color:#1a6b33; font-family:var(--mono); font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; }
-.cert-status-pending { color:var(--muted); font-family:var(--mono); font-size:0.6rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
-</style>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mayoreo &amp; Sample Pack — Maia Botánicas</title>
+<meta name="description" content="Solicita un sample pack gratis (3 productos mini, pagas solo el envío) o pide tu primer pedido mayorista por WhatsApp con Don Próspero. Maia Botánicas, Santa Marta.">
+<link rel="canonical" href="https://maia-botanicas.com/mayoreo.html">
+<link rel="alternate" hreflang="es" href="https://maia-botanicas.com/mayoreo.html">
+<link rel="alternate" hreflang="en" href="https://maia-botanicas.com/en/mayoreo.html">
+<link rel="alternate" hreflang="x-default" href="https://maia-botanicas.com/mayoreo.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mayoreo Maia Botánicas — pide sample pack gratis">
+<meta property="og:description" content="3 productos mini gratis, pagas solo el envío. Pedidos mayoristas vía WhatsApp.">
+<meta property="og:url" content="https://maia-botanicas.com/mayoreo.html">
+<meta property="og:image" content="https://maia-botanicas.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css?v=20260622">
+<script defer src="/js/main.js?v=20260622"></script>
+<script defer src="/js/consent.js?v=20260622"></script>
 </head>
 <body>
-<!-- ===== NAV ===== -->
-<nav id="navbar">
-<a class="nav-logo" href="index.html">
-<div class="nav-logo-mark">
-<svg fill="none" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" fill="none" stroke="#B87333" stroke-width="1.4"></path>
-<line stroke="#B87333" stroke-linecap="round" stroke-width="1.2" x1="10" x2="10" y1="3" y2="16"></line>
-<path d="M10 9C8.5 7.5 6 8.5 5.5 10" fill="none" stroke="#B87333" stroke-linecap="round" stroke-width="0.9"></path>
-<path d="M10 12C11.5 10.5 14 11.5 14.5 13" fill="none" stroke="#B87333" stroke-linecap="round" stroke-width="0.9"></path>
-</svg>
-</div>
-<div class="nav-wordmark">
-<span class="nav-wordmark-primary">Maia Botánicas</span>
-<span class="nav-wordmark-sub">Santa Marta · Colombia</span>
-</div>
-</a>
-<div class="nav-center" id="navCenter">
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="productos.html">Productos</a></li>
-<li><a class="active" href="mayoreo.html">Mayoreo</a></li>
-<li><a href="proceso.html">Proceso</a></li>
-<li><a href="sostenibilidad.html">Sostenibilidad</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-</ul>
-<div class="nav-sep"></div>
-<div class="lang-toggle"><a aria-label="Ver versión en inglés" class="lang-btn lang-btn--navigate" href="/en/mayoreo.html" hreflang="en" rel="alternate">EN</a></div>
-</div>
-<button aria-label="Menú" class="mobile-toggle" onclick="toggleMenu()" type="button">
-<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line>
-</svg>
-</button>
-</nav>
-<main id="main-content">
-<!-- ===== HERO ===== -->
-<div class="about-hero">
-<div class="about-hero-inner">
-<div>
-<div class="about-tag" style="color:#F5E6D3 !important;font-size:0.875rem !important;font-weight:600 !important;letter-spacing:0.05em !important;">Mayoreo &amp; Exportación B2B</div>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
-<h1>Ingredientes colombianos<br/>para tu negocio — <em>local o global</em></h1>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Maia Botánicas, inicio">
+      Maia Botánicas
+      <span class="brand__small">Dispensario · Santa Marta</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-primary" aria-label="Abrir menú">☰ Menú</button>
+    <nav class="nav" aria-label="Principal">
+      <div class="nav__primary" id="nav-primary">
+        <a href="/productos.html">Productos</a>
+        <a href="/mayoreo.html" aria-current="page">Mayoreo</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/contacto.html">Contacto</a>
+        <a class="nav__lang active" href="/mayoreo.html">ES</a>
+        <a class="nav__lang" href="/en/mayoreo.html">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-<p>Proveemos a bares, restaurantes, hoteles y distribuidores en Colombia y mercados de exportación. Muestras sin costo para negocios calificados, pedidos recurrentes vía LlevaLleva, y documentación completa para importación internacional.</p>
+<main id="main">
 
-</div>
-<div class="about-metrics">
-<div class="about-metric">
-<span class="about-metric-num">24h</span>
-<span class="about-metric-label">Respuesta a solicitudes</span>
-
-</div>
-<div class="about-metric">
-<span class="about-metric-num">4–6</span>
-<span class="about-metric-label">Semanas entrega exportación</span>
-
-</div>
-<div class="about-metric">
-<span class="about-metric-num">FOB</span>
-<span class="about-metric-label">Cartagena, Colombia</span>
-
-</div>
-<div class="about-metric">
-<span class="about-metric-num">3</span>
-<span class="about-metric-label">Mercados de exportación: UAE, USA, EU</span>
-
-</div>
-</div>
-</div>
-</div>
-<!-- ===== FOR BARS & RESTAURANTS (LOCAL) ===== -->
-<section class="bg-cream">
-<div class="section-inner">
-<div class="reveal">
-<span class="section-label">Colombia Local — HORECA</span>
-
-<h2 class="section-title">Para bares, restaurantes<br/><em>y hoteles en Colombia</em></h2>
-
-<p class="section-sub">Programa HORECA con entrega directa en Colombia vía la plataforma B2B LlevaLleva. Pedidos recurrentes, catálogo actualizado, condiciones de suscripción mensual disponibles.</p>
-
-</div>
-<div class="story-blocks" style="margin-top:2.5rem;">
-<div class="story-block reveal">
-<div class="story-block-num">01</div>
-<div>
-<h3>Pedidos vía LlevaLleva</h3>
-
-<p>Toda nuestra línea está disponible en la plataforma B2B <a href="https://lleva-lleva.com" rel="noopener" style="color:var(--forest);font-weight:600;" target="_blank">LlevaLleva</a> — el marketplace para chefs, bares y restaurantes en Colombia. Catálogo actualizado en tiempo real, pedidos programables, entrega directa. Para bares y restaurantes que prefieren gestión directa, también aceptamos pedidos por WhatsApp.</p>
-
-</div>
-</div>
-<div class="story-block reveal">
-<div class="story-block-num">02</div>
-<div>
-<h3>Suscripción HORECA Mensual</h3>
-
-<p>Programa de suscripción mensual para bares y restaurantes que compran regularmente. Precios fijos por 3 meses, entrega programada, opción de personalización de etiqueta para programas de coctelería de marca propia. Pregunta por el programa al solicitar muestras.</p>
-
-</div>
-</div>
-<div class="story-block reveal">
-<div class="story-block-num">03</div>
-<div>
-<h3>Muestras para Negocios Calificados</h3>
-
-<p>Ofrecemos muestras gratuitas de hasta 4 productos a bares, restaurantes y hoteles en Colombia. Proceso simple: mensaje por WhatsApp con nombre del negocio y dirección, enviamos en 3-5 días hábiles en Santa Marta, hasta 7 días para el resto de Colombia.</p>
-
-</div>
-</div>
-</div>
-<div class="reveal" style="margin-top:2rem;">
-<a class="btn-primary" href="https://wa.me/19034598763?text=Hola!%20Soy%20de%20un%20bar%2Frestaurante%20y%20quiero%20unirme%20al%20programa%20HORECA%20de%20Maia%20Bot%C3%A1nicas" rel="noopener" target="_blank">Solicitar Ingreso HORECA</a>
-
-        
-      <a class="btn-ghost" href="https://lleva-lleva.com" rel="noopener" target="_blank">Ir a LlevaLleva →</a>
-
-</div>
-</div>
+<section class="section--sm">
+  <div class="container">
+    <span class="eyebrow">℞ Mayoreo — Don Próspero al habla</span>
+    <h1 class="mb-4">Pide muestras, abre cuenta, recibe tu primera caja.</h1>
+    <p class="lead">
+      No hay portal, no hay catálogo PDF de 20 páginas. Hay un WhatsApp y un Don Próspero
+      al otro lado que sabe qué tiene fresco en el estante y qué llega vía socios.
+    </p>
+  </div>
 </section>
-<!-- ===== MOQ TABLE ===== -->
-<section class="bg-white">
-<div class="section-inner">
-<div class="reveal">
-<span class="section-label">Condiciones B2B</span>
 
-<h2 class="section-title">Cantidades mínimas<br/><em>y formatos disponibles</em></h2>
-
-<p class="section-sub">Precios y condiciones finales según volumen, destino y personalización. Contacta para cotización formal.</p>
-
-</div>
-<div class="moq-wrap reveal" style="margin-top:2rem;background:white;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(45,80,22,0.10),0 1px 4px rgba(45,80,22,0.05);border:1px solid rgba(45,80,22,0.08);">
-<table class="moq-table" style="width:100%;border-collapse:collapse;margin:0;font-family:var(--sans);">
-<thead>
-<tr style="background:var(--forest);">
-<th style="background:var(--forest);color:var(--cream);padding:1.15rem 1.35rem;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border:none;">Línea de Producto</th>
-<th style="background:var(--forest);color:var(--cream);padding:1.15rem 1.35rem;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border:none;">Formato Disponible</th>
-<th style="background:var(--forest);color:var(--cream);padding:1.15rem 1.35rem;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border:none;">MOQ Local (Colombia)</th>
-<th style="background:var(--forest);color:var(--cream);padding:1.15rem 1.35rem;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border:none;">MOQ Exportación</th>
-<th style="background:var(--forest);color:var(--cream);padding:1.15rem 1.35rem;font-family:var(--mono);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-align:left;border:none;">Plazo de Entrega</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Concentrados Clarificados</td>
-<td>1L · 5L · 20L · 250kg bulk</td>
-<td class="moq-val">6 unidades (1L)</td>
-<td class="moq-val">250 kg / lote</td>
-<td>3–5 días · 4–6 semanas (export)</td>
-</tr>
-<tr>
-<td>Jarabes Artesanales</td>
-<td>500ml · 750ml · 1L · 5L (B2B)</td>
-<td class="moq-val">6 botellas</td>
-<td class="moq-val">100 kg / lote</td>
-<td>3–7 días · 4–6 semanas (export)</td>
-</tr>
-<tr>
-<td>Garnishes Deshidratados</td>
-<td>Frasco vidrio 40g / 50g / 200g</td>
-<td class="moq-val">12 frascos</td>
-<td class="moq-val">24 frascos</td>
-<td>5–7 días · 6–8 semanas (export)</td>
-</tr>
-<tr>
-<td>Majín</td>
-<td>50g retail · 250g B2B · 1kg food service</td>
-<td class="moq-val">24 unidades</td>
-<td class="moq-val">48 unidades</td>
-<td>5–7 días · 4–6 semanas (export)</td>
-</tr>
-<tr>
-<td>Formulación Privatelabel</td>
-<td>Según especificación cliente</td>
-<td class="moq-val">Consultar</td>
-<td class="moq-val">Consultar</td>
-<td>10 días (muestra) + 6–8 semanas producción</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<!-- ===== EXPORT MARKETS ===== -->
-<section class="why-section">
-<div class="section-inner">
-<div class="reveal">
-<span class="section-label" style="color:rgba(201,138,74,0.8);">Mercados de Exportación</span>
-
-<h2 class="section-title" style="color:var(--cream);">Fabricados en Colombia,<br/><em>enviados al mundo</em></h2>
-
-<p class="section-sub" style="color:rgba(245,239,224,0.65);">Acceso a tres mercados prioritarios con ventajas arancelarias y crecimiento documentado en el segmento de ingredientes botánicos premium.</p>
-
-</div>
-<div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;">
-<div class="market-card">
-<span class="market-flag">🇦🇪</span>
-<h3>Emiratos Árabes Unidos</h3>
-
-<p>Acceso vía Colombia-UAE CEPA (acuerdo de libre comercio vigente). Cero aranceles sobre ingredientes alimentarios colombianos. El mercado de F&amp;B premium del Golfo crece al 8% anual. Dubai y Abu Dhabi son centros de distribución para todo el Medio Oriente.</p>
-
-<div class="market-badge">✓ Libre de aranceles — CEPA vigente</div>
-
-</div>
-<div class="market-card">
-<span class="market-flag">🇺🇸</span>
-<h3>Estados Unidos</h3>
-
-<p>Mercado RTD (Ready-to-Drink) y mocktail premium en expansión exponencial — CAGR +15% 2024-2028. Ingredientes de origen verificable con narrativa latinoamericana son tendencia en bares premium de NYC, LA y Miami. Importación vía Miami o Nueva York.</p>
-
-<div class="market-badge">✓ Acceso vía ATPDEA</div>
-
-</div>
-<div class="market-card">
-<span class="market-flag">🇪🇺</span>
-<h3>Europa</h3>
-
-<p>Distribuidores gourmet, grupos hoteleros y bares de autor en España, Francia, Alemania y Países Bajos. Acceso vía Acuerdo Colombia-UE. Los ingredientes colombianos de origen verificable tienen alta demanda en el segmento "ingredients with story" que domina la coctelería europea de autor.</p>
-
-<div class="market-badge">✓ Acuerdo Colombia-UE vigente</div>
-
-</div>
-</div>
-<!-- Export documentation -->
-<div class="reveal" style="margin-top:3rem;background:rgba(245,239,224,0.06);border:1px solid rgba(184,115,51,0.2);border-radius:var(--radius-lg);padding:2.5rem;">
-<div style="font-family:var(--mono);font-size:0.65rem;font-weight:600;color:var(--gold-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;">Documentación de Exportación Disponible</div>
-
-<div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">Certificado Sanitario INVIMA</span>
-
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">Certificado de Origen Colombia</span>
-
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">COA (Certificate of Analysis)</span>
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">Ficha Técnica por SKU</span>
-
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">Certificado Fitosanitario ICA</span>
-
-<span style="background:rgba(245,239,224,0.08);border:1px solid rgba(184,115,51,0.25);padding:0.4rem 0.85rem;border-radius:6px;font-family:var(--mono);font-size:0.7rem;font-weight:500;color:var(--cream);">MSDS / SDS</span>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== CERTIFICATIONS ===== -->
-<section class="bg-cream">
-<div class="section-inner">
-<div class="reveal">
-<span class="section-label">Certificaciones &amp; Calidad</span>
-
-<h2 class="section-title">Estándares que<br/><em>el mercado exige</em></h2>
-
-<p class="section-sub">Nuestras certificaciones actuales y en proceso, relevantes para compras B2B locales e internacionales.</p>
-
-</div>
-<div class="reveal" style="margin-top:2.5rem;">
-<div class="cert-item">
-<div class="cert-item-icon">🇨🇴</div>
-<div class="cert-item-body">
-<h3>INVIMA — Instituto Nacional de Vigilancia de Medicamentos y Alimentos</h3>
-<p>Registro sanitario vigente. El INVIMA es el equivalente colombiano a la FDA — garantiza que nuestros productos cumplen los estándares de inocuidad alimentaria para comercialización en Colombia y exportación.</p>
-
-<div class="cert-status-active">✓ ACTIVO</div>
-
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-item-icon">🏭</div>
-<div class="cert-item-body">
-<h3>BPM / GMP — Buenas Prácticas de Manufactura</h3>
-<p>Nuestro proceso productivo cumple con Buenas Prácticas de Manufactura según normativa colombiana (Decreto 3075). Control de calidad documentado en cada lote, trazabilidad completa desde materia prima hasta producto terminado.</p>
-
-<div class="cert-status-active">✓ ACTIVO</div>
-
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-item-icon">⚠️</div>
-<div class="cert-item-body">
-<h3>HACCP — Hazard Analysis Critical Control Points</h3>
-<p>Sistema HACCP implementado en toda la cadena de producción. Análisis de puntos críticos de control para prevención de riesgos biológicos, químicos y físicos en cada etapa del proceso.</p>
-
-<div class="cert-status-active">✓ IMPLEMENTADO</div>
-
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-item-icon">🌿</div>
-<div class="cert-item-body">
-<h3>ISO 22000 — Food Safety Management</h3>
-<p>En proceso de certificación ISO 22000:2018. Estándar internacional de gestión de seguridad alimentaria exigido por la mayoría de distribuidores HORECA europeos y estadounidenses para proveedores de ingredientes.</p>
-
-<div class="cert-status-pending">⏳ EN PROCESO — 2026</div>
-
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-item-icon">☘️</div>
-<div class="cert-item-body">
-<h3>USDA Organic / EU Organic</h3>
-<p>Certificación orgánica en proceso para línea de concentrados clarificados. Auditoría por organismo acreditado (Ecocert / Control Union) contra NOP de USDA y Reglamento CE 2018/848. Prevista finalización Q4 2026.</p>
-
-<div class="cert-status-pending">⏳ EN PROCESO — Q4 2026</div>
-
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-item-icon">✡️</div>
-<div class="cert-item-body">
-<h3>Kosher</h3>
-<p>Certificación Kosher disponible para línea de concentrados clarificados y jarabes artesanales. Relevante para distribuidores en USA (mercado judío de $12B) y UAE (mercados de interfaz con Israel post-Abraham Accords).</p>
-
-<div class="cert-status-active">✓ DISPONIBLE</div>
-
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== REQUEST SAMPLES CTA ===== -->
-<div class="cta-band">
-<div class="section-inner">
-<h2>¿Listo para hacer un pedido o solicitar muestras?</h2>
-
-<p>Escríbenos por WhatsApp o envía el formulario de contacto — respondemos en menos de 24 horas con cotización formal y disponibilidad de muestras.</p>
-
-<div class="cta-band-btns">
-<a class="btn-primary" href="https://wa.me/19034598763?text=Hola!%20Quiero%20solicitar%20muestras%20y%20cotizaci%C3%B3n%20B2B%20de%20Maia%20Bot%C3%A1nicas" rel="noopener" target="_blank">WhatsApp — Solicitar Muestras</a>
-
-<a class="btn-ghost" href="contacto.html">Formulario de Contacto</a>
-
-</div>
-<p style="margin-top:1.5rem;font-size:0.82rem;opacity:0.7;">También disponible en <a href="https://lleva-lleva.com" rel="noopener" style="color:inherit;text-decoration:underline;" target="_blank">LlevaLleva</a> para distribución local Colombia.</p>
-
-</div>
-</div>
-<!-- ===== FOOTER ===== -->
-</main>
-<footer>
-<div class="footer-inner">
-<div class="footer-top">
-<div class="footer-brand">
-<div class="footer-logo-row">
-<div class="footer-logo-mark">
-<svg fill="none" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" fill="none" stroke="white" stroke-width="1.4"></path>
-<line stroke="white" stroke-linecap="round" stroke-width="1.2" x1="10" x2="10" y1="3" y2="16"></line>
-</svg>
-</div>
-<span class="footer-brand-name">Maia Botánicas</span>
-</div>
-<p>Parte de <a href="https://the-maia-group.com" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;" target="_blank">The Maia Group</a> — Santa Marta, Colombia.</p>
-
-</div>
-<div class="footer-col">
-<div class="footer-title">Productos</div>
-<ul>
-<li><a href="productos.html#concentrados">Concentrados</a></li>
-<li><a href="productos.html#syrups">Jarabes</a></li>
-<li><a href="productos.html#garnishes">Garnishes</a></li>
-<li><a href="productos.html#majin">Majín</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<div class="footer-title">Empresa</div>
-<ul>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="sostenibilidad.html">Sostenibilidad</a></li>
-<li><a href="proceso.html">Proceso</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<div class="footer-title">The Maia Group</div>
-<ul>
-<li><a href="https://the-maia-group.com" rel="noopener" target="_blank">The Maia Group</a></li>
-<li><a href="https://lleva-lleva.com" rel="noopener" target="_blank">LlevaLleva</a></li>
-<li><a href="https://maia-management.com" rel="noopener" target="_blank">Gestión</a></li>
-<li><a href="https://maia-realty.com" rel="noopener" target="_blank">Real Estate</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<div class="footer-title">Contacto</div>
-<ul>
-<li><a href="mailto:info@maia-botanicas.com">info@maia-botanicas.com</a></li>
-<li><a href="tel:+19034598763">+1 903 459 8763</a></li>
-<li><a href="https://wa.me/19034598763" rel="noopener" target="_blank">WhatsApp Business</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="footer-copy">© 2026 Maia Management S.A.S. — Maia Botánicas. NIT 901.862.977-7. Santa Marta, Colombia.</div>
-
-<div class="footer-links">
-<a href="privacy.html">Privacidad</a>
-<a href="terminos.html">Términos</a>
-<a href="sitemap.xml">Sitemap</a>
-</div>
-</div>
-</div>
-</footer>
-<a aria-label="WhatsApp" class="wa" href="https://wa.me/19034598763" rel="noopener" target="_blank">
-<svg fill="white" height="26" viewbox="0 0 24 24" width="26" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.112 1.526 5.836L.057 23.617a.75.75 0 00.919.921l5.857-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.74-.516-5.292-1.415l-.369-.214-3.862.977.998-3.78-.236-.381A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
-</a>
-<script defer="" src="js/main.js?v=20260524-routes"></script>
-
-<!-- ===== COOKIE CONSENT BANNER (Ley 1581/2012) — T1-07 install 2026-06-01 ===== -->
-<div id="mb-consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a3a2a;color:#fff;padding:16px 24px;z-index:10001;box-shadow:0 -2px 12px rgba(0,0,0,0.3);font-family:Inter,sans-serif;font-size:13px;line-height:1.5;">
-  <div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;">
-    <div style="flex:1;min-width:200px;">
-      <span class="mb-es">Usamos cookies y Google Analytics (Ley 1581/2012) para mejorar tu experiencia. <a href="privacy.html" style="color:#F2C879;">Política de privacidad</a>.</span>
-      <span class="mb-en" style="display:none;">We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#F2C879;">Privacy policy</a>.</span>
-    </div>
-    <div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-      <button type="button" onclick="MB_consentAccept()" style="background:#6F4019;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;"><span class="mb-es">Aceptar</span><span class="mb-en" style="display:none;">Accept</span></button>
-      <button type="button" onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;"><span class="mb-es">Solo esenciales</span><span class="mb-en" style="display:none;">Essential only</span></button>
+<!-- 3 STEP HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <h2 class="mb-6">Cómo funciona</h2>
+    <div class="grid grid--3">
+      <div>
+        <span class="stamp stamp--green">Paso 1</span>
+        <h3 class="mt-4">Saluda &amp; cuenta</h3>
+        <p>Por WhatsApp, dile a Don Próspero qué bar/restaurante tienes, en qué ciudad, y qué estilo manejas
+        (cocteles, yakitori, sushi, otro).</p>
+      </div>
+      <div>
+        <span class="stamp stamp--green">Paso 2</span>
+        <h3 class="mt-4">Sample pack gratis</h3>
+        <p>Te armamos 3 productos mini a elegir, sin costo. Pagas solo el flete (~$50–100k según ciudad).
+        Pruebas en tu bar antes de comprometerte.</p>
+      </div>
+      <div>
+        <span class="stamp stamp--green">Paso 3</span>
+        <h3 class="mt-4">Primer pedido</h3>
+        <p>Si te gustan, abrimos cuenta. MOQ chico por categoría. Luz coordina envío y te manda código de
+        seguimiento por el mismo chat.</p>
+      </div>
     </div>
   </div>
+</section>
+
+<!-- SAMPLE PACK FORM -->
+<section class="section" style="background: var(--bg-card);">
+  <div class="container">
+    <div class="grid" style="grid-template-columns: 1fr; gap: var(--space-7);">
+      <div>
+        <span class="eyebrow">℞ Solicita tu sample pack</span>
+        <h2 class="mb-4">3 productos mini, gratis. Solo pagas envío.</h2>
+        <p>Llena este formulario o salta directo a WhatsApp con Don Próspero —
+        él te guía paso a paso.</p>
+        <div class="mt-6">
+          <a class="btn btn--green btn--lg btn--wa" href="https://wa.me/19034598763?text=Hola%20Don%20Pr%C3%B3spero%2C%20me%20interesa%20el%20sample%20pack%20gratis.%20Soy%20de%20un%20bar%2Frestaurante%20en%20%5Bciudad%5D%20y%20manejo%20%5Bestilo%5D.">
+            Hablar con Don Próspero
+          </a>
+          <p class="field-help mt-4">Respuesta promedio: bajo 1 hora en horario hábil (lun-sáb, 9 am – 7 pm COT).</p>
+        </div>
+      </div>
+
+      <form class="form-grid form-grid--2" name="sample-pack-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contacto.html?status=ok#sent" autocomplete="on">
+        <input type="hidden" name="form-name" value="sample-pack-request">
+        <p hidden><label>No llenar: <input name="bot-field"></label></p>
+        <input type="hidden" name="origin" value="mayoreo">
+        <input type="hidden" name="lang" value="es">
+
+        <div class="form-row form-row--full">
+          <label for="restaurant_name" class="req">Nombre del bar/restaurante</label>
+          <input id="restaurant_name" name="restaurant_name" type="text" required maxlength="120" autocomplete="organization">
+        </div>
+
+        <div class="form-row">
+          <label for="contact_name" class="req">Tu nombre</label>
+          <input id="contact_name" name="contact_name" type="text" required maxlength="80" autocomplete="name">
+        </div>
+
+        <div class="form-row">
+          <label for="whatsapp" class="req">WhatsApp</label>
+          <input id="whatsapp" name="whatsapp" type="tel" required placeholder="+57 300 000 0000" maxlength="20" autocomplete="tel">
+        </div>
+
+        <div class="form-row">
+          <label for="city" class="req">Ciudad</label>
+          <input id="city" name="city" type="text" required maxlength="60" autocomplete="address-level2">
+        </div>
+
+        <div class="form-row">
+          <label for="business_type" class="req">Tipo de negocio</label>
+          <select id="business_type" name="business_type" required>
+            <option value="">Selecciona…</option>
+            <option value="bar">Bar / coctelería</option>
+            <option value="restaurant">Restaurante</option>
+            <option value="hotel">Hotel / F&amp;B</option>
+            <option value="catering">Catering / eventos</option>
+            <option value="private">Cocina privada / chef</option>
+            <option value="other">Otro</option>
+          </select>
+        </div>
+
+        <fieldset class="form-row form-row--full">
+          <legend>Categorías de interés (elige las que quieras)</legend>
+          <div class="checkbox-group">
+            <label class="checkbox-pill"><input type="checkbox" name="interest[]" value="japones"> 🌿 Japonés</label>
+            <label class="checkbox-pill"><input type="checkbox" name="interest[]" value="caribeno"> 🌿 Caribeño</label>
+            <label class="checkbox-pill"><input type="checkbox" name="interest[]" value="glassware"> 🌎 Cristalería</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row form-row--full">
+          <label for="notes">Algo más que Don Próspero debería saber</label>
+          <textarea id="notes" name="notes" rows="4" maxlength="600" placeholder="Productos específicos, frecuencia de uso, urgencia, etc."></textarea>
+        </div>
+
+        <div class="form-row form-row--full">
+          <div class="consent">
+            <label style="display:flex; gap:var(--space-2); align-items:flex-start; cursor:pointer;">
+              <input type="checkbox" name="consent" required style="width:auto; margin-top:3px;">
+              <span>
+                Autorizo a Maia Management S.A.S. (NIT 901.862.977-7) a tratar mis datos
+                personales conforme a la <a href="/privacy.html">Política de Habeas Data (Ley 1581)</a>,
+                con el fin único de contactarme para esta solicitud y entregas relacionadas.
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row form-row--full">
+          <button class="btn btn--green btn--lg" type="submit">Solicitar sample pack</button>
+          <p class="field-help">Don Próspero te contactará por WhatsApp en menos de 24 h hábiles.</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING / TERMS -->
+<section class="section">
+  <div class="container">
+    <h2 class="mb-6">Condiciones mayoristas</h2>
+    <div class="grid grid--2">
+      <div>
+        <h4>Precios</h4>
+        <p>Lista mayorista (~50–60% del PVP). Pedido inaugural recibe 10% de descuento. Pago a 30 días para clientes recurrentes (referidos).</p>
+        <h4 class="mt-4">MOQ</h4>
+        <p>Cada producto tiene su MOQ chico (6–12 unidades en categoría Japonés/Caribeño, 1 pack en Cristalería). Indicado en cada ficha de producto.</p>
+        <h4 class="mt-4">Pago</h4>
+        <p>Wompi (Nequi, PSE, Bancolombia, tarjeta) o transferencia. Primera caja: pago anticipado. Cuentas recurrentes: 30 días.</p>
+      </div>
+      <div>
+        <h4>Tiempo de entrega</h4>
+        <p>
+          <strong>🌿 En Casa (Japonés / Caribeño):</strong> 3–5 días hábiles desde confirmación de pago. Envío desde Santa Marta vía Servientrega / Coordinadora.<br><br>
+          <strong>🌎 Importado (Cristalería):</strong> 1–2 semanas. Surtimos vía socios al recibir tu pedido — no mantenemos stock propio.
+        </p>
+        <h4 class="mt-4">Ciudades servidas</h4>
+        <p>Santa Marta, Cartagena, Barranquilla, Bogotá, Medellín, Cali. Otras ciudades: cotiza flete por WhatsApp.</p>
+        <h4 class="mt-4">Devoluciones</h4>
+        <p>Productos en casa: garantía de frescura. Cristalería importada: devolución por defecto de fábrica en 7 días.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="rx-block">
+      <span class="eyebrow">℞ Side effects may include</span>
+      <p style="font-style:italic; color:var(--ink-soft); margin:0;">
+        Cartas con más personalidad. Bartenders haciendo segundas pruebas. Pedidos repetidos. Comentarios del tipo
+        “¿quién hace esto?” en mesas vecinas. Si no te lo recomienda Don Próspero, no te lo vendemos.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__brand">Maia Botánicas</span>
+        <p style="font-size:0.92rem; max-width:38ch;">
+          Dispensario B2B desde Santa Marta.
+        </p>
+        <p style="font-size:0.85rem; opacity:0.8;">
+          Maia Management S.A.S. · NIT 901.862.977-7<br>
+          Calle 24 #3-99, Edificio Banco de Bogotá, Suite 1102<br>
+          Santa Marta, Magdalena, Colombia
+        </p>
+      </div>
+      <div>
+        <h4>Sitio</h4>
+        <ul style="display:flex; flex-direction:column; gap:var(--space-2); font-size:0.95rem;">
+          <li><a href="/productos.html">Productos</a></li>
+          <li><a href="/mayoreo.html">Mayoreo</a></li>
+          <li><a href="/nosotros.html">Nosotros</a></li>
+          <li><a href="/contacto.html">Contacto</a></li>
+          <li><a href="/en/">English</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ecosistema Maia</h4>
+        <ul class="footer__ecosystem">
+          <li><a href="https://el-sanatorio.com" rel="noopener">El Sanatorio</a></li>
+          <li><a href="https://sushi-pop.co" rel="noopener">Sushi Pop</a></li>
+          <li><a href="https://maia-recruitment.com" rel="noopener">Maia Recruitment</a></li>
+          <li><a href="https://maia-management.com" rel="noopener">Maia Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Maia Management S.A.S.</span>
+      <ul>
+        <li><a href="/privacy.html">Privacidad &amp; Habeas Data</a></li>
+        <li><a href="/terminos.html">Términos</a></li>
+        <li><a href="https://wa.me/19034598763" rel="noopener">WhatsApp: +1 903 459 8763</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="consent-banner" id="consent-banner" role="region" aria-label="Aviso de cookies">
+  <div class="consent-banner__copy">
+    Usamos cookies esenciales y analíticas anónimas. Datos personales en formularios bajo <a href="/privacy.html">Habeas Data / Ley 1581</a>.
+  </div>
+  <div class="consent-banner__actions">
+    <button class="btn btn--green" data-consent="accept">Aceptar</button>
+    <button class="btn btn--ghost" data-consent="reject">Rechazar analíticas</button>
+  </div>
 </div>
-<script>
-(function(){
-  var B = document.getElementById('mb-consent-banner');
-  window.MB_openConsentBanner = function(){ if(B) B.style.display='block'; };
-  window.MB_consentAccept = function(){
-    try{ localStorage.setItem('mb_consent','accepted'); }catch(e){}
-    if(B) B.style.display='none';
-    if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics();
-  };
-  window.MB_consentReject = function(){
-    try{ localStorage.setItem('mb_consent','rejected'); }catch(e){}
-    if(B) B.style.display='none';
-  };
-  try{
-    var c = localStorage.getItem('mb_consent');
-    if(!c){ setTimeout(function(){ if(B) B.style.display='block'; }, 800); }
-    else if(c==='accepted'){ if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics(); }
-  }catch(e){ if(B) B.style.display='block'; }
-})();
-</script>
+
 </body>
 </html>

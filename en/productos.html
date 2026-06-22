@@ -1,774 +1,283 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script defer="" src="/js/consent.js?v=20260524-routes"></script>
-<title>B2B Product Catalogue | Maia Botánicas Colombia</title>
-<meta content="Clarified concentrates, cocktail syrups, dehydrated garnishes and Majín made with Colombian ingredients for bars and export." name="description"/>
-<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
-<link href="https://maia-botanicas.com/en/productos.html" rel="canonical"/><link href="https://maia-botanicas.com/productos.html" hreflang="es" rel="alternate"/><link href="https://maia-botanicas.com/en/productos.html" hreflang="en" rel="alternate"/><link href="https://maia-botanicas.com/productos.html" hreflang="x-default" rel="alternate"/>
-
-
-
-<meta content="website" property="og:type"/>
-<meta content="B2B Product Catalogue | Maia Botánicas Colombia" property="og:title"/>
-<meta content="65° Brix concentrates, artisanal syrups, garnishes and Majín. Colombian botanicals for bars, restaurants and international export." property="og:description"/>
-<meta content="https://maia-botanicas.com/en/productos.html" property="og:url"/>
-<meta content="https://maia-botanicas.com/og-image.jpg" property="og:image"/>
-<meta content="Maia Botánicas — B2B botanical ingredients from Colombia" property="og:image:alt"/>
-<meta content="Maia Botánicas" property="og:site_name"/>
-<meta content="en_US" property="og:locale"/><meta content="es_CO" property="og:locale:alternate"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="@MaiaGroupCO" name="twitter:site"/>
-<meta content="@MaiaGroupCO" name="twitter:creator"/>
-<meta content="B2B Product Catalogue | Maia Botánicas Colombia" name="twitter:title"/>
-<meta content="Clarified concentrates, artisanal syrups, garnishes and Majín. Premium Colombian botanicals." name="twitter:description"/>
-<meta content="https://maia-botanicas.com/og-image.jpg" name="twitter:image"/>
-<link href="https://maia-botanicas.com" rel="author"/>
-<link href="/css/styles.css?v=20260516c" rel="stylesheet"/>
-<link href="/favicon.svg" rel="apple-touch-icon"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#0A1A0A" name="theme-color"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["Organization", "LocalBusiness", "FoodEstablishment"],
-      "@id": "https://maia-botanicas.com/#organization",
-      "name": "Maia Botánicas",
-      "legalName": "Maia Management S.A.S.",
-      "taxID": "901.862.977-7",
-      "url": "https://maia-botanicas.com",
-      "telephone": "+19034598763",
-      "email": "info@maia-botanicas.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle 24 #3-99, Edificio Banco de Bogotá, Suite 1102, Level 11",
-        "addressLocality": "Santa Marta",
-        "addressRegion": "Magdalena",
-        "postalCode": "470004",
-        "addressCountry": "CO"
-      },
-      "description": "Fabricante colombiano de concentrados clarificados 65° Brix, jarabes artesanales y botánicos de exportación. Productos para bares, restaurantes y exportación internacional.",
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "The Maia Group",
-        "url": "https://the-maia-group.com"
-      }
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://maia-botanicas.com/en/productos.html#catalog",
-      "name": "Catálogo de Productos B2B — Maia Botánicas",
-      "description": "Concentrados clarificados 65° Brix, jarabes artesanales, garnishes deshidratados y Majín. Ingredientes colombianos premium para bares, restaurantes y exportación.",
-      "url": "https://maia-botanicas.com/en/productos.html",
-      "numberOfItems": 4,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Concentrados Clarificados 65° Brix",
-          "description": "Concentrados de frutas colombianas clarificados a 65° Brix. Hibiscus, lulo, corozo, guanábana, maracuyá."
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Jarabes Artesanales de Coctelería",
-          "description": "Jarabes artesanales para coctelería premium elaborados con botánicos colombianos."
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Garnishes Deshidratados",
-          "description": "Garnishes deshidratados para coctelería y gastronomía de alta gama."
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Majín",
-          "description": "Condimento seco tropical de chili y lima. Sazonador insignia de Maia Botánicas — equivalente colombiano del Tajín para coctelería."
-        }
-      ]
-    }
-  ]
-}
-</script>
-<style>
-/* ===== PRODUCT SPEC CARD ===== */
-.spec-card {
-  background: white;
-  border: 1px solid var(--cream-3);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  transition: all 0.3s;
-}
-.spec-card:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
-.spec-card-header {
-  display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem;
-  padding-bottom: 1.25rem; border-bottom: 1px solid var(--cream-3);
-}
-.spec-card-icon {
-  width: 56px; height: 56px; border-radius: 12px;
-  background: var(--gold-wash); border: 1px solid rgba(184,115,51,0.2);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; flex-shrink: 0;
-}
-.spec-card-title h3 {
-  font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
-  color: var(--forest); margin-bottom: 0.2rem; line-height: 1.2;
-}
-.spec-card-title .binomial {
-  font-family: var(--mono); font-size: 0.65rem; color: var(--muted);
-  font-style: italic; letter-spacing: 0.02em;
-}
-.spec-card-title .origin {
-  font-family: var(--mono); font-size: 0.62rem; font-weight: 500;
-  color: var(--gold); letter-spacing: 0.04em; text-transform: uppercase;
-  margin-top: 0.2rem;
-}
-.spec-card p {
-  font-size: 0.88rem; color: var(--ink-3); line-height: 1.7; margin-bottom: 1rem;
-}
-.spec-row {
-  display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;
-}
-.spec-key {
-  font-family: var(--mono); font-size: 0.6rem; font-weight: 600;
-  color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase;
-  min-width: 80px; flex-shrink: 0; padding-top: 0.1rem;
-}
-.spec-val {
-  font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
-  color: var(--forest); flex: 1;
-}
-.spec-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.75rem 0; }
-.spec-tag {
-  display: inline-block; padding: 0.2rem 0.5rem;
-  background: var(--gold-wash); border: 1px solid rgba(184,115,51,0.18);
-  border-radius: 4px; font-family: var(--mono); font-size: 0.6rem;
-  font-weight: 500; color: var(--forest); letter-spacing: 0.02em;
-}
-.spec-cta {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  margin-top: 1rem; padding: 0.55rem 1rem;
-  background: var(--forest); color: var(--cream);
-  border-radius: 6px; font-family: var(--mono); font-size: 0.68rem;
-  font-weight: 600; text-decoration: none; letter-spacing: 0.04em;
-  transition: all 0.2s; text-transform: uppercase;
-}
-.spec-cta:hover { background: var(--forest-2); }
-
-.products-grid-3 {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;
-}
-.products-grid-2 {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;
-}
-@media (max-width: 900px) {
-  .products-grid-3 { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 640px) {
-  .products-grid-3, .products-grid-2 { grid-template-columns: 1fr; }
-}
-
-/* Featured product layout */
-.product-featured {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-  align-items: start; background: white;
-  border: 1px solid var(--cream-3); border-radius: var(--radius-lg);
-  padding: 2.5rem; margin-top: 2rem;
-}
-.product-featured-props { display: flex; flex-direction: column; gap: 0.6rem; }
-.pfp-row {
-  display: flex; align-items: baseline; gap: 0.75rem;
-  padding: 0.6rem 0.85rem; border-radius: 6px;
-  border-left: 2px solid var(--gold);
-}
-.pfp-row:nth-child(even) { background: var(--cream-2); }
-.pfp-label { font-family: var(--mono); font-size: 0.6rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; min-width: 110px; flex-shrink: 0; }
-.pfp-val { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; color: var(--forest); }
-@media (max-width: 760px) { .product-featured { grid-template-columns: 1fr; gap: 2rem; } }
-</style>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Catalog — Maia Botánicas</title>
+<meta name="description" content="Maia Botánicas catalog: Japanese koji ferments (koji, miso, tare), Caribbean in-house (mango tuahine, black garlic, bitters), wholesale glassware and bar tools.">
+<link rel="canonical" href="https://maia-botanicas.com/en/productos.html">
+<link rel="alternate" hreflang="es" href="https://maia-botanicas.com/productos.html">
+<link rel="alternate" hreflang="en" href="https://maia-botanicas.com/en/productos.html">
+<link rel="alternate" hreflang="x-default" href="https://maia-botanicas.com/productos.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maia Botánicas Catalog">
+<meta property="og:description" content="Japanese ferments, Caribbean in-house, glassware &amp; bar tools.">
+<meta property="og:url" content="https://maia-botanicas.com/en/productos.html">
+<meta property="og:image" content="https://maia-botanicas.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/css/styles.css?v=20260622">
+<script defer src="/js/main.js?v=20260622"></script>
+<script defer src="/js/consent.js?v=20260622"></script>
 </head>
 <body>
-<!-- ===== NAV ===== -->
-<nav id="navbar">
-<a class="nav-logo" href="index.html">
-<div class="nav-logo-mark">
-<svg fill="none" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" fill="none" stroke="#B87333" stroke-width="1.4"></path>
-<line stroke="#B87333" stroke-linecap="round" stroke-width="1.2" x1="10" x2="10" y1="3" y2="16"></line>
-<path d="M10 9C8.5 7.5 6 8.5 5.5 10" fill="none" stroke="#B87333" stroke-linecap="round" stroke-width="0.9"></path>
-<path d="M10 12C11.5 10.5 14 11.5 14.5 13" fill="none" stroke="#B87333" stroke-linecap="round" stroke-width="0.9"></path>
-</svg>
-</div>
-<div class="nav-wordmark">
-<span class="nav-wordmark-primary">Maia Botánicas</span>
-<span class="nav-wordmark-sub">Santa Marta · Colombia</span>
-</div>
-</a>
-<div class="nav-center" id="navCenter">
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="nosotros.html">About</a></li>
-<li><a class="active" href="productos.html">Products</a></li>
-<li><a href="mayoreo.html">Wholesale</a></li>
-<li><a href="proceso.html">Process</a></li>
-<li><a href="sostenibilidad.html">Sustainability</a></li>
-<li><a href="contacto.html">Contact</a></li>
-</ul>
-<div class="nav-sep"></div>
-<div class="lang-toggle"><a aria-label="Switch to Spanish version" class="lang-btn lang-btn--navigate" href="/productos.html" hreflang="es" rel="alternate">ES</a></div>
-</div>
-<button aria-label="Menú" class="mobile-toggle" onclick="toggleMenu()" type="button">
-<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line>
-</svg>
-</button>
-</nav>
-<main id="main-content">
-<!-- ===== PRODUCTS HERO ===== -->
-<div class="products-hero">
-<div class="products-hero-inner">
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div class="about-tag" style="color:#F5E6D3 !important;font-size:0.875rem !important;font-weight:600 !important;letter-spacing:0.05em !important;">B2B Catalogue 2026</div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/en/" aria-label="Maia Botánicas, home">
+      Maia Botánicas
+      <span class="brand__small">Dispensary · Santa Marta</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-primary" aria-label="Open menu">☰ Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__primary" id="nav-primary">
+        <a href="/en/productos.html" aria-current="page">Catalog</a>
+        <a href="/en/mayoreo.html">Wholesale</a>
+        <a href="/en/nosotros.html">About</a>
+        <a href="/en/contacto.html">Contact</a>
+        <a class="nav__lang" href="/productos.html">ES</a>
+        <a class="nav__lang active" href="/en/productos.html">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-<h1>Colombian ingredients<br/><em>for the world</em></h1>
+<main id="main">
 
-<p>Four product lines manufactured in Colombia with verifiable-origin ingredients — for craft bars, professional kitchens and export markets in EU, USA and UAE. Every product documented with per-batch COA.</p>
-<div style="margin-top:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-
-<a href="#concentrados" style="padding:0.45rem 1rem;background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.3);color:var(--gold-2);font-family:var(--mono);font-size:0.68rem;font-weight:600;text-decoration:none;border-radius:6px;letter-spacing:0.04em;">Concentrates →</a>
-
-<a href="#syrups" style="padding:0.45rem 1rem;background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.3);color:var(--gold-2);font-family:var(--mono);font-size:0.68rem;font-weight:600;text-decoration:none;border-radius:6px;letter-spacing:0.04em;">Syrups →</a>
-
-<a href="#garnishes" style="padding:0.45rem 1rem;background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.3);color:var(--gold-2);font-family:var(--mono);font-size:0.68rem;font-weight:600;text-decoration:none;border-radius:6px;letter-spacing:0.04em;">Garnishes →</a>
-<a href="#majin" style="padding:0.45rem 1rem;background:rgba(184,115,51,0.12);border:1px solid rgba(184,115,51,0.3);color:var(--gold-2);font-family:var(--mono);font-size:0.68rem;font-weight:600;text-decoration:none;border-radius:6px;letter-spacing:0.04em;">Majín →</a>
-</div>
-</div>
-</div>
-<!-- ===== SECTION 1: CONCENTRADOS ===== -->
-<section class="product-section bg-cream" id="concentrados">
-<div class="product-inner">
-<div class="product-header reveal">
-
-<div class="product-label">Line 01 — Core Product</div>
-
-<h2>Clarified Concentrates<br/><em>65° Brix</em></h2>
-
-<p>Our flagship line. Ultra-clarified, crystal-clear Colombian botanical concentrates, compatible with carbonation and keg dispensing. Shelf-stable, export-ready. Every batch documented with Certificate of Analysis.</p>
-</div>
-<!-- Featured Product: Hibiscus -->
-<div class="product-featured reveal">
-<div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-<div style="width:60px;height:60px;background:var(--gold-wash);border:1px solid rgba(184,115,51,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0;">🌺</div>
-<div>
-
-<h3 style="font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--forest);line-height:1.2;">Clarified Hibiscus</h3>
-<div style="font-family:var(--mono);font-size:0.62rem;color:var(--muted);font-style:italic;">Hibiscus sabdariffa</div>
-
-<div style="font-family:var(--mono);font-size:0.6rem;font-weight:600;color:var(--gold);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.15rem;">Colombian Caribbean · Magdalena</div>
-</div>
-</div>
-
-<p style="font-size:0.9rem;color:var(--ink-3);line-height:1.7;">Ultra-clarified Colombian hibiscus flower concentrate. Deep crimson tone refined by ultra-filtration — crystal-clear for premium bar applications. Colombian hibiscus presents exceptionally high anthocyanin levels that contribute both colour and documented antioxidant properties.</p>
-<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:1rem 0;">
-<span class="spec-tag">Craft cocktails</span>
-<span class="spec-tag">Premium mocktails</span>
-<span class="spec-tag">RTD beverages</span>
-<span class="spec-tag">Hotel bar programs</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Hi!%20I%27d%20like%20to%20request%20COA%20and%20sample%20of%20Maia%20Bot%C3%A1nicas%20Hibiscus%20Concentrate" rel="noopener" target="_blank">Request COA &amp; Sample →</a>
-</div>
-<div>
-
-<div style="margin-bottom:0.75rem;font-family:var(--mono);font-size:0.62rem;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;">Technical Specifications</div>
-<div class="product-featured-props">
-<div class="pfp-row"><span class="pfp-label">Brix</span><span class="pfp-val">≥ 65°</span></div>
-<div class="pfp-row"><span class="pfp-label">Anthocyanins</span><span class="pfp-val">1.5 – 2.2%</span></div>
-<div class="pfp-row"><span class="pfp-label">Moisture</span><span class="pfp-val">≤ 11%</span></div>
-<div class="pfp-row"><span class="pfp-label">Appearance</span><span class="pfp-val">Liquid, crystal-clear</span></div>
-<div class="pfp-row"><span class="pfp-label">Shelf life</span><span class="pfp-val">18 months sealed, cool</span></div>
-<div class="pfp-row"><span class="pfp-label">MOQ</span><span class="pfp-val">250 kg / export lot</span></div>
-<div class="pfp-row"><span class="pfp-label">Incoterms</span><span class="pfp-val">FOB Cartagena</span></div>
-<div class="pfp-row"><span class="pfp-label">Certs.</span><span class="pfp-val">INVIMA · HACCP · Kosher</span></div>
-<div class="pfp-row"><span class="pfp-label">COA</span><span class="pfp-val">Per batch, on request</span></div>
-</div>
-</div>
-</div>
-<!-- Other concentrates grid -->
-<div class="products-grid-3" style="margin-top:2.5rem;">
-<!-- Lulo -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🍊</div>
-<div class="spec-card-title">
-
-<h3>Clarified Andean Lulo</h3>
-<div class="binomial">Solanum quitoense</div>
-
-<div class="origin">Cauca &amp; Nariño · 38 growers</div>
-</div>
-</div>
-
-<p>Andean citrus endemic to Colombia and Ecuador — unique tropical acidity profile found in no other fruit. Cauca lulo has notes of lemon, passion fruit and fresh herbs. Clarified for immediate bar use.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">62° · pH 3.2</span></div>
-<div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">6 cases (750ml) · Private label</span></div>
-<div class="spec-row"><span class="spec-key">Origin</span><span class="spec-val">38 smallholder growers, Cauca &amp; Nariño</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Cocktails</span>
-<span class="spec-tag">RTD</span>
-<span class="spec-tag">Private label</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Request%20COA%20Clarified%20Andean%20Lulo" rel="noopener" target="_blank">Request COA →</a>
-</div>
-<!-- Maracuyá -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">💛</div>
-<div class="spec-card-title">
-
-<h3>Clarified Passion Fruit</h3>
-<div class="binomial">Passiflora edulis</div>
-
-<div class="origin">Meta &amp; Huila · Eastern Plains</div>
-</div>
-</div>
-
-<p>Colombian passion fruit from the Llanos — high tropical acidity, intense aroma, floral notes. One of the most requested concentrates by international premium cocktail programmes. Crystal-clarified for bar and bottle-base applications.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">≥ 65°</span></div>
-<div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">100 kg / export</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Premium bar</span>
-<span class="spec-tag">HORECA</span>
-<span class="spec-tag">Export</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Request%20COA%20Clarified%20Passion%20Fruit" rel="noopener" target="_blank">Request COA →</a>
-</div>
-<!-- Guanábana -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🍈</div>
-<div class="spec-card-title">
-
-<h3>Clarified Soursop</h3>
-<div class="binomial">Annona muricata</div>
-
-<div class="origin">Sierra Nevada · Santa Marta</div>
-</div>
-</div>
-
-<p>Soursop concentrate from the slopes of the Sierra Nevada de Santa Marta — unique creamy-tropical profile with coconut and pear notes. Trending in US and European wellness and premium mocktail markets.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">≥ 65°</span></div>
-<div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">100 kg / export</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Wellness</span>
-<span class="spec-tag">Mocktails</span>
-<span class="spec-tag">USA/EU</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Request%20COA%20Clarified%20Soursop" rel="noopener" target="_blank">Request COA →</a>
-</div>
-<!-- Corozo -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🫐</div>
-<div class="spec-card-title">
-
-<h3>Clarified Corozo Palm</h3>
-<div class="binomial">Bactris guineensis</div>
-
-<div class="origin">Caribbean Coast · Magdalena &amp; Bolívar</div>
-</div>
-</div>
-
-<p>Palm fruit endemic to the Colombian Caribbean — intense purple colour, tannic-acidic profile. Virtually unknown outside Colombia. A genuine differentiation asset for any beverage programme seeking unique ingredients with an origin story.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">≥ 62°</span></div>
-<div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">50 kg · seasonal</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Exclusive</span>
-<span class="spec-tag">Craft cocktails</span>
-<span class="spec-tag">Seasonal</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Interested%20in%20Clarified%20Corozo%20Palm" rel="noopener" target="_blank">Check Availability →</a>
-</div>
-</div>
-</div>
+<section class="section--sm">
+  <div class="container">
+    <span class="eyebrow">The shelf</span>
+    <h1 class="mb-4">Maia Botánicas Catalog</h1>
+    <p class="lead">
+      Three categories. In-house items marked <strong>🌿 IN-HOUSE</strong>;
+      partner-supplied tools marked <strong>🌎 IMPORTED</strong>. Orders by WhatsApp with Don Próspero.
+    </p>
+  </div>
 </section>
-<!-- ===== SECTION 2: JARABES ===== -->
-<section class="product-section bg-white" id="syrups">
-<div class="product-inner">
-<div class="product-header reveal">
 
-<div class="product-label">Line 02 — Bar &amp; Restaurant</div>
+<section class="section--sm" style="padding-top:0;">
+  <div class="container">
+    <div class="tabs" role="tablist" aria-label="Product categories">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="panel-japones" id="tab-japones" data-tab="japones">🌿 Japanese</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-caribeno" id="tab-caribeno" data-tab="caribeno">🌿 Caribbean</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-glassware" id="tab-glassware" data-tab="glassware">🌎 Glassware &amp; Tools</button>
+    </div>
 
-<h2>Artisanal Cocktail<br/><em>Syrups</em></h2>
+    <div class="tab-panel is-active" id="panel-japones" role="tabpanel" aria-labelledby="tab-japones" data-anchor="japones">
+      <a id="japones"></a>
+      <div class="prod-grid">
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Yakitori Tare</div>
+          <h3 class="prod-card__title">Yakitori Tare — Koji-Fermented</h3>
+          <p class="prod-card__desc">Yakitori master sauce, koji-fermented for 14 days. Compounded at La Farmacia, Santa Marta.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 bottles (250 ml)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Yakitori%20Tare%20%28JP-TARE-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Shio Koji</div>
+          <h3 class="prod-card__title">Shio Koji — Fermented Salt</h3>
+          <p class="prod-card__desc">Koji-fermented salt; tenderizes proteins and deepens umami. Caribbean rice base.</p>
+          <div class="prod-card__meta"><span>MOQ: 12 jars (200 g)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Shio%20Koji%20%28JP-SHIO-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Caribbean Miso</div>
+          <h3 class="prod-card__title">Caribbean Miso Paste</h3>
+          <p class="prod-card__desc">Miso fermented in Santa Marta with Caribbean bean and house koji. No additives.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 tubs (500 g)</span><span>· Delivery 5–7 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Caribbean%20Miso%20%28JP-MISO-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">House Soy</div>
+          <h3 class="prod-card__title">House Soy Sauce</h3>
+          <p class="prod-card__desc">Barrel-fermented soy sauce. Deeper than commercial, no added sugar.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 bottles (500 ml)</span><span>· Delivery 5–7 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20House%20Soy%20%28JP-SHOYU-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Chili Oil</div>
+          <h3 class="prod-card__title">Fermented Chili Oil</h3>
+          <p class="prod-card__desc">Sushi Pop-style fermented chili oil. Medium heat, big aroma.</p>
+          <div class="prod-card__meta"><span>MOQ: 12 jars (200 ml)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Fermented%20Chili%20Oil%20%28JP-CHILI-001%29.">Order on WhatsApp</a>
+        </article>
+      </div>
+    </div>
 
-<p>Formulated specifically for craft bar programmes and premium cocktail menus. No artificials, batch-to-batch consistent, with verifiable Colombian origin on every bottle. The El Sanatorio programme uses them as the base of its menu.</p>
-</div>
-<div class="products-grid-3">
-<!-- Hibiscus & Rosa -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🌸</div>
-<div class="spec-card-title">
+    <div class="tab-panel" id="panel-caribeno" role="tabpanel" aria-labelledby="tab-caribeno" data-anchor="caribeno">
+      <a id="caribeno"></a>
+      <div class="prod-grid">
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Mango Tuahine</div>
+          <h3 class="prod-card__title">Mango Tuahine — Hot Sauce</h3>
+          <p class="prod-card__desc">Chamoy-style fermented mango hot sauce. Made with Magdalena mango.</p>
+          <div class="prod-card__meta"><span>MOQ: 12 bottles (250 ml)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Mango%20Tuahine%20%28CB-MANGO-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media">
+            <img src="/images/botanicas-black-garlic.webp" alt="Maia Botánicas slow-fermented black garlic jar, dark cloves on cream background." loading="lazy" decoding="async">
+          </div>
+          <h3 class="prod-card__title">Black Garlic — Slow-Fermented</h3>
+          <p class="prod-card__desc">40-day slow-fermented black garlic. Sweet, no heat.</p>
+          <div class="prod-card__meta"><span>MOQ: 12 jars (150 g)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Black%20Garlic%20%28CB-AJONEGRO-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Dried Lemons</div>
+          <h3 class="prod-card__title">Dried Caribbean Lemons</h3>
+          <p class="prod-card__desc">Sun-dried Creole lemons. For infusions, garnish, bar tea.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 bags (200 g)</span><span>· Delivery 5–7 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Dried%20Lemons%20%28CB-LIMON-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media prod-card__media--placeholder">Coffee &amp; Cacao Bitters</div>
+          <h3 class="prod-card__title">Coffee &amp; Cacao Bitters</h3>
+          <p class="prod-card__desc">Bitters infused with Sierra Nevada coffee and Magdalena cacao. Pure Caribbean.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 bottles (100 ml)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Coffee%20%26%20Cacao%20Bitters%20%28CB-BITTERS-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
+          <div class="prod-card__media">
+            <img src="/assets/images/hibiscus-harvest.webp" alt="Freshly harvested hibiscus flowers — base ingredient for Maia Botánicas clarified syrup." loading="lazy" decoding="async">
+          </div>
+          <h3 class="prod-card__title">Clarified Hibiscus Syrup</h3>
+          <p class="prod-card__desc">Clarified Jamaica-flower syrup, cocktail-ready. Brilliant color.</p>
+          <div class="prod-card__meta"><span>MOQ: 6 bottles (500 ml)</span><span>· Delivery 3–5 days</span></div>
+          <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Hibiscus%20Syrup%20%28CB-HIBISCO-001%29.">Order on WhatsApp</a>
+        </article>
+      </div>
+    </div>
 
-<h3>Hibiscus &amp; Andean Rose Syrup</h3>
-<div class="binomial">Hibiscus sabdariffa · Rosa spp.</div>
+    <div class="tab-panel" id="panel-glassware" role="tabpanel" aria-labelledby="tab-glassware" data-anchor="glassware">
+      <a id="glassware"></a>
+      <div class="note mb-6">
+        <strong>Imported category.</strong> We don't hold stock: once you order, we source through our B2B partners
+        (Mercado Libre / LATAM distributors) and ship direct to your bar. Delivery 1–2 weeks.
+      </div>
+      <div class="prod-grid">
+        <article class="prod-card">
+          <span class="badge badge--imported badge--abs">🌎 Imported</span>
+          <div class="prod-card__media prod-card__media--placeholder">Highball Glass</div>
+          <h3 class="prod-card__title">Highball Glass — pack 12</h3>
+          <p class="prod-card__desc">350 ml lead-free crystal highball glass. Wholesale pack of 12. Via partners.</p>
+          <div class="prod-card__meta"><span>MOQ: 1 pack (12 u.)</span><span>· Delivery 1–2 weeks</span></div>
+          <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Highball%20Glass%20%28GL-HIGHBALL-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--imported badge--abs">🌎 Imported</span>
+          <div class="prod-card__media prod-card__media--placeholder">Boston Shaker</div>
+          <h3 class="prod-card__title">Boston Shaker Tin/Tin</h3>
+          <p class="prod-card__desc">Tin-on-tin stainless steel Boston shaker. Professional bar standard.</p>
+          <div class="prod-card__meta"><span>MOQ: 2 units</span><span>· Delivery 1–2 weeks</span></div>
+          <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Boston%20Shaker%20%28GL-SHAKER-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--imported badge--abs">🌎 Imported</span>
+          <div class="prod-card__media prod-card__media--placeholder">Double Jigger</div>
+          <h3 class="prod-card__title">Double Jigger 30/60 ml</h3>
+          <p class="prod-card__desc">30/60 ml stainless steel double jigger. Non-slip handle.</p>
+          <div class="prod-card__meta"><span>MOQ: 4 units</span><span>· Delivery 1–2 weeks</span></div>
+          <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Double%20Jigger%20%28GL-JIGGER-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--imported badge--abs">🌎 Imported</span>
+          <div class="prod-card__media prod-card__media--placeholder">Bar Mat</div>
+          <h3 class="prod-card__title">Non-Slip Bar Mat</h3>
+          <p class="prod-card__desc">Non-slip rubber bar mat. 60×30 cm.</p>
+          <div class="prod-card__meta"><span>MOQ: 2 units</span><span>· Delivery 1–2 weeks</span></div>
+          <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Bar%20Mat%20%28GL-BARMAT-001%29.">Order on WhatsApp</a>
+        </article>
+        <article class="prod-card">
+          <span class="badge badge--imported badge--abs">🌎 Imported</span>
+          <div class="prod-card__media prod-card__media--placeholder">Sphere Ice Mold</div>
+          <h3 class="prod-card__title">Sphere Ice Mold 6 cm</h3>
+          <p class="prod-card__desc">6 cm silicone sphere mold. Slow-melt premium presentation.</p>
+          <div class="prod-card__meta"><span>MOQ: 4 units</span><span>· Delivery 1–2 weeks</span></div>
+          <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Sphere%20Ice%20Mold%20%28GL-ICEMOLD-001%29.">Order on WhatsApp</a>
+        </article>
+      </div>
+    </div>
 
-<div class="origin">Magdalena &amp; Cundinamarca</div>
-</div>
-</div>
+    <hr class="divider">
 
-<p>Our most-requested syrup. High-anthocyanin Colombian hibiscus with floral Andean rose notes. Clarified, intense crimson colour, perfect for craft cocktails and tropical spritzes. Preferred by boutique bars in Bogotá and the coast.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">65°</span></div>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">750ml · 1L · 5L (B2B)</span></div>
-<div class="spec-row"><span class="spec-key">MOQ</span><span class="spec-val">6 bottles 750ml</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Cocktails</span>
-<span class="spec-tag">Spritz</span>
-<span class="spec-tag">Mocktails</span>
-<span class="spec-tag">HORECA</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20request%20Hibiscus%20Rose%20Syrup" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-<!-- Tamarindo -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🟤</div>
-<div class="spec-card-title">
-
-<h3>Tamarind Syrup</h3>
-<div class="binomial">Tamarindus indica</div>
-
-<div class="origin">Caribbean Coast · Magdalena</div>
-</div>
-</div>
-
-<p>Colombian tamarind from the Caribbean coast — deep sweet-sour profile, date and caramel notes. Exceptionally versatile for tropical cocktails, marinades and gastronomic bases. One of the most-imported Asian ingredients that can be made locally.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">65°</span></div>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">750ml · 1L · 5L (B2B)</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Cocktails</span>
-<span class="spec-tag">Gastronomy</span>
-<span class="spec-tag">Marinades</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20request%20Tamarind%20Syrup" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-<!-- Ají Tropical -->
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🌶️</div>
-<div class="spec-card-title">
-
-<h3>Tropical Chili Syrup</h3>
-<div class="binomial">Capsicum spp. &amp; botanicals blend</div>
-
-<div class="origin">Sierra Nevada · Santa Marta</div>
-</div>
-</div>
-
-<p>Blend of Colombian Sierra Nevada chilies with tropical spices. Moderate heat with aromatic depth — designed for craft cocktails in mezcal style, spicy margaritas and heat-forward beverage programmes. Widely used in innovative cocktail programmes.</p>
-<div class="spec-row"><span class="spec-key">Brix</span><span class="spec-val">65°</span></div>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">500ml · 1L (B2B)</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Mezcal</span>
-<span class="spec-tag">Margaritas</span>
-<span class="spec-tag">Spicy cocktails</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20Tropical%20Chili%20Syrup" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-</div>
-</div>
+    <div class="rx-block">
+      <span class="eyebrow">℞ Your first prescription</span>
+      <h2>Not sure where to start?</h2>
+      <p>WhatsApp Don Próspero. He'll put together a sample pack (3 mini products free, you pay shipping)
+      and we'll see what your menu actually needs before you commit to a case.</p>
+      <a class="btn btn--green btn--wa btn--lg" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27d%20like%20a%20sample%20pack.">Talk to Don Próspero</a>
+    </div>
+  </div>
 </section>
-<!-- ===== SECTION 3: GARNISHES ===== -->
-<section class="product-section bg-cream" id="garnishes">
-<div class="product-inner">
-<div class="product-header reveal">
 
-<div class="product-label">Line 03 — Bar Decoration</div>
-
-<h2>Dehydrated<br/><em>Garnishes</em></h2>
-
-<p>Premium bar decorations from dehydrated Colombian tropical fruits and flowers. Shelf-stable, boutique presentation in glass jars. Designed to elevate craft cocktail presentation.</p>
-</div>
-<div class="products-grid-3">
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🌸</div>
-<div class="spec-card-title">
-
-<h3>Dried Hibiscus Flowers</h3>
-<div class="binomial">Hibiscus sabdariffa</div>
-
-<div class="origin">Magdalena · Caribbean</div>
-</div>
-</div>
-
-<p>Temperature-controlled dehydrated Colombian hibiscus flowers. Vibrant crimson colour, crunchy texture. Ideal for garnishing floral cocktails, spritzes and gin tonics. Impactful visual presence on ice.</p>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">Glass jar 50g / 200g</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Gin Tonic</span>
-<span class="spec-tag">Spritz</span>
-<span class="spec-tag">Bar garnish</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20Hibiscus%20Flowers%20Maia" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🟠</div>
-<div class="spec-card-title">
-
-<h3>Dehydrated Lulo Chips</h3>
-<div class="binomial">Solanum quitoense</div>
-
-<div class="origin">Nariño · Andes</div>
-</div>
-</div>
-
-<p>Dehydrated Andean lulo slices — vibrant orange colour, translucent texture. Visually spectacular on acid cocktails. One of Colombia's most photographed garnishes. Certified for export.</p>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">Glass jar 40g / 150g</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Sour cocktails</span>
-<span class="spec-tag">Bar photography</span>
-<span class="spec-tag">Export</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20Dehydrated%20Lulo%20Chips" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-<div class="spec-card reveal">
-<div class="spec-card-header">
-<div class="spec-card-icon">🌴</div>
-<div class="spec-card-title">
-
-<h3>Caribbean Tropical Mix</h3>
-<div class="binomial">Mix botánico artesanal</div>
-
-<div class="origin">Caribbean Coast · Magdalena</div>
-</div>
-</div>
-
-<p>Artisanal blend of dehydrated Colombian tropical garnishes: corozo, coconut, Tahiti lime, dried red chili, Jamaica flower. The complete set for an authentic Caribbean bar anywhere in the world.</p>
-<div class="spec-row"><span class="spec-key">Format</span><span class="spec-val">Glass jar 80g (mix)</span></div>
-<div class="spec-tags">
-<span class="spec-tag">Bar kit</span>
-<span class="spec-tag">Caribbean</span>
-<span class="spec-tag">Corporate gift</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Sample%20Caribbean%20Tropical%20Mix" rel="noopener" target="_blank">Request Sample →</a>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== SECTION 4: MAJÍN ===== -->
-<section class="product-section bg-white" id="majin">
-<div class="product-inner">
-<div class="product-header reveal">
-
-<div class="product-label">Line 04 — Proprietary Brand</div>
-
-<h2><em>Majín</em><br/>The Colombian Tajín</h2>
-
-<p>Our proprietary brand. Majín is a tropical Colombian chili-lime seasoning — with its own search identity, positioned to become a reference for Latin American tropical mixology. Boutique presentation in glass jar.</p>
-</div>
-<div class="product-featured reveal">
-<div>
-<div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-<div style="width:70px;height:70px;background:linear-gradient(135deg,var(--gold-wash),rgba(184,115,51,0.2));border:1px solid rgba(184,115,51,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">🌶️</div>
-<div>
-<h3 style="font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--forest);">Majín</h3>
-
-<div style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);">Tropical Chili &amp; Lime Seasoning</div>
-
-<div style="font-family:var(--mono);font-size:0.6rem;font-weight:600;color:var(--gold);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.15rem;">Sierra Nevada · Santa Marta, Colombia</div>
-</div>
-</div>
-
-<p style="font-size:0.9rem;color:var(--ink-3);line-height:1.75;">Majín was born from a simple observation: Tajín is one of the most-used cocktail ingredients in Latin America, but all of it comes from Mexico. Why not create the Colombian equivalent — with local Sierra Nevada chilies, Caribbean Tahiti lime and Colombian tropical spices? The result is Majín: a seasoning with unique identity, proprietary brand, and the potential to become synonymous with Colombian tropical mixology.</p>
-<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:1rem 0;">
-<span class="spec-tag">Cocktail rim</span>
-<span class="spec-tag">Snacks &amp; ceviche</span>
-<span class="spec-tag">Tropical gastronomy</span>
-<span class="spec-tag">Retail &amp; B2B</span>
-</div>
-
-<a class="spec-cta" href="https://wa.me/19034598763?text=Information%20request%20about%20Maj%C3%ADn" rel="noopener" target="_blank">Request Samples →</a>
-</div>
-<div>
-<div style="background:var(--cream-2);border-radius:12px;padding:2rem;">
-
-<div style="font-family:var(--mono);font-size:0.62rem;font-weight:600;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;">Why Majín?</div>
-<div style="display:flex;flex-direction:column;gap:1rem;">
-<div style="display:flex;gap:0.75rem;align-items:flex-start;">
-<div style="width:28px;height:28px;background:var(--gold-wash);border:1px solid rgba(184,115,51,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;">🌶️</div>
-<div><p style="font-size:0.82rem;color:var(--ink-3);line-height:1.6;">Colombian Sierra Nevada chilies — unique flavour, traceable to origin</p></div>
-</div>
-<div style="display:flex;gap:0.75rem;align-items:flex-start;">
-<div style="width:28px;height:28px;background:var(--gold-wash);border:1px solid rgba(184,115,51,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;">🍋</div>
-<div><p style="font-size:0.82rem;color:var(--ink-3);line-height:1.6;">Caribbean Colombian Tahiti lime — bright natural acidity</p></div>
-</div>
-<div style="display:flex;gap:0.75rem;align-items:flex-start;">
-<div style="width:28px;height:28px;background:var(--gold-wash);border:1px solid rgba(184,115,51,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;">📦</div>
-<div><p style="font-size:0.82rem;color:var(--ink-3);line-height:1.6;">Boutique glass jar packaging — 50g retail, 250g B2B, 1kg food service</p></div>
-</div>
-<div style="display:flex;gap:0.75rem;align-items:flex-start;">
-<div style="width:28px;height:28px;background:var(--gold-wash);border:1px solid rgba(184,115,51,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;">™</div>
-<div><p style="font-size:0.82rem;color:var(--ink-3);line-height:1.6;">Trademark brand, own search identity — "Majín" as unique market term</p></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== CUSTOM FORMULATIONS CTA ===== -->
-<section style="padding:4rem 2.5rem;background:var(--forest);">
-<div class="section-inner">
-<div class="custom-box reveal" style="grid-template-columns:1fr auto;display:grid;gap:2rem;align-items:center;background:rgba(245,239,224,0.06);border:1px solid rgba(184,115,51,0.25);border-radius:var(--radius-lg);padding:3rem;">
-<div>
-
-<div class="product-label" style="color:var(--gold-2);">Custom Formulations</div>
-
-<h3 style="font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--cream);margin-bottom:0.75rem;">Need a Colombian flavour<br/>not in the catalogue?</h3>
-
-<p style="color:rgba(245,239,224,0.65);font-size:0.9rem;line-height:1.7;">We develop private label formulations and exclusive recipes for beverage programmes and professional kitchens. Tell us the sensory profile and we'll send you a concept sample in 10 business days.</p>
-</div>
-<div style="flex-shrink:0;">
-
-<a class="btn-gold" href="https://wa.me/19034598763?text=Custom%20formulation%20request%20Maia%20Bot%C3%A1nicas" rel="noopener" target="_blank">Enquire Custom Formulation</a>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== FOOTER ===== -->
 </main>
-<footer>
-<div class="footer-inner">
-<div class="footer-top">
-<div class="footer-brand">
-<div class="footer-logo-row">
-<div class="footer-logo-mark">
-<svg fill="none" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 2C10 2 4 5.5 4 11C4 13.8 6.2 16 10 16C13.8 16 16 13.8 16 11C16 5.5 10 2 10 2Z" fill="none" stroke="white" stroke-width="1.4"></path>
-<line stroke="white" stroke-linecap="round" stroke-width="1.2" x1="10" x2="10" y1="3" y2="16"></line>
-</svg>
-</div>
-<span class="footer-brand-name">Maia Botánicas</span>
-</div>
 
-<p>Colombia's Botanical Intelligence. Part of <a href="https://the-maia-group.com" rel="noopener" style="color:var(--gold-2);text-decoration:underline;text-underline-offset:0.16em;" target="_blank">The Maia Group</a> — Santa Marta, Colombia.</p>
-</div>
-<div class="footer-col">
-<div class="footer-title">Product Lines</div>
-<ul>
-<li><a href="#concentrados">Clarified Concentrates</a></li>
-<li><a href="#syrups">Artisanal Syrups</a></li>
-<li><a href="#garnishes">Dehydrated Garnishes</a></li>
-<li><a href="#majin">Majín</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<div class="footer-title">Company</div>
-<ul>
-<li><a href="nosotros.html">About</a></li>
-<li><a href="sostenibilidad.html">Sustainability</a></li>
-<li><a href="mayoreo.html">Wholesale</a></li>
-<li><a href="proceso.html">Process</a></li>
-<li><a href="contacto.html">Contact</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<div class="footer-title">The Maia Group</div>
-<ul>
-<li><a href="https://the-maia-group.com" rel="noopener" target="_blank">The Maia Group</a></li>
-<li><a href="https://lleva-lleva.com" rel="noopener" target="_blank">LlevaLleva B2B</a></li>
-<li><a href="https://maia-management.com" rel="noopener" target="_blank">Management</a></li>
-</ul>
-</div>
-<div class="footer-col">
-
-<div class="footer-title">Contact</div>
-<ul>
-<li><a href="mailto:info@maia-botanicas.com">info@maia-botanicas.com</a></li>
-<li><a href="tel:+19034598763">+1 903 459 8763</a></li>
-<li><a href="https://wa.me/19034598763" rel="noopener" target="_blank">WhatsApp Business</a></li>
-
-<li style="font-size:0.78rem;color:rgba(250,248,245,0.35);list-style:none;padding-top:0.25rem;">Calle 24 #3-99, Edificio Banco de Bogotá,<br/>Suite 1102, Level 11, Santa Marta</li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-
-<div class="footer-copy">© 2026 Maia Management S.A.S. — commercial brand: Maia Botánicas · NIT 901.862.977-7 · Santa Marta, Colombia.</div>
-<div class="footer-links" style="margin-top:1.25rem;display:flex;flex-wrap:wrap;gap:1.25rem;font-size:0.75rem;">
-
-<a href="privacy.html" style="color:rgba(255,255,255,0.72);text-decoration:none;">Privacy Policy</a>
-
-<a href="terminos.html" style="color:rgba(255,255,255,0.72);text-decoration:none;">Terms of Service</a>
-<a href="sitemap.xml" style="color:rgba(255,255,255,0.72);text-decoration:none;">Sitemap</a>
-
-<a href="#mb-consent-banner" onclick="event.preventDefault(); window.MB_openConsentBanner &amp;&amp; window.MB_openConsentBanner()" style="color:rgba(255,255,255,0.72);text-decoration:none;cursor:pointer;">Cookie Settings</a>
-</div>
-</div>
-</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__brand">Maia Botánicas</span>
+        <p style="font-size:0.92rem; max-width:38ch;">Wholesale dispensary from Santa Marta. Caribbean-coast bar supply.</p>
+        <p style="font-size:0.85rem; opacity:0.8;">
+          Maia Management S.A.S. · NIT 901.862.977-7<br>
+          Calle 24 #3-99, Edificio Banco de Bogotá, Suite 1102<br>
+          Santa Marta, Magdalena, Colombia
+        </p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul style="display:flex; flex-direction:column; gap:var(--space-2); font-size:0.95rem;">
+          <li><a href="/en/productos.html">Catalog</a></li>
+          <li><a href="/en/mayoreo.html">Wholesale</a></li>
+          <li><a href="/en/nosotros.html">About</a></li>
+          <li><a href="/en/contacto.html">Contact</a></li>
+          <li><a href="/">Español</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Maia ecosystem</h4>
+        <ul class="footer__ecosystem">
+          <li><a href="https://el-sanatorio.com" rel="noopener">El Sanatorio</a></li>
+          <li><a href="https://sushi-pop.co" rel="noopener">Sushi Pop</a></li>
+          <li><a href="https://maia-recruitment.com" rel="noopener">Maia Recruitment</a></li>
+          <li><a href="https://maia-management.com" rel="noopener">Maia Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Maia Management S.A.S.</span>
+      <ul>
+        <li><a href="/en/privacy.html">Privacy &amp; Habeas Data</a></li>
+        <li><a href="/en/terminos.html">Terms</a></li>
+        <li><a href="https://wa.me/19034598763" rel="noopener">WhatsApp: +1 903 459 8763</a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
-<div class="toast" id="toast">
-<div class="toast-check"><svg fill="none" height="10" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="10"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-<span id="toastMsg"></span>
-</div>
-<script src="/js/main.js?v=20260524-routes"></script>
-<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/19034598763" rel="noopener" target="_blank">
-<svg fill="white" height="28" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.112 1.526 5.836L.057 23.617a.75.75 0 00.919.921l5.857-1.48A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.933 0-3.74-.516-5.292-1.415l-.369-.214-3.862.977.998-3.78-.236-.381A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
-</a>
-<style>
-.whatsapp-float{position:fixed;bottom:24px;right:24px;background:#25D366;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.25);z-index:9999;transition:transform .2s,box-shadow .2s;text-decoration:none}
-.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(0,0,0,.35)}
-</style>
-<div id="mb-consent-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a3a2a;color:#fff;padding:16px 24px;z-index:10001;box-shadow:0 -2px 12px rgba(0,0,0,0.3);font-family:Inter,sans-serif;font-size:13px;line-height:1.5;">
-<div style="max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;">
-<div style="flex:1;min-width:200px;">
 
-<span>We use cookies and Google Analytics (Law 1581/2012) to improve your experience. <a href="privacy.html" style="color:#F2C879;">Privacy policy</a>.</span>
+<div class="consent-banner" id="consent-banner" role="region" aria-label="Cookie notice">
+  <div class="consent-banner__copy">
+    Essential cookies and anonymous analytics. Form data handled under Colombia's <a href="/en/privacy.html">Habeas Data / Law 1581</a>.
+  </div>
+  <div class="consent-banner__actions">
+    <button class="btn btn--green" data-consent="accept">Accept</button>
+    <button class="btn btn--ghost" data-consent="reject">Reject analytics</button>
+  </div>
 </div>
-<div style="display:flex;gap:8px;flex-shrink:0;align-items:center;">
-<button onclick="MB_consentAccept()" style="background:#6F4019;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;" type="button"><span>Accept</span></button>
-<button onclick="MB_consentReject()" style="background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;" type="button"><span>Essential only</span></button>
-</div>
-</div>
-</div>
-<script>
-(function(){
-  var B = document.getElementById('mb-consent-banner');
-  window.MB_openConsentBanner = function(){ if(B) B.style.display='block'; };
-  window.MB_consentAccept = function(){
-    try{ localStorage.setItem('mb_consent','accepted'); }catch(e){}
-    if(B) B.style.display='none';
-    if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics();
-  };
-  window.MB_consentReject = function(){
-    try{ localStorage.setItem('mb_consent','rejected'); }catch(e){}
-    if(B) B.style.display='none';
-  };
-  try{
-    var c = localStorage.getItem('mb_consent');
-    if(!c){ setTimeout(function(){ if(B) B.style.display='block'; }, 800); }
-    else if(c==='accepted'){ if (typeof window.MB_enableAnalytics === 'function') window.MB_enableAnalytics(); }
-  }catch(e){ if(B) B.style.display='block'; }
-})();
-</script>
+
 </body>
 </html>

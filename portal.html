@@ -54,7 +54,7 @@
         </div>
         <div class="form-row">
           <button class="btn btn--green btn--lg" type="submit">Enviar enlace mágico</button>
-          <p class="field-help" id="magic-help">El enlace expira en 30 minutos.</p>
+          <p class="field-help" id="magic-help" role="status" aria-live="polite">El enlace expira en 30 minutos.</p>
         </div>
       </form>
       <hr class="divider">
@@ -83,13 +83,13 @@
     <div class="grid grid--2" style="gap:var(--space-7);">
       <div>
         <h2 class="mb-4">Pedidos recientes</h2>
-        <div id="orders-list">
+        <div id="orders-list" aria-live="polite" aria-busy="true">
           <p class="text-mute">Cargando…</p>
         </div>
       </div>
       <div>
         <h2 class="mb-4">Sample pack</h2>
-        <div id="sample-tracker">
+        <div id="sample-tracker" aria-live="polite" aria-busy="true">
           <p class="text-mute">Cargando…</p>
         </div>
 

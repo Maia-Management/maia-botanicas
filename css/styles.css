@@ -708,3 +708,17 @@ ul { list-style: none; padding: 0; margin: 0; }
   body { background: white; color: black; }
   a { color: black; text-decoration: underline; }
 }
+
+
+/* ---------- 14. REDUCED MOTION (WCAG 2.3.3) — added 2026-06-22 (audit verify-4.8) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .stamp { transform: none !important; }
+  .hero__rx { transform: none !important; }
+}

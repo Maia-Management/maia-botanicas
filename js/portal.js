@@ -87,6 +87,7 @@
 
   function renderOrders(orders) {
     var box = $('#orders-list');
+    if (box) box.setAttribute('aria-busy', 'false');
     if (!orders.length) {
       box.innerHTML = '<p class="text-mute">Aún no tienes pedidos registrados. Cuando hagas el primero con Don Próspero, aparecerá aquí.</p>';
       return;
@@ -109,6 +110,7 @@
 
   function renderSampleTracker(lead) {
     var box = $('#sample-tracker');
+    if (box) box.setAttribute('aria-busy', 'false');
     if (!lead) { box.innerHTML = '<p class="text-mute">Sin cuenta de comprador activa.</p>'; return; }
     if (lead.sample_pack_requested) {
       box.innerHTML = '<p>Sample pack <strong>' + (lead.status || 'solicitado') + '</strong>. Luz lo coordina por WhatsApp.</p>';

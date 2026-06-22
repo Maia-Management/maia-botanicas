@@ -135,7 +135,12 @@ async function pickVariant(stage, lang) {
   if (!rows || !rows.length) {
     // fallback to other lang if seed missing
     const fb = await sb('GET', `botanicas_bot_variations?stage=eq.${stage}&select=id,template_text,use_count`);
-    if (!fb || !fb.length) return { id: null, template_text: 'Don Próspero está al teléfono. Un momento.' };
+    if (!fb || !fb.length) {
+      const fallback = lang === 'en'
+        ? 'Don Próspero is on the line — one moment.'
+        : 'Don Próspero está al teléfono. Un momento.';
+      return { id: null, template_text: fallback };
+    }
     return fb[Math.floor(Math.random() * fb.length)];
   }
   // prefer less-used variants
@@ -146,15 +151,16 @@ async function pickVariant(stage, lang) {
 
 async function bumpVariant(id) {
   if (!id) return;
-  await sb('PATCH', `botanicas_bot_variations?id=eq.${id}`,
-    { use_count: { $inc: 1 } } // pseudo — PostgREST doesn't support raw increment; do raw RPC instead.
-  ).catch(() => {});
-  // Simpler: fetch, increment, write.
+  // PostgREST has no raw increment operator. Read-modify-write is safe here:
+  // the variation pool is small (~12/stage/lang) and the count is advisory
+  // (used only to bias selection toward less-shown variants).
   try {
     const rows = await sb('GET', `botanicas_bot_variations?id=eq.${id}&select=use_count`);
-    const cur = rows && rows[0] ? rows[0].use_count : 0;
+    const cur = rows && rows[0] ? (rows[0].use_count || 0) : 0;
     await sb('PATCH', `botanicas_bot_variations?id=eq.${id}`, { use_count: cur + 1 });
-  } catch {}
+  } catch {
+    /* swallow — counter drift is non-fatal */
+  }
 }
 
 async function appendTurn(leadId, turn) {
@@ -269,7 +275,15 @@ export default async (req) => {
     });
   } catch (err) {
     console.error('botanicas-bot error', err);
-    const fallback = 'Estamos teniendo un problema técnico — escríbele directo a Luz: wa.me/19034598763. Don Próspero vuelve pronto.';
+    // Best-effort lang inference from the body we attempted to parse — defaults ES.
+    let errLang = 'es';
+    try {
+      const errParams = new URLSearchParams(rawBody);
+      errLang = detectLang(errParams.get('Body') || '');
+    } catch { /* keep ES */ }
+    const fallback = errLang === 'en'
+      ? 'Technical hiccup on our side — message Luz directly: wa.me/19034598763. Don Próspero will be back shortly.'
+      : 'Estamos teniendo un problema técnico — escríbele directo a Luz: wa.me/19034598763. Don Próspero vuelve pronto.';
     return new Response(twiml(fallback), { headers: { 'Content-Type': 'text/xml' } });
   }
 };

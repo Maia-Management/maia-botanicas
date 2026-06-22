@@ -1,173 +1,104 @@
-/* =====================================================
-   MAIA BOTÁNICAS — main.js
-   Spanish-primary bilingual B2B site
-   ===================================================== */
+/* Maia Botánicas v1 — main.js — 2026-06-22
+ * Lightweight: nav toggle, product tabs, smooth-scroll, consent
+ */
+(function () {
+  'use strict';
+  document.documentElement.classList.add('js-ready');
 
-/* ===== JS-READY FLAG (enables CSS scroll animations) ===== */
-document.documentElement.classList.add('js-ready');
-
-/* ===== ANIMATION FALLBACK — make everything visible after 3 s ===== */
-setTimeout(function() {
-  document.querySelectorAll('.reveal, .rv, .fade-in').forEach(function(el) {
-    el.style.opacity = '1';
-    el.style.transform = 'none';
-  });
-}, 3000);
-
-/* ===== LANGUAGE (route-driven) =====
-   The site is split into separately-indexable routes: ES at /, EN at /en/.
-   The HTML <html lang="..."> attribute is authoritative — no JS swapping.
-   We keep setLang as a helper so the contact form handler and any legacy
-   callers still work, but it no longer flips the body class or writes to
-   localStorage (which used to override the route on subsequent page loads). */
-function currentLang() {
-  return (document.documentElement.getAttribute('lang') || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
-}
-
-function setLang(l) {
-  // Kept for the contact-form code path that still calls this; no DOM swap.
-  syncLocalizedFormControls(l === 'en' ? 'en' : 'es');
-  var nav = document.getElementById('navCenter');
-  if (nav) nav.classList.remove('open');
-}
-
-function syncLocalizedFormControls(l) {
-  document.querySelectorAll('form [data-lang]').forEach(function(el) {
-    if (!/^(INPUT|TEXTAREA|SELECT|BUTTON|OPTION)$/.test(el.tagName)) return;
-    el.disabled = el.getAttribute('data-lang') !== l;
-  });
-}
-
-/* Mark the body so any legacy CSS that keys off body.en still applies on /en/ pages. */
-(function() {
-  if (currentLang() === 'en') document.body && document.body.classList.add('en');
-})();
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (currentLang() === 'en') document.body.classList.add('en');
-  syncLocalizedFormControls(currentLang());
-});
-
-/* ===== MOBILE MENU ===== */
-function toggleMenu() {
-  var nav = document.getElementById('navCenter');
-  if (nav) nav.classList.toggle('open');
-}
-
-/* Close mobile menu when a nav link is clicked */
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.nav-links a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      var nav = document.getElementById('navCenter');
-      if (nav) nav.classList.remove('open');
-    });
-  });
-});
-
-/* ===== SCROLLED NAV ===== */
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
-  if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-/* ===== SCROLL REVEAL ===== */
-(function() {
-  if (typeof IntersectionObserver === 'undefined') return;
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-
-  // Animation is CSS-driven (.js-ready .reveal); just observe for the .visible class
-  document.querySelectorAll('.reveal').forEach(function(el) {
-    obs.observe(el);
-  });
-})();
-
-/* ===== TOAST ===== */
-function showToast(msg) {
-  var t = document.getElementById('toast');
-  var m = document.getElementById('toastMsg');
-  if (!t || !m) return;
-  m.textContent = msg;
-  t.classList.add('show');
-  setTimeout(function() { t.classList.remove('show'); }, 3800);
-}
-
-/* ===== CONTACT FORM ===== */
-(function() {
-  var form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var isES = currentLang() === 'es';
-    syncLocalizedFormControls(isES ? 'es' : 'en');
-    var btn = form.querySelector('.form-submit[data-lang="' + (isES ? 'es' : 'en') + '"]') || form.querySelector('.form-submit');
-    if (btn) { btn.disabled = true; btn.textContent = '...'; }
-
-    var data = new FormData(form);
-    fetch(form.getAttribute('action') || '/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    })
-    .then(function(res) {
-      if (res.ok) {
-        showToast(isES
-          ? 'Mensaje enviado — te contactaremos pronto.'
-          : 'Message sent — we\'ll be in touch shortly.');
-        form.reset();
-        if (typeof gtag === 'function') {
-          gtag('event', 'form_submit', { event_category: 'lead', event_label: 'maia-botanicas-contact' });
-        }
-      } else {
-        showToast(isES
-          ? 'Algo salió mal. Por favor escríbenos por WhatsApp.'
-          : 'Something went wrong. Please contact us via WhatsApp.');
-      }
-    })
-    .catch(function() {
-      var isES = currentLang() === 'es';
-      showToast(isES
-        ? 'Algo salió mal. Por favor escríbenos por WhatsApp.'
-        : 'Something went wrong. Please contact us via WhatsApp.');
-    })
-    .finally(function() {
-      if (btn) {
-        btn.disabled = false;
-        var isES = currentLang() === 'es';
-        btn.textContent = isES ? 'Enviar Solicitud' : 'Send Enquiry';
-      }
-    });
-  });
-})();
-
-/* ===== GA4 EVENT TRACKING ===== */
-document.addEventListener('click', function(e) {
-  if (typeof gtag !== 'function') return;
-
-  var wa = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-  if (wa) { gtag('event', 'whatsapp_click', { event_category: 'contact', event_label: wa.href }); }
-
-  var tel = e.target.closest('a[href^="tel:"]');
-  if (tel) { gtag('event', 'phone_click', { event_category: 'contact', event_label: tel.href }); }
-
-  var mail = e.target.closest('a[href^="mailto:"]');
-  if (mail) { gtag('event', 'email_click', { event_category: 'contact', event_label: mail.href }); }
-});
-
-/* ===== SMOOTH SCROLL for anchor links ===== */
-document.addEventListener('click', function(e) {
-  var link = e.target.closest('a[href^="#"]');
-  if (!link) return;
-  var target = document.querySelector(link.getAttribute('href'));
-  if (target) {
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function lang() {
+    var l = (document.documentElement.getAttribute('lang') || 'es').toLowerCase();
+    return l.indexOf('en') === 0 ? 'en' : 'es';
   }
-});
+
+  /* Mobile nav toggle */
+  function initNav() {
+    var btn = document.querySelector('.nav__toggle');
+    var nav = document.getElementById('nav-primary');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') nav.classList.remove('is-open');
+    });
+  }
+
+  /* Product tabs */
+  function initTabs() {
+    var tabs = document.querySelectorAll('.tab[data-tab]');
+    var panels = document.querySelectorAll('.tab-panel[data-anchor]');
+    if (!tabs.length || !panels.length) return;
+
+    function activate(id) {
+      tabs.forEach(function (t) {
+        var active = t.dataset.tab === id;
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('is-active', p.dataset.anchor === id);
+      });
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var id = t.dataset.tab;
+        activate(id);
+        if (history.replaceState) history.replaceState(null, '', '#' + id);
+      });
+      t.addEventListener('keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        var arr = Array.prototype.slice.call(tabs);
+        var idx = arr.indexOf(document.activeElement);
+        if (idx < 0) return;
+        var next = e.key === 'ArrowRight' ? (idx + 1) % arr.length : (idx - 1 + arr.length) % arr.length;
+        arr[next].focus();
+        arr[next].click();
+      });
+    });
+
+    var hash = (location.hash || '').replace('#', '');
+    if (hash && document.getElementById('panel-' + hash)) activate(hash);
+  }
+
+  /* Smooth-scroll anchor links */
+  function initSmoothScroll() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      var hash = link.getAttribute('href');
+      if (hash.length < 2) return;
+      var target = document.querySelector(hash);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (history.replaceState) history.replaceState(null, '', hash);
+      }
+    });
+  }
+
+  /* Form-status toast after Netlify redirect */
+  function initFormStatus() {
+    var params = new URLSearchParams(location.search);
+    var status = params.get('status');
+    if (!status) return;
+    var msg = document.createElement('div');
+    msg.setAttribute('role', 'status');
+    msg.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#2E5C3F;color:#FFFAF1;padding:14px 22px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.2);z-index:200;font-weight:600;max-width:90vw;text-align:center;';
+    msg.textContent = lang() === 'es'
+      ? '¡Recibido! Don Próspero te escribe en menos de 24 horas hábiles.'
+      : 'Got it! Don Próspero will message you within 24 business hours.';
+    document.body.appendChild(msg);
+    setTimeout(function () { msg.style.opacity = '0'; msg.style.transition = 'opacity 0.4s ease'; }, 5200);
+    setTimeout(function () { msg.remove(); }, 5800);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initNav(); initTabs(); initSmoothScroll(); initFormStatus();
+    });
+  } else {
+    initNav(); initTabs(); initSmoothScroll(); initFormStatus();
+  }
+})();

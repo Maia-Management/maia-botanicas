@@ -52,4 +52,31 @@
   } catch (e) {
     // Keep denied defaults when storage is unavailable.
   }
+
+  /* Banner UI ------------------------------------------------------- */
+  function initBanner() {
+    var banner = document.getElementById("consent-banner");
+    if (!banner) return;
+    var decided = false;
+    try { decided = !!localStorage.getItem("mb_consent"); } catch (e) {}
+    if (!decided) banner.classList.add("is-visible");
+
+    banner.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-consent]");
+      if (!b) return;
+      var choice = b.getAttribute("data-consent");
+      try {
+        localStorage.setItem("mb_consent", choice === "accept" ? "accepted" : "rejected");
+      } catch (err) {}
+      if (choice === "accept" && typeof window.MB_enableAnalytics === "function") {
+        window.MB_enableAnalytics();
+      }
+      banner.classList.remove("is-visible");
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBanner);
+  } else {
+    initBanner();
+  }
 })();

@@ -722,3 +722,11 @@ ul { list-style: none; padding: 0; margin: 0; }
   .stamp { transform: none !important; }
   .hero__rx { transform: none !important; }
 }
+
+
+/* Pass-4 PM 2026-06-23 mobile touch-target floor */
+@media (max-width: 768px) {
+  .nav__toggle { min-height: 44px; min-width: 44px; padding: 12px 14px !important; }
+  .checkbox-pill { min-height: 44px; padding: 12px 18px !important; }
+  .whatsapp-float { bottom: 14px; left: 14px; right: auto; width: 52px; height: 52px; }
+}

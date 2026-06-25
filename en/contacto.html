@@ -82,15 +82,15 @@
       <p hidden><label>Don't fill: <input name="bot-field"></label></p>
       <input type="hidden" name="origin" value="contacto-en">
       <input type="hidden" name="lang" value="en">
-      <div class="form-row"><label for="name" class="req">Your name</label><input id="name" name="name" type="text" required maxlength="80" autocomplete="name"></div>
+      <div class="form-row"><label for="name" class="req">Your name</label><input id="name" name="name" type="text" required aria-required="true" maxlength="80" autocomplete="name"></div>
       <div class="form-row"><label for="org">Bar / restaurant</label><input id="org" name="org" type="text" maxlength="120" autocomplete="organization"></div>
       <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" maxlength="120" autocomplete="email"></div>
-      <div class="form-row"><label for="wa" class="req">WhatsApp</label><input id="wa" name="whatsapp" type="tel" required placeholder="+57 300 000 0000" autocomplete="tel"></div>
-      <div class="form-row form-row--full"><label for="msg" class="req">Message</label><textarea id="msg" name="message" required rows="5" maxlength="1200"></textarea></div>
+      <div class="form-row"><label for="wa" class="req">WhatsApp</label><input id="wa" name="whatsapp" type="tel" required aria-required="true" placeholder="+57 300 000 0000" autocomplete="tel"></div>
+      <div class="form-row form-row--full"><label for="msg" class="req">Message</label><textarea id="msg" name="message" required aria-required="true" rows="5" maxlength="1200"></textarea></div>
       <div class="form-row form-row--full">
         <div class="consent">
           <label style="display:flex; gap:var(--space-2); align-items:flex-start; cursor:pointer;">
-            <input type="checkbox" name="consent" required style="width:auto; margin-top:3px;">
+            <input type="checkbox" name="consent" required aria-required="true" style="width:auto; margin-top:3px;">
             <span>I authorize Maia Management S.A.S. (NIT 901.862.977-7) to process my data under <a href="/en/privacy.html">Habeas Data Policy (Law 1581)</a> to respond to this enquiry.</span>
           </label>
         </div>

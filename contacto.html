@@ -99,7 +99,7 @@
 
       <div class="form-row">
         <label for="name" class="req">Tu nombre</label>
-        <input id="name" name="name" type="text" required maxlength="80" autocomplete="name">
+        <input id="name" name="name" type="text" required aria-required="true" maxlength="80" autocomplete="name">
       </div>
       <div class="form-row">
         <label for="org">Bar / restaurante</label>
@@ -111,16 +111,16 @@
       </div>
       <div class="form-row">
         <label for="wa" class="req">WhatsApp</label>
-        <input id="wa" name="whatsapp" type="tel" required placeholder="+57 300 000 0000" autocomplete="tel" inputmode="tel">
+        <input id="wa" name="whatsapp" type="tel" required aria-required="true" placeholder="+57 300 000 0000" autocomplete="tel" inputmode="tel">
       </div>
       <div class="form-row form-row--full">
         <label for="msg" class="req">Tu mensaje</label>
-        <textarea id="msg" name="message" required rows="5" maxlength="1200"></textarea>
+        <textarea id="msg" name="message" required aria-required="true" rows="5" maxlength="1200"></textarea>
       </div>
       <div class="form-row form-row--full">
         <div class="consent">
           <label style="display:flex; gap:var(--space-2); align-items:flex-start; cursor:pointer;">
-            <input type="checkbox" name="consent" required style="width:auto; margin-top:3px;">
+            <input type="checkbox" name="consent" required aria-required="true" style="width:auto; margin-top:3px;">
             <span>Autorizo a Maia Management S.A.S. (NIT 901.862.977-7) a tratar mis datos bajo
               <a href="/privacy.html">Política de Habeas Data (Ley 1581)</a> para contactarme sobre esta solicitud.</span>
           </label>

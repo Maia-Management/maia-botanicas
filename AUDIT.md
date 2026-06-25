@@ -110,7 +110,7 @@ The wholesale/export page has no embedded form — all CTAs go to WhatsApp. B2B 
 - WhatsApp: ✅ `wa.me/19034598763` — all 20+ links correct
 - NIT: ✅ `901.862.977-7` — correct in index, nosotros, mayoreo, proceso, privacy, terminos, 404, schema JSON-LD
 - Address: ✅ `Calle 24 #3-99, Edificio Banco de Bogotá, Suite 1102, Level 11, Santa Marta` — consistent
-- Email: ✅ `info@maia-botanicas.com` — correct throughout, no personal email exposed
+- Email: ✅ `botanicas@maia-management.com` — canonical updated 2026-06-25 PM per memory reference_advertising_email_andrew_maia_management (was `info@maia-botanicas.com`)
 
 ### SEO / Meta Tags ✅ (Good)
 - Canonical: ✅ All pages have correct canonical URLs

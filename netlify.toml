@@ -243,6 +243,16 @@
   to = "/terminos.html"
   status = 301
 
+# Explicit 404 fallback — was only Netlify-convention before, now belt-and-braces.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# ===== FUNCTIONS =====
+[functions]
+  node_bundler = "esbuild"
+
 # ===== SECURITY & CACHE HEADERS =====
 [[headers]]
   for = "/*"

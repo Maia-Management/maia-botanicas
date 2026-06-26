@@ -22,6 +22,7 @@
  */
 
 import crypto from 'node:crypto';
+import { recordEventSafe, BRANDS, CHANNELS, EVENTS } from './lib/vert/event-bus.mjs';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -119,6 +120,15 @@ async function findOrCreateLead(whatsapp, lang) {
     lang,
     status: 'intake',
     conversation_turns: [],
+  });
+  // Vert OS: chat_start beacon for new wholesale leads.
+  recordEventSafe({
+    brand: BRANDS.MAIA_BOTANICAS,
+    type: EVENTS.CHAT_STARTED,
+    channel: CHANNELS.WHATSAPP,
+    customer: { phone: e164 },
+    source_ref: 'botanicas-bot-' + (created[0]?.id || e164),
+    metadata: { lang, persona: 'don_prospero' },
   });
   return created[0];
 }
@@ -267,12 +277,22 @@ export default async (req) => {
     // If we just hit handoff, mark status & notify Luz (best-effort)
     if (stage === 'handoff') {
       await setLeadField(lead.id, { status: 'qualifying' });
+      // Vert OS: lead beacon when wholesale intake reaches handoff.
+      recordEventSafe({
+        brand: BRANDS.MAIA_BOTANICAS,
+        type: EVENTS.LEAD,
+        channel: CHANNELS.WHATSAPP,
+        customer: { phone: from.replace(/^whatsapp:/, '') },
+        source_ref: 'botanicas-lead-' + lead.id,
+        metadata: { stage: 'handoff', lang },
+      });
       // Note: outbound to Luz would use Twilio REST API; left as a P1 enhancement.
     }
 
     return new Response(twiml(variant.template_text), {
       headers: { 'Content-Type': 'text/xml' },
     });
+  
   } catch (err) {
     console.error('botanicas-bot error', err);
     // Best-effort lang inference from the body we attempted to parse — defaults ES.

@@ -72,13 +72,42 @@ a { color: var(--sepia-deep); text-decoration: underline; text-decoration-thickn
 a:hover, a:focus { color: var(--leaf-green); }
 :focus-visible { outline: 3px solid var(--ochre); outline-offset: 3px; border-radius: 3px; }
 
+/* Skip link — visually hidden until focused (a11y)
+   2026-06-26 phone-audit fix: clip-rect visually-hidden pattern keeps the
+   link reachable to screen readers + tab order, but reveals on :focus. */
 .skip-link {
-  position: absolute; left: -9999px;
-  padding: var(--space-3) var(--space-5);
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
   background: var(--ink-deep); color: var(--bg-parchment);
   text-decoration: none; font-weight: 600;
 }
-.skip-link:focus { left: var(--space-3); top: var(--space-3); z-index: 200; }
+.skip-link:focus {
+  position: absolute;
+  top: var(--space-3); left: var(--space-3);
+  width: auto; height: auto;
+  padding: var(--space-3) var(--space-5); margin: 0;
+  clip: auto; clip-path: none;
+  overflow: visible;
+  z-index: 200;
+  outline: 2px solid var(--bg-parchment); outline-offset: 2px;
+}
+
+/* Footer legal links — WCAG min touch target 44x44
+   2026-06-26 phone-audit fix. */
+.site-footer a,
+.footer__bottom a,
+.footer__ecosystem a {
+  min-height: 44px;
+  padding-block: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
 
 /* ---------- 2. TYPOGRAPHY ---------- */
 h1, h2, h3, h4 {

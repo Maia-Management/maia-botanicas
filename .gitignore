@@ -87,3 +87,5 @@ pnpm-debug.log*
 .worktrees/
 *.tmp
 *.bak
+.deploy-log.txt
+

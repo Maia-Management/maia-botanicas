@@ -180,16 +180,14 @@ export async function recordEvent({
     if (customer && (customer.phone || customer.email)) {
       customer_id = await ensureCustomer(customer);
     }
-    // Some events (page_view) won't have customer info. Skip when no customer_id —
-    // the DB constraint requires customer_id NOT NULL on this table. Log via console
-    // and return ok:false so the caller sees the no-op but the user request still
-    // succeeds.
-    if (!customer_id) {
-      return { ok: false, error: 'no_customer_identifier', skipped: true };
-    }
+    // Anonymous events (page_view, product_card_click, category_browse,
+    // whatsapp_click — most of the public-beacon traffic) have no phone/email
+    // and therefore no customer_id. The 2026-06-26 vcbi_nullable_customer_id
+    // migration relaxed the NOT NULL constraint so these can land. Insert
+    // customer_id=null and persist the brand-level signal.
 
     const ins = await sb('POST', 'vert_customer_brand_interaction', {
-      customer_id,
+      customer_id,                                // may be null for anon events
       brand,
       channel,
       interaction_type: type,
@@ -200,9 +198,20 @@ export async function recordEvent({
       staff_handled: null,
     });
     if (!ins.ok || !Array.isArray(ins.body) || !ins.body.length) {
-      return { ok: false, error: ins.error || 'insert_failed' };
+      // Surface the real failure reason in Netlify function logs. Previously
+      // every failure was swallowed silently and the public endpoint returned
+      // 204, so a misconfigured env or schema mismatch was invisible — the
+      // "204 black hole" today's E2E test caught.
+      console.warn(
+        '[botanicas event-bus] insert failed:',
+        ins.error || `status_${ins.status}`,
+        'brand=' + brand,
+        'type=' + type,
+        'body=' + (typeof ins.body === 'string' ? ins.body.slice(0, 240) : JSON.stringify(ins.body || {}).slice(0, 240)),
+      );
+      return { ok: false, error: ins.error || 'insert_failed', status: ins.status };
     }
-    return { ok: true, interaction_id: ins.body[0].id };
+    return { ok: true, interaction_id: ins.body[0].id, anonymous: customer_id === null };
   } catch (err) {
     return { ok: false, error: err?.message || String(err) };
   }
@@ -215,16 +224,20 @@ export async function recordEvent({
 export async function recordEventSafe(args) {
   try {
     const result = await recordEvent(args);
-    if (
-      !result?.ok &&
-      result?.error &&
-      result.error !== 'no_customer_identifier' &&
-      result.error !== 'db_unavailable'
-    ) {
+    if (!result?.ok && result?.error && result.error !== 'db_unavailable') {
+      // db_unavailable still warrants a warn but the message is shorter — it
+      // means Netlify env vars (SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY) are
+      // not set on this project, not a runtime fault.
       console.warn(
         '[botanicas event-bus] recordEvent failed:',
         result.error,
         'type=' + (args?.type || '?'),
+        'brand=' + (args?.brand || BRANDS.MAIA_BOTANICAS),
+      );
+    } else if (!result?.ok && result?.error === 'db_unavailable') {
+      console.warn(
+        '[botanicas event-bus] SUPABASE env missing — events not persisted (type=' +
+          (args?.type || '?') + ')',
       );
     }
     return result;

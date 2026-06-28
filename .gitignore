@@ -89,3 +89,9 @@ pnpm-debug.log*
 *.bak
 .deploy-log.txt
 
+# Playwright local screenshots + cache (created during audit walks; not part of source)
+.playwright-mcp/
+live-*-desktop.png
+live-*-mobile.png
+live-*-toast.png
+

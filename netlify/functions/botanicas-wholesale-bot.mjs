@@ -48,7 +48,7 @@ const SESSION_RESET_HOURS = 24;
 
 function twiml(message) {
   const safe = String(message)
-    .replace(/&/g, '&amp;')
+    .replace(/&/g, '&')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
   return `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${safe}</Message></Response>`;

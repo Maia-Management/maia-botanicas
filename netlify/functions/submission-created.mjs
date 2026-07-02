@@ -215,13 +215,25 @@ export default async function handler(req) {
   let subject;
   let body;
 
-  if (formName === 'sample-pack-request') {
+  // Form names were split per locale in commit b4df265 (Netlify Forms otherwise
+  // collapses ES+EN submissions into one record). Match all variants here.
+  const isSamplePack =
+    formName === 'sample-pack-request' ||
+    formName === 'sample-pack-request-es' ||
+    formName === 'sample-pack-request-en';
+  const isContact =
+    formName === 'contact' ||
+    formName === 'contact-es' ||
+    formName === 'contact-en' ||
+    formName === 'maia-botanicas-contact';
+
+  if (isSamplePack) {
     body = formatMayoreoEmail(data, meta);
     const who = data.restaurant_name
       ? `${data.restaurant_name} (${data.city || '—'})`
       : data.contact_name || 'desconocido';
     subject = `[Maia Botánicas · Mayoreo] Sample pack — ${who}`;
-  } else if (formName === 'contact' || formName === 'maia-botanicas-contact') {
+  } else if (isContact) {
     body = formatGenericEmail(formName, data, meta);
     const who = data.name || data.nombre || data.email || 'sin nombre';
     subject = `[Maia Botánicas · Contacto] ${who}`;

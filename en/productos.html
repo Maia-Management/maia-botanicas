@@ -22,6 +22,33 @@
 <script defer src="/js/main.js?v=20260622"></script>
 <script defer src="/js/consent.js?v=20260622"></script>
 <script defer src="/js/vert-track.js?v=20260626"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Maia Botánicas Catalog",
+  "description": "Japanese ferments, Caribbean in-house products and B2B glassware for bars and restaurants.",
+  "numberOfItems": 16,
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Yakitori Tare — Koji-Fermented","category":"Japanese / Ferments","sku":"JP-TARE-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Shio Koji — Fermented Salt","category":"Japanese / Ferments","sku":"JP-SHIO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Caribbean Miso Paste","category":"Japanese / Ferments","sku":"JP-MISO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"House Soy Sauce","category":"Japanese / Ferments","sku":"JP-SHOYU-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Fermented Chili Oil","category":"Japanese / Ferments","sku":"JP-CHILI-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Vacuum-Packed Sando Loaf — Maison Yumi","category":"Japanese / Bakery","sku":"JP-SANDO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Mango Tuahine — Hot Sauce","category":"Caribbean","sku":"CB-MANGO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Black Garlic — Slow-Fermented","category":"Caribbean","sku":"CB-AJONEGRO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Dried Caribbean Lemons","category":"Caribbean","sku":"CB-LIMON-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"Coffee & Cacao Bitters","category":"Caribbean","sku":"CB-BITTERS-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"Clarified Hibiscus Syrup","category":"Caribbean","sku":"CB-HIBISCO-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"Highball Glass — pack 12","category":"Glassware","sku":"GL-HIGHBALL-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":13,"item":{"@type":"Product","name":"Boston Shaker Tin/Tin","category":"Glassware","sku":"GL-SHAKER-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":14,"item":{"@type":"Product","name":"Double Jigger 30/60 ml","category":"Glassware","sku":"GL-JIGGER-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":15,"item":{"@type":"Product","name":"Non-Slip Bar Mat","category":"Glassware","sku":"GL-BARMAT-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}},
+    {"@type":"ListItem","position":16,"item":{"@type":"Product","name":"Sphere Ice Mold 6 cm","category":"Glassware","sku":"GL-ICEMOLD-001","brand":{"@type":"Brand","name":"Maia Botánicas"}}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -61,11 +88,16 @@
 
 <section class="section--sm" style="padding-top:0;">
   <div class="container">
+    <h2 class="mb-4">By category</h2>
     <div class="tabs" role="tablist" aria-label="Product categories">
       <button class="tab" role="tab" aria-selected="true" aria-controls="panel-japones" id="tab-japones" data-tab="japones">🌿 Japanese</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-caribeno" id="tab-caribeno" data-tab="caribeno">🌿 Caribbean</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="panel-glassware" id="tab-glassware" data-tab="glassware">🌎 Glassware &amp; Tools</button>
     </div>
+
+    <p class="text-mute mt-4" style="font-size:0.9rem;">
+      Need the full line sheet with wholesale pricing? <a href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27d%20like%20the%20PDF%20catalog%20with%20wholesale%20pricing." rel="noopener">Ask Don Próspero for the PDF on WhatsApp →</a>
+    </p>
 
     <div class="tab-panel is-active" id="panel-japones" role="tabpanel" aria-labelledby="tab-japones" data-anchor="japones">
       <a id="japones"></a>
@@ -132,20 +164,20 @@
         <article class="prod-card">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
-            <img src="/images/botanicas-syrup-hero.webp" alt="Amber bottles of Maia Botánicas mango tuahine hot sauce, Caribbean ingredient compounded in Santa Marta." loading="lazy" decoding="async">
+            <img src="/images/botanicas-syrup-hero.webp" alt="Amber bottles of Maia Botánicas mango tuahine hot sauce, Caribbean ingredient compounded in Santa Marta." loading="lazy" decoding="async" width="600" height="400">
           </div>
           <h3 class="prod-card__title">Mango Tuahine — Hot Sauce</h3>
-          <p class="prod-card__desc">Chamoy-style fermented mango hot sauce. Made with Magdalena mango.</p>
+          <p class="prod-card__desc">Chamoy-style fermented mango hot sauce. Made with Magdalena mango (<em>Mangifera indica</em>).</p>
           <div class="prod-card__meta"><span>MOQ: 12 bottles (250 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Mango%20Tuahine%20%28CB-MANGO-001%29.">Order on WhatsApp</a>
         </article>
         <article class="prod-card">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
-            <img src="/images/botanicas-black-garlic.webp" alt="Maia Botánicas slow-fermented black garlic jar, dark cloves on cream background." loading="lazy" decoding="async">
+            <img src="/images/botanicas-black-garlic.webp" alt="Maia Botánicas slow-fermented black garlic jar, dark cloves on cream background." loading="lazy" decoding="async" width="600" height="400">
           </div>
           <h3 class="prod-card__title">Black Garlic — Slow-Fermented</h3>
-          <p class="prod-card__desc">40-day slow-fermented black garlic. Sweet, no heat.</p>
+          <p class="prod-card__desc">40-day slow-fermented garlic (<em>Allium sativum</em>). Sweet, no heat.</p>
           <div class="prod-card__meta"><span>MOQ: 12 jars (150 g)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Black%20Garlic%20%28CB-AJONEGRO-001%29.">Order on WhatsApp</a>
         </article>
@@ -153,7 +185,7 @@
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Dried Lemons</div>
           <h3 class="prod-card__title">Dried Caribbean Lemons</h3>
-          <p class="prod-card__desc">Sun-dried Creole lemons. For infusions, garnish, bar tea.</p>
+          <p class="prod-card__desc">Sun-dried Creole lemons (<em>Citrus aurantifolia</em>). For infusions, garnish, bar tea.</p>
           <div class="prod-card__meta"><span>MOQ: 6 bags (200 g)</span><span>· Delivery 5–7 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Dried%20Lemons%20%28CB-LIMON-001%29.">Order on WhatsApp</a>
         </article>
@@ -161,17 +193,17 @@
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Coffee &amp; Cacao Bitters</div>
           <h3 class="prod-card__title">Coffee &amp; Cacao Bitters</h3>
-          <p class="prod-card__desc">Bitters infused with Sierra Nevada coffee and Magdalena cacao. Pure Caribbean.</p>
+          <p class="prod-card__desc">Bitters infused with Sierra Nevada coffee (<em>Coffea arabica</em>) and Magdalena cacao (<em>Theobroma cacao</em>). Pure Caribbean.</p>
           <div class="prod-card__meta"><span>MOQ: 6 bottles (100 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Coffee%20%26%20Cacao%20Bitters%20%28CB-BITTERS-001%29.">Order on WhatsApp</a>
         </article>
         <article class="prod-card">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
-            <img src="/assets/images/hibiscus-harvest.webp" alt="Freshly harvested hibiscus flowers — base ingredient for Maia Botánicas clarified syrup." loading="lazy" decoding="async">
+            <img src="/assets/images/hibiscus-harvest.webp" alt="Freshly harvested hibiscus flowers — base ingredient for Maia Botánicas clarified syrup." loading="lazy" decoding="async" width="600" height="400">
           </div>
           <h3 class="prod-card__title">Clarified Hibiscus Syrup</h3>
-          <p class="prod-card__desc">Clarified Jamaica-flower syrup, cocktail-ready. Brilliant color.</p>
+          <p class="prod-card__desc">Clarified Jamaica-flower syrup (<em>Hibiscus sabdariffa</em>), cocktail-ready. Brilliant color.</p>
           <div class="prod-card__meta"><span>MOQ: 6 bottles (500 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Hibiscus%20Syrup%20%28CB-HIBISCO-001%29.">Order on WhatsApp</a>
         </article>
@@ -255,7 +287,7 @@
         </p>
       </div>
       <div>
-        <h4>Site</h4>
+        <h3>Site</h3>
         <ul style="display:flex; flex-direction:column; gap:var(--space-2); font-size:0.95rem;">
           <li><a href="/en/productos.html">Catalog</a></li>
           <li><a href="/en/mayoreo.html">Wholesale</a></li>
@@ -265,7 +297,7 @@
         </ul>
       </div>
       <div>
-        <h4>Maia ecosystem</h4>
+        <h3>Maia ecosystem</h3>
         <ul class="footer__ecosystem">
           <li><a href="https://el-sanatorio.com" rel="noopener">El Sanatorio</a></li>
           <li><a href="https://sushi-pop.co" rel="noopener">Sushi Pop</a></li>
@@ -279,6 +311,7 @@
       <ul>
         <li><a href="/en/privacy.html">Privacy &amp; Habeas Data</a></li>
         <li><a href="/en/terminos.html">Terms</a></li>
+        <li><a href="tel:+19034598763" aria-label="Call Maia Botánicas">📞 +1 903 459 8763</a></li>
         <li><a href="https://wa.me/19034598763" rel="noopener">WhatsApp: +1 903 459 8763</a></li>
       </ul>
     </div>

@@ -24,6 +24,7 @@
 <script defer src="/js/main.js?v=20260622"></script>
 <script defer src="/js/consent.js?v=20260622"></script>
 <script defer src="/js/vert-track.js?v=20260626"></script>
+<script defer src="/js/order-builder.js?v=20260701"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,7 +88,7 @@
     <h1 class="mb-4">Maia Botánicas Catalog</h1>
     <p class="lead">
       Three categories. In-house items marked <strong>🌿 IN-HOUSE</strong>;
-      partner-supplied tools marked <strong>🌎 IMPORTED</strong>. Orders by WhatsApp with Don Próspero.
+      partner-supplied tools marked <strong>🌎 IMPORTED</strong>. Orders by WhatsApp with Don Próspero — or tap <strong>“+ Add to order”</strong> on any card and send the whole order in one message.
     </p>
   </div>
 </section>
@@ -108,7 +109,7 @@
     <div class="tab-panel is-active" id="panel-japones" role="tabpanel" aria-labelledby="tab-japones" data-anchor="japones">
       <a id="japones"></a>
       <div class="prod-grid">
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-TARE-001" data-name="Yakitori Tare — Koji-Fermented" data-moq="6" data-unit="bottles (250 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Yakitori Tare</div>
           <h3 class="prod-card__title">Yakitori Tare — Koji-Fermented</h3>
@@ -116,7 +117,7 @@
           <div class="prod-card__meta"><span>MOQ: 6 bottles (250 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Yakitori%20Tare%20%28JP-TARE-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-SHIO-001" data-name="Shio Koji — Fermented Salt" data-moq="12" data-unit="jars (200 g)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Shio Koji</div>
           <h3 class="prod-card__title">Shio Koji — Fermented Salt</h3>
@@ -124,7 +125,7 @@
           <div class="prod-card__meta"><span>MOQ: 12 jars (200 g)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Shio%20Koji%20%28JP-SHIO-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-MISO-001" data-name="Caribbean Miso Paste" data-moq="6" data-unit="tubs (500 g)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Caribbean Miso</div>
           <h3 class="prod-card__title">Caribbean Miso Paste</h3>
@@ -132,7 +133,7 @@
           <div class="prod-card__meta"><span>MOQ: 6 tubs (500 g)</span><span>· Delivery 5–7 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Caribbean%20Miso%20%28JP-MISO-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-SHOYU-001" data-name="House Soy Sauce" data-moq="6" data-unit="bottles (500 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">House Soy</div>
           <h3 class="prod-card__title">House Soy Sauce</h3>
@@ -140,7 +141,7 @@
           <div class="prod-card__meta"><span>MOQ: 6 bottles (500 ml)</span><span>· Delivery 5–7 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20House%20Soy%20%28JP-SHOYU-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-CHILI-001" data-name="Fermented Chili Oil" data-moq="12" data-unit="jars (200 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Chili Oil</div>
           <h3 class="prod-card__title">Fermented Chili Oil</h3>
@@ -149,7 +150,7 @@
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Fermented%20Chili%20Oil%20%28JP-CHILI-001%29.">Order on WhatsApp</a>
         </article>
       
-        <article class="prod-card">
+        <article class="prod-card" data-sku="JP-SANDO-001" data-name="Vacuum-Packed Sando Loaf — Maison Yumi" data-moq="6" data-unit="loaves (450 g)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Sando Loaf — Maison Yumi</div>
           <h3 class="prod-card__title">Vacuum-Packed Sando Loaf — Maison Yumi</h3>
@@ -167,7 +168,7 @@
     <div class="tab-panel" id="panel-caribeno" role="tabpanel" aria-labelledby="tab-caribeno" data-anchor="caribeno">
       <a id="caribeno"></a>
       <div class="prod-grid">
-        <article class="prod-card">
+        <article class="prod-card" data-sku="CB-MANGO-001" data-name="Mango Tuahine — Hot Sauce" data-moq="12" data-unit="bottles (250 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
             <img src="/images/botanicas-syrup-hero.webp" alt="Amber bottles of Maia Botánicas mango tuahine hot sauce, Caribbean ingredient compounded in Santa Marta." loading="lazy" decoding="async" width="600" height="400">
@@ -177,7 +178,7 @@
           <div class="prod-card__meta"><span>MOQ: 12 bottles (250 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Mango%20Tuahine%20%28CB-MANGO-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="CB-AJONEGRO-001" data-name="Black Garlic — Slow-Fermented" data-moq="12" data-unit="jars (150 g)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
             <img src="/images/botanicas-black-garlic.webp" alt="Maia Botánicas slow-fermented black garlic jar, dark cloves on cream background." loading="lazy" decoding="async" width="600" height="400">
@@ -187,7 +188,7 @@
           <div class="prod-card__meta"><span>MOQ: 12 jars (150 g)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Black%20Garlic%20%28CB-AJONEGRO-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="CB-LIMON-001" data-name="Dried Caribbean Lemons" data-moq="6" data-unit="bags (200 g)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Dried Lemons</div>
           <h3 class="prod-card__title">Dried Caribbean Lemons</h3>
@@ -195,7 +196,7 @@
           <div class="prod-card__meta"><span>MOQ: 6 bags (200 g)</span><span>· Delivery 5–7 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Dried%20Lemons%20%28CB-LIMON-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="CB-BITTERS-001" data-name="Coffee & Cacao Bitters" data-moq="6" data-unit="bottles (100 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media prod-card__media--placeholder">Coffee &amp; Cacao Bitters</div>
           <h3 class="prod-card__title">Coffee &amp; Cacao Bitters</h3>
@@ -203,7 +204,7 @@
           <div class="prod-card__meta"><span>MOQ: 6 bottles (100 ml)</span><span>· Delivery 3–5 days</span></div>
           <a class="btn btn--green btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Coffee%20%26%20Cacao%20Bitters%20%28CB-BITTERS-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="CB-HIBISCO-001" data-name="Clarified Hibiscus Syrup" data-moq="6" data-unit="bottles (500 ml)">
           <span class="badge badge--inhouse badge--abs">🌿 In-House</span>
           <div class="prod-card__media">
             <img src="/assets/images/hibiscus-harvest.webp" alt="Freshly harvested hibiscus flowers — base ingredient for Maia Botánicas clarified syrup." loading="lazy" decoding="async" width="600" height="400">
@@ -223,7 +224,7 @@
         (Mercado Libre / LATAM distributors) and ship direct to your bar. Delivery 1–2 weeks.
       </div>
       <div class="prod-grid">
-        <article class="prod-card">
+        <article class="prod-card" data-sku="GL-HIGHBALL-001" data-name="Highball Glass — pack 12" data-moq="1" data-unit="pack (12 u.)">
           <span class="badge badge--imported badge--abs">🌎 Imported</span>
           <div class="prod-card__media prod-card__media--placeholder">Highball Glass</div>
           <h3 class="prod-card__title">Highball Glass — pack 12</h3>
@@ -231,7 +232,7 @@
           <div class="prod-card__meta"><span>MOQ: 1 pack (12 u.)</span><span>· Delivery 1–2 weeks</span></div>
           <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Highball%20Glass%20%28GL-HIGHBALL-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="GL-SHAKER-001" data-name="Boston Shaker Tin/Tin" data-moq="2" data-unit="units">
           <span class="badge badge--imported badge--abs">🌎 Imported</span>
           <div class="prod-card__media prod-card__media--placeholder">Boston Shaker</div>
           <h3 class="prod-card__title">Boston Shaker Tin/Tin</h3>
@@ -239,7 +240,7 @@
           <div class="prod-card__meta"><span>MOQ: 2 units</span><span>· Delivery 1–2 weeks</span></div>
           <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Boston%20Shaker%20%28GL-SHAKER-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="GL-JIGGER-001" data-name="Double Jigger 30/60 ml" data-moq="4" data-unit="units">
           <span class="badge badge--imported badge--abs">🌎 Imported</span>
           <div class="prod-card__media prod-card__media--placeholder">Double Jigger</div>
           <h3 class="prod-card__title">Double Jigger 30/60 ml</h3>
@@ -247,7 +248,7 @@
           <div class="prod-card__meta"><span>MOQ: 4 units</span><span>· Delivery 1–2 weeks</span></div>
           <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Double%20Jigger%20%28GL-JIGGER-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="GL-BARMAT-001" data-name="Non-Slip Bar Mat" data-moq="2" data-unit="units">
           <span class="badge badge--imported badge--abs">🌎 Imported</span>
           <div class="prod-card__media prod-card__media--placeholder">Bar Mat</div>
           <h3 class="prod-card__title">Non-Slip Bar Mat</h3>
@@ -255,7 +256,7 @@
           <div class="prod-card__meta"><span>MOQ: 2 units</span><span>· Delivery 1–2 weeks</span></div>
           <a class="btn btn--wa prod-card__cta" href="https://wa.me/19034598763?text=Hello%20Don%20Pr%C3%B3spero%2C%20I%27m%20interested%20in%20Bar%20Mat%20%28GL-BARMAT-001%29.">Order on WhatsApp</a>
         </article>
-        <article class="prod-card">
+        <article class="prod-card" data-sku="GL-ICEMOLD-001" data-name="Sphere Ice Mold 6 cm" data-moq="4" data-unit="units">
           <span class="badge badge--imported badge--abs">🌎 Imported</span>
           <div class="prod-card__media prod-card__media--placeholder">Sphere Ice Mold</div>
           <h3 class="prod-card__title">Sphere Ice Mold 6 cm</h3>

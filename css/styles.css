@@ -652,7 +652,18 @@ input:focus, select:focus, textarea:focus {
   padding: var(--space-8) 0 var(--space-5);
   margin-top: var(--space-9);
 }
-.site-footer h4 { color: var(--ochre-soft); margin-bottom: var(--space-3); }
+/* Footer column headings — pages use h3 since the 2026-06-28 heading-order
+   a11y fix (h4 kept for safety). Replicates the pre-fix h4 look; without an
+   explicit color these inherit --ink-deep and vanish on the dark footer. */
+.site-footer h3,
+.site-footer h4 {
+  color: var(--ochre-soft);
+  margin-bottom: var(--space-3);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 .site-footer a { color: var(--bg-card); text-decoration: none; }
 .site-footer a:hover { color: var(--ochre-soft); text-decoration: underline; }
 .footer__grid {

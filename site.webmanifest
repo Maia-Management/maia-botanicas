@@ -1,12 +1,12 @@
 {
   "name": "Maia Botánicas",
   "short_name": "Maia Botánicas",
-  "description": "Colombian B2B botanical ingredients — clarified syrups, precision ferments and export botanicals from Santa Marta.",
+  "description": "Dispensario B2B desde Santa Marta — fermentos japoneses, productos caribeños y cristalería para bares y restaurantes.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0A1A0A",
-  "theme_color": "#0A1A0A",
+  "background_color": "#F4EDE0",
+  "theme_color": "#F4EDE0",
   "lang": "es-CO",
   "icons": [
     {

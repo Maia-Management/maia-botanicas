@@ -358,7 +358,9 @@ p { margin: 0 0 var(--space-4); max-width: var(--max-prose); }
   background: var(--sepia-deep);
   color: var(--bg-card-elevated);
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+  /* color must ease in sync with background — otherwise ghost buttons flash
+     cream-on-light for 150ms on hover/focus while the bg catches up */
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease, color 0.15s ease;
 }
 .btn:hover, .btn:focus {
   background: var(--ink-deep);

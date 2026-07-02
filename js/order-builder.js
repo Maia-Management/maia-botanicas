@@ -208,6 +208,7 @@
     sendLink = document.createElement('a');
     sendLink.className = 'btn btn--green btn--wa order-tray__send';
     sendLink.rel = 'noopener';
+    sendLink.href = WA; // real href from creation — crawlable even before renderTray fills the order
     sendLink.textContent = T.send;
 
     bar.appendChild(trayLabel);
